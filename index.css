@@ -85,12 +85,6 @@ nav img {
   margin-right: 10.3rem;
 }
 
-.carousel-item>.row {
-  scroll-behavior: smooth;
-  /*per uno scorrimento fluido delle immagini*/
-  padding-bottom: 1rem;
-}
-
 .search-bar {
   display: flex;
   align-items: center;
