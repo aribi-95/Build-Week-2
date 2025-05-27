@@ -71,11 +71,64 @@ nav img {
   margin-left: 5.3rem;
   margin-right: 5.3rem;
 }
+#dropdown {
+  width: 120px;
+  background-color: white;
+} 
+#dropdown-menu{
+  left: 25%;
+}
 
-/*.carousel-item > .row {
-  scroll-behavior: smooth; per uno scorrimento fluido delle immagini
-  padding-bottom: 1rem;
-}*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  max-width: 730px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.search-section {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-section label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.search-section input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: #ddd;
+}
+
+.search-button {
+  background-color: #FF385C;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+
 
 .title h2{
     margin: 0;
