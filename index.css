@@ -1,62 +1,72 @@
 header {
-    background-color: white;
-    height: 110px;
+  background-color: white;
+  height: 110px;
 }
 
 nav {
-    width: 100%;
-    height: 60px;
+  width: 100%;
+  height: 60px;
 }
 
 nav img {
-    width: 100px;
-    height: 45px;
+  width: 100px;
+  height: 45px;
 }
 
 .dropdown {
-    width: 60px;
-    height: 35px;
-    border-radius: 30%;
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
+  width: 60px;
+  height: 35px;
+  border-radius: 30%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .hamburger-icon {
-    font-size: 100px;
-    color: black;
-    position: relative;
-    right: -7px;
+  font-size: 100px;
+  color: black;
+  position: relative;
+  right: -7px;
 }
 
 .bg-icon {
-    background-color: lightgray;
-    padding: 8px;
-    border-radius: 50%;
-    font-size: large;
-    color: black;
+  background-color: lightgray;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: large;
+  color: black;
 }
 
 .navbar-text {
-    width: 300px;
-    flex: nowrap;
-    justify-content: space-evenly;
+  width: 300px;
+  flex: nowrap;
+  justify-content: space-evenly;
 }
 
 .dropdown-menu[data-bs-popper] {
-    left: -70px;
+  left: -70px;
 }
 
 .navbar-text a:hover {
-    background-color: lightgray;
-    padding: 8px;
-    border-radius: 50%;
+  background-color: lightgray;
+  padding: 8px;
+  border-radius: 50%;
 }
-.container{
-    border: 1px solid black;
+.container {
+  border: 1px solid black;
+}
+
+#gallerie {
+  margin-left: 10.3rem;
+  margin-right: 10.3rem;
+}
+
+.carousel-item > .row {
+  scroll-behavior: smooth; /*per uno scorrimento fluido delle immagini*/
+  padding-bottom: 1rem;
 }
