@@ -57,9 +57,9 @@ nav img {
   padding: 8px;
   border-radius: 50%;
 }
-.container {
+/*.container {
   border: 1px solid black;
-}
+}*/
 
 #gallerie {
   margin-left: 10.3rem;
@@ -69,4 +69,22 @@ nav img {
 .carousel-item > .row {
   scroll-behavior: smooth; /*per uno scorrimento fluido delle immagini*/
   padding-bottom: 1rem;
+}
+
+#colonne-footer .row {
+  gap: 3rem;
+}
+
+#colonne-footer div > ul {
+  list-style: none;
+  line-height: 2.3;
+}
+
+.footer-links {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links:hover {
+  text-decoration: underline;
 }
