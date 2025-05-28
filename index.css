@@ -223,8 +223,49 @@ nav img {
 .footer-links {
   color: black;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.social-links > p {
+  font-size: 14px;
 }
 
 .footer-links:hover {
   text-decoration: underline;
+}
+
+#social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#social-icons > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+}
+
+#social-icons > button:hover {
+  background-color: lightgray;
+  border-radius: 32px;
+}
+
+.footer-icons {
+  font-size: 18px;
+  padding-right: 10px;
+  padding: 8px;
+}
+
+.footer-icons:hover {
+  background-color: lightgray;
+  padding: 8px;
+  border-radius: 50%;
+  color: black;
 }
