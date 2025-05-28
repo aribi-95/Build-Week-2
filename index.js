@@ -33,3 +33,23 @@ function scrollCarousel4(direction) {
         behavior: 'smooth'
     });
 }
+
+const inputFields = document.querySelectorAll('.input-field');
+const searchBtn = document.getElementById('searchBtn');
+const searchIcon = document.getElementById('searchIcon');
+
+inputFields.forEach(field => {
+  field.addEventListener('focus', () => {
+    searchBtn.classList.add('expanded');
+    searchBtn.innerHTML = '<ion-icon name="search-outline"></ion-icon> <span>Cerca</span>';
+  });
+
+  field.addEventListener('blur', () => {
+    setTimeout(() => {
+      if (![...inputFields].some(f => f === document.activeElement)) {
+        searchBtn.classList.remove('expanded');
+        searchBtn.innerHTML = '<ion-icon name="search-outline"></ion-icon>';
+      }
+    }, 100);
+  });
+});

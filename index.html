@@ -26,7 +26,6 @@
 
   <body>
     <header>
-
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" />
@@ -34,53 +33,30 @@
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="search-bar">
-                    <div class="search-section">
-                        <label>Dove</label>
-                        <input id="dropdown" class="dropdown" type="text" placeholder="Cerca destinazioni"
-                            data-bs-toggle="dropdown">
-                        <ul id="dropdown-menu" class="dropdown-menu">
-                            <li>
-                                <div>
-                                   
-                                </div>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="search-section">
-                        <label>Check-in</label>
-                        <input type="date" placeholder="Aggiungi date">
-                    </div>
-                    <div class="divider"></div>
-                    <div class="search-section">
-                        <label>Check-out</label>
-                        <input type="date" placeholder="Aggiungi date">
-                    </div>
-                    <div class="divider"></div>
-                    <div class="search-section ">
-                        <label>Chi</label>
-                        <input id="dropdown" class="dropdown" type="text" placeholder="Aggiungi ospiti"
-                            data-bs-toggle="dropdown">
-                        <ul id="dropdown-menu2" class="dropdown-menu">
-                            <li>
-                                <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-                                    <div class="d-flex flex-column">
-                                    <p class="mb-0 ms-3">Adulti</p>
-                                    <p class="mb-0 ms-3">Da 13 in su</p>
-                                    </div>
-                                    <input class="me-3" type="number">
-                                </div>
-                            </li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div><ion-icon class="glass-icon " name="search-outline"></ion-icon></div>
+                <div class="menu-personalizzato">
+                    <!-- Alloggi -->
+                    <div id="elemento-menu" class="elemento-menu">
+                        <img src="assets/icons8-house-64.png" alt="Alloggi">
+                        <div class="etichetta">Alloggi</div>
 
+                    </div>
+
+                    <!-- Esperienze -->
+                    <div class="elemento-menu">
+                        <div class="badge-novita">NOVITÀ</div>
+                        <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
+                            alt="Esperienze">
+                        <div class="etichetta">Esperienze</div>
+                    </div>
+
+                    <!-- Servizi -->
+                    <div class="elemento-menu">
+                        <div class="badge-novita">NOVITÀ</div>
+                        <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi">
+                        <div class="etichetta">Servizi</div>
+                    </div>
                 </div>
+
                 <div class="navbar-text d-flex align-items-center">
                     <a class="opacity-6 text-decoration-none nav-custom-fs ms-4" href="#">Inizia ad ospitare</a>
                     <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
@@ -90,23 +66,148 @@
                             aria-expanded="false" name="menu-sharp"></ion-icon>
                         <img src="assets/propic.png" alt="avatar-1" width="20px" height="20px" class="rounded-5 ms-2" />
 
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Account</a></li>
-                <li><a class="dropdown-item" href="#">Change account</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Payments</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Settings</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </li>
-              </ul>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><a class="dropdown-item" href="#">Change account</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Payments</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+        </nav>
+        <div class="search-bar">
+            <div class="search-section hidden-searchBar ">
+                <label>Dove</label>
+                <input id="dropdown" class="dropdown input-field " type="text" placeholder="Cerca destinazioni"
+                    data-bs-toggle="dropdown">
+                <ul id="dropdown-menu" class="dropdown-menu">
+                    <li>
+                        <div class="d-flex align-items-center pb-3">
+                            <img class="dimensione-icone" src="assets/freccia.webp" alt="freccia">
+                            <div>
+                            <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
+                            <p class="mb-0 ms-3">scopri le opzioni intorno a te </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center pb-3">
+                            <img class="dimensione-icone" src="assets/milano.webp" alt="milano">
+                            <div>
+                            <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
+                            <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center pb-3">
+                            <img class="dimensione-icone" src="assets/parigi.webp" alt="parigi">
+                             <div>
+                            <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
+                            <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
+                             </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex  align-items-center pb-3">
+                            <img class="dimensione-icone" src="assets/firenze.webp" alt="firenze">
+                            <div>
+                            <p class="mb-0 ms-3 fw-bold">Firenze</p>
+                            <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="divider hidden-searchBar"></div>
+            <div class="search-section hidden-searchBar">
+                <label>Check-in</label>
+                <input type="date" placeholder="Aggiungi date">
+            </div>
+            <div class="divider hidden-searchBar"></div>
+            <div class="d-none"><p>Inizia la Ricerca</p></div>
+            <div class="search-section hidden-searchBar">
+                <label>Check-out</label>
+                <input type="date" placeholder="Aggiungi date">
+            </div>
+            <div class="divider hidden-searchBar"></div>
+            <div class="search-section hidden-searchBar">
+                <label>Chi</label>
+                <input id="dropdown" class="dropdown input-field" type="text" placeholder="Aggiungi ospiti"
+                    data-bs-toggle="dropdown">
+                <ul id="dropdown-menu2" class="dropdown-menu">
+                    <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 ms-3">Adulti</p>
+                                <p class="mb-0 ms-3">Da 13 in su</p>
+                            </div>
+                            <input class="me-3" type="number">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 ms-3">Bambini</p>
+                                <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+                            </div>
+                            <input class="me-3" type="number">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 ms-3">Neonati</p>
+                                <p class="mb-0 ms-3">fino a 2 anni</p>
+                            </div>
+                            <input class="me-3" type="number">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 ms-3">Animali domestici</p>
+                                <p class="mb-0 ms-3 text-decoration-underline ">Viaggi con un animale di servio?</p>
+                            </div>
+                            <input class="me-3" type="number">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="searchBtn" class="glass-icon " > <ion-icon name="search-outline"></ion-icon></div>
+            
         </div>
-      </nav>
+        <div class="menu-personalizzato nascosto">
+                    <!-- Alloggi -->
+                    <div id="elemento-menu" class="elemento-menu">
+                        <img src="assets/icons8-house-64.png" alt="Alloggi">
+                        <div class="etichetta">Alloggi</div>
+
+                    </div>
+
+                    <!-- Esperienze -->
+                    <div class="elemento-menu">
+                        <div class="badge-novita">NOVITÀ</div>
+                        <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
+                            alt="Esperienze">
+                        <div class="etichetta">Esperienze</div>
+                    </div>
+
+                    <!-- Servizi -->
+                    <div class="elemento-menu">
+                        <div class="badge-novita">NOVITÀ</div>
+                        <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi">
+                        <div class="etichetta">Servizi</div>
+                    </div>
+                </div>
     </header>
 
     <main>
