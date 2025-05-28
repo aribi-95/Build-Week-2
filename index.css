@@ -79,23 +79,22 @@ nav img {
 #dropdown-menu {
   left: 25%;
 }
-#dropdown-menu2{
+#dropdown-menu2 {
   left: 53%;
   padding: 1%;
 }
-#dropdown-menu2 input{
+#dropdown-menu2 input {
   width: 25%;
   border: 1px solid black;
   border-radius: 4px;
 }
-#dropdown-menu2 p:last-child{
+#dropdown-menu2 p:last-child {
   font-size: small;
   color: gray;
 }
-.bordo{
-  border-bottom: #6A6A6A solid 1px;
+.bordo {
+  border-bottom: #6a6a6a solid 1px;
 }
-
 
 .search-bar {
   display: flex;
@@ -145,15 +144,14 @@ nav img {
   margin-left: 16px;
   cursor: pointer;
 }
-.glass-icon{
-   background-color: red;
+.glass-icon {
+  background-color: red;
   padding: 14px;
   border-radius: 50%;
   font-size: large;
   color: white;
   position: relative;
   top: 4px;
-
 }
 
 .title h2 {
@@ -277,6 +275,7 @@ nav img {
   text-align: center;
   border: none;
   font-size: 12px;
+  border-radius: 32px;
 }
 
 #social-icons > button:hover {
