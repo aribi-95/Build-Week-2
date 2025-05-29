@@ -109,3 +109,30 @@ document.querySelectorAll('.heart').forEach(heart => {
     });
   });
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const meno= document.querySelectorAll('.meno');
+const piu= document.querySelectorAll('.piu');
+const num= document.querySelectorAll('.num');
+const outputInput= document.querySelector('.input');
+console.log(meno, piu, num, outputInput);
+
+function aggiornaInput(value) {
+    num.textContent = value;
+    outputInput.value=value;
+    meno.disabled = value===0;
+}
+
+piu.addEventListener('click', () =>{ 
+  let valore = parseInt(num.textContent, 10);
+  console.log(valore);
+  valore++;
+  aggiornaInput(valore); 
+  })
+meno.addEventListener('click',() => {
+  let valore = parseInt(num.textContent, 10);
+  if (valore > 0) {
+    valore--;
+    aggiornaInput(valore);
+  }  
+})   /*da sistemare deve gestire un array */

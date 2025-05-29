@@ -56,19 +56,23 @@ nav img {
 }
 
 .dropdown-menu[data-bs-popper] {
-  left: -70px;
+  left: -80px;
+  border-radius: 25px;
+
 }
 
-.navbar-text a:hover, #dropdown-menu li > div:hover {
-  background-color: lightgray;
-  padding: 8px;
-  border-radius: 50px;
+.navbar-text a:hover,
+#dropdown-menu li>div:hover {
+ background-color: #f4f4f4;
+    padding: 8px;
+    border-radius: 15px;
 }
+
 /*.container {
   border: 1px solid black;
 }*/
 
-main{
+main {
   margin-top: 70px;
 }
 
@@ -76,28 +80,37 @@ main{
   margin-left: 5.3rem;
   margin-right: 5.3rem;
 }
+
 #dropdown {
   width: 120px;
   background-color: white;
 }
+
 #dropdown-menu {
   left: 25%;
+  border-radius: 25px;
+  padding: 25px;
 }
-#dropdown-menu2{
+
+#dropdown-menu2 {
   left: 53%;
   padding: 1%;
+  border-radius: 25px;
 }
-#dropdown-menu2 input{
+
+#dropdown-menu2 input {
   width: 25%;
   border: 1px solid black;
   border-radius: 4px;
 }
-#dropdown-menu2 p:last-child{
+
+#dropdown-menu2 p:last-child {
   font-size: small;
   color: gray;
 }
-.bordo{
-  border-bottom: #6A6A6A solid 1px;
+
+.bordo {
+  border-bottom: lightgrey solid 1px;
 }
 
 
@@ -108,7 +121,7 @@ main{
   border-radius: 32px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 8px;
-  max-width: 675px;
+  max-width: 800px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
 }
@@ -232,13 +245,14 @@ h4 a {
   font-size: 13px;
 }
 
-.card-text, .cardDescription {
+.card-text,
+.cardDescription {
   max-width: 177px;
 }
 
-.cardDescription h5{
-  white-space: nowrap;     
-  overflow: hidden;        
+.cardDescription h5 {
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -246,12 +260,12 @@ h4 a {
   font-size: 11px;
   color: #6a6a6a;
   margin: 0;
-  white-space: nowrap;     
-  overflow: hidden;        
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.badgeCard{
+.badgeCard {
   position: absolute;
   top: 3%;
   display: flex;
@@ -294,7 +308,7 @@ span.badge {
   gap: 3rem;
 }
 
-#colonne-footer div > ul {
+#colonne-footer div>ul {
   list-style: none;
   line-height: 2.3;
 }
@@ -305,7 +319,7 @@ span.badge {
   font-size: 14px;
 }
 
-.social-links > p {
+.social-links>p {
   font-size: 14px;
 }
 
@@ -322,7 +336,7 @@ span.badge {
   flex-wrap: wrap;
 }
 
-#social-icons > button {
+#social-icons>button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -331,7 +345,7 @@ span.badge {
   font-size: 12px;
 }
 
-#social-icons > button:hover {
+#social-icons>button:hover {
   background-color: lightgray;
   border-radius: 32px;
 }
@@ -367,19 +381,20 @@ span.badge {
 
 
 .glass-icon {
-     background-color: red;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: large;
-    color: white;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.6s ease;
+  background-color: red;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: large;
+  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease;
 
 }
+
 .expanded {
   width: auto;
   padding: 0 10px;
@@ -390,11 +405,12 @@ span.badge {
   align-items: center;
   gap: 5px;
   height: 40px;
-  left: -28px;
+  left: 10px;
   position: relative;
   margin-left: 6px;
   transform: translateX(-15%);
 }
+
 .menu-personalizzato {
   display: flex;
   justify-content: center;
@@ -444,12 +460,58 @@ span.badge {
   height: 50px;
 }
 
-.nascosto{display: none;}
+.nascosto {
+  display: none;
+}
+
 @media (max-width:743px) {
-  .navbar{display: none;}
-  .nascosto{display: flex;padding: 0;}
-  .d-none{display: block !important;}
-  .d-none p{margin: 0;font-weight: bold;font-size: 20px;}
-  .hidden-searchBar{display: none;}
-  .search-bar{justify-content: center; flex-direction: row-reverse;gap: 10px;}
+  .navbar {
+    display: none;
+  }
+
+  .nascosto {
+    display: flex;
+    padding: 0;
+  }
+
+  .d-none {
+    display: block !important;
+  }
+
+  .d-none p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .hidden-searchBar {
+    display: none;
+  }
+
+  .search-bar {
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+}
+
+
+
+
+.size-div {
+  width: 210px;
+}
+
+.button-chi {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 4px;
+}
+.search-section:hover{
+     background-color: #EBEBEB;
+    padding: 8px;
+    border-radius: 30px;
 }
