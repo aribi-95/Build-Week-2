@@ -14,6 +14,7 @@
         <header style="border: 1px solid pink">
             <p>Da inserire la nav una volta completata sulla pagina principale</p>
         </header>
+
         <main class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-7 col-xl-8" id="file-appartamenti">
@@ -283,11 +284,22 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89542.44571771681!2d9.108199046866742!3d45.465746131965865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilano%20MI!5e0!3m2!1sit!2sit!4v1748370994248!5m2!1sit!2sit" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+
+            <div>
+                <button id="openMapButton" class="btn btn-primary d-block d-md-none fixed-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMap" aria-expanded="false" aria-controls="collapseMap">Apri mappa</button>
+                <div class="collapse position-fixed top-0 start-0 w-100 h-100" id="collapseMap">
+                    <button id="closeMapButton" class="btn btn-danger position-absolute m-3 top-0 end-0 z-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMap" aria-expanded="true" aria-controls="collapseMap">&times;</button>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89542.44571771681!2d9.108199046866742!3d45.465746131965865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilano%20MI!5e0!3m2!1sit!2sit!4v1748370994248!5m2!1sit!2sit" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </main>
+
         <span class="ms-5"><a href="index.html">Link di collegamento alla Homepage - provvisorio</a></span>
+
         <footer style="border: 1px solid lightblue">
             <p>Da inserire il footer una volta completato sulla pagina principale</p>
         </footer>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         <script src="index.js"></script>
     </body>
