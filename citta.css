@@ -68,3 +68,21 @@ body {
     border-radius: 50%;
     padding: 6px;
 }
+
+#openMapButton {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+#collapseMap {
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+}
+
+#closeMapButton {
+    z-index: 1055;
+}
