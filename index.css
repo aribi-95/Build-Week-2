@@ -179,6 +179,7 @@ h4 a {
   position: relative;
   width: 183px;
   margin: 1px;
+  cursor: pointer;
 }
 
 .card-container {
