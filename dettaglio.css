@@ -81,3 +81,15 @@ h1 {
     display: none;
   }
 }
+
+#occasione img{
+  width: 30px;
+  height: 30px;
+}
+
+#occasione p{
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px;
+  margin: 0;
+}
