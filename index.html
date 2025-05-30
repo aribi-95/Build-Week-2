@@ -26,6 +26,12 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    ;
   </head>
 
   <body>
@@ -190,6 +196,7 @@
             type="date"
             value="2025-05-26"
             placeholder="Aggiungi date"
+            class="datepicker"
           />
         </div>
         <div class="divider hidden-searchBar"></div>
@@ -203,6 +210,7 @@
             type="date"
             value="2025-06-03"
             placeholder="Aggiungi date"
+            class="datepicker"
           />
         </div>
         <div class="divider hidden-searchBar"></div>
@@ -1904,5 +1912,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script>
+      flatpickr(".datepicker", {
+        dateFormat: "d-m-Y", // Formato della data: 2025-05-30
+        minDate: "today", // Opzionale: disabilita le date passate
+        defaultDate: "today", // Imposta oggi come valore predefinito
+        //maxDate per data di checkout massima
+      });
+    </script>
   </body>
 </html>
