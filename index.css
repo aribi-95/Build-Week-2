@@ -109,10 +109,11 @@ main {
   color: gray;
 }
 
+
 .bordo {
   border-bottom: lightgrey solid 1px;
-}
 
+}
 
 .search-bar {
   display: flex;
@@ -166,6 +167,7 @@ main {
 h4 a {
   text-decoration: none;
   color: black;
+
 }
 
 .title h2 {
@@ -343,6 +345,7 @@ span.badge {
   text-align: center;
   border: none;
   font-size: 12px;
+  border-radius: 32px;
 }
 
 #social-icons>button:hover {
