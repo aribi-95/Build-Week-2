@@ -2,87 +2,159 @@
 
 html,
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .card p,
 .comeOrdiniamo {
-    font-size: 0.9em;
-    color: #6a6a6a;
-    margin: 0;
+  font-size: 0.9em;
+  color: #6a6a6a;
+  margin: 0;
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
 }
 
 .cardAppartamentoCitta {
-    border: none;
+  border: none;
 }
 
 .carouselInnerCitta {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 .carousel-img-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
 }
 
 .carousel-img-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel-control-prev.citta,
 .carousel-control-next.citta {
-    margin: 0 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    background-color: #ebebeb;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  margin: 0 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .carousel-control-prev.citta:hover,
 .carousel-control-next.citta:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .carousel-control-next.citta ion-icon,
 .carousel-control-prev.citta ion-icon {
-    font-size: 20px;
-    background-color: #ebebeb;
-    border-radius: 50%;
-    padding: 6px;
+  font-size: 20px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  padding: 6px;
 }
 
 #openMapButton {
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    width: fit-content;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
 }
 
 #collapseMap {
-    z-index: 1040;
-    width: 100vw;
-    height: 100vh;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
 }
 
 #closeMapButton {
-    z-index: 1055;
+  z-index: 1055;
+}
+
+#colonne-footer {
+  margin-top: inherit;
+}
+
+#colonne-footer .row {
+  gap: 5rem;
+  margin: auto;
+}
+
+#colonne-footer div > ul {
+  list-style: none;
+  line-height: 2.3;
+}
+
+.footer-links {
+  color: rgb(35, 35, 35);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-links > p {
+  font-size: 14px;
+}
+
+.footer-links:hover {
+  text-decoration: underline;
+}
+
+#social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#social-icons > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+  border-radius: 32px;
+}
+
+#social-icons > button:hover {
+  background-color: lightgray;
+  border-radius: 32px;
+}
+
+.footer-icons {
+  font-size: 18px;
+  padding-right: 10px;
+  padding: 8px;
+}
+
+.footer-icons:hover {
+  background-color: lightgray;
+  padding: 8px;
+  border-radius: 50%;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 26%;
+  }
 }
