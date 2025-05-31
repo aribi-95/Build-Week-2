@@ -67,9 +67,9 @@ nav img {
   border-radius: 15px;
 }
 
-/*.container {
-  border: 1px solid black;
-}*/
+div.search-bar > div:nth-child(3) > input.datepicker.form-control.input, div.search-bar > div:nth-child(6) > input.datepickerOut.form-control.input{
+  width: 120px;
+}
 
 main {
   margin-top: 70px;

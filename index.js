@@ -73,8 +73,14 @@ function intervalloDate() {
     const checkInDate = new Date(checkInValue);
     const checkOutDate = new Date(checkOutValue);
 
-    const giornoIn = checkInDate.getDate();
+    if(checkOutValue < checkInValue){
+      alert("🕰️ Check-out prima del check-in? Ti serve un TARDIS, non un B&B.")
+    } else {
+      const giornoIn = checkInDate.getDate();
     const giornoOut = checkOutDate.getDate();
+
+    console.log("checkIn:", checkInValue);
+    console.log("checkOut:", checkOutValue);
 
     const meseIn = checkInDate
       .toLocaleString("it-IT", { month: "short" })
@@ -99,18 +105,15 @@ function intervalloDate() {
     const prezzoNotte = 87;
     let prezzoTotale = prezzoNotte * notti;
 
-    document
-      .querySelectorAll(".permanenza")
-      .forEach((el) => (el.textContent = risultato));
-    document
-      .querySelectorAll(".costo")
-      .forEach((el) => (el.textContent = `${prezzoTotale} €`));
-    document
-      .querySelectorAll(".notti")
-      .forEach(
-        (el) => (el.textContent = `${notti} ${notti === 1 ? "notte" : "notti"}`)
-      ); //appare notti se è più di una, altrimenti notte
+    document.querySelectorAll(".permanenza").forEach((el) => (el.textContent = risultato));
+    document.querySelectorAll(".costo").forEach((el) => (el.textContent = `${prezzoTotale} €`));
+    document.querySelectorAll(".notti").forEach((el) => (el.textContent = `${notti} ${notti === 1 ? "notte" : "notti"}`)
+    ); //appare notti se è più di una, altrimenti notte
   }
+
+    }
+
+    
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -147,3 +150,18 @@ meno.addEventListener("click", () => {
     aggiornaInput(valore);
   }
 }); /*da sistemare deve gestire un array */
+
+/*funzione per trasferire i valori dei form in un'altra pagina (da rivedere)
+  function vaiADettaglio() {
+    const checkIn = document.getElementById("checkIn").value;
+    const checkOut = document.getElementById("checkOut").value;
+
+    if (!checkIn || !checkOut) {
+      alert("Seleziona entrambe le date!");
+      return;
+    }
+
+    // Redireziona verso dettaglio.html con le date nella query string
+    window.location.href = `dettaglio.html?checkin=${checkIn}&checkout=${checkOut}`;
+  }
+*/
