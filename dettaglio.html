@@ -205,7 +205,7 @@
                   <input
                     type="date"
                     class="form-control datepicker"
-                    id="checkin"
+                    id="checkIn"
                   />
                 </div>
                 <div class="mb-3">
@@ -213,7 +213,7 @@
                   <input
                     type="date"
                     class="form-control datepicker"
-                    id="checkout"
+                    id="checkOut"
                   />
                 </div>
                 <div class="mb-3">
@@ -479,6 +479,19 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+  <!-- PER OTTENERE I VALORI INSERITI NEI FORM DELL'ALTRA SCHEDA
+  <script>
+  // Recupera parametri dalla query string
+  const params = new URLSearchParams(window.location.search);
+  const checkIn = params.get("checkin");
+  const checkOut = params.get("checkout");
+
+  if (checkIn && checkOut) {
+    document.getElementById("checkIn").value = checkIn;
+    document.getElementById("checkOut").value = checkOut;
+  }
+</script>-->
   
   </body>
 </html>

@@ -1,1924 +1,1542 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clone AirBnb - Homepage</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clone AirBnb - Homepage</title>
 
-    <!--ICONE BOOTSTRAP-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    ;
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <img
-            src="assets/logo-pink.png"
-            alt="AirBnb Logo"
-            width="110px"
-            class="ms-3"
-          />
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="menu-personalizzato">
-            <!-- Alloggi -->
-            <div id="elemento-menu" class="elemento-menu">
-              <img src="assets/icons8-house-64.png" alt="Alloggi" />
-              <div class="etichetta">Alloggi</div>
-            </div>
+  <!--ICONE BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+  ;
+</head>
 
-            <!-- Esperienze -->
-            <div class="elemento-menu">
-              <div class="badge-novita">NOVITÀ</div>
-              <img
-                src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
-                alt="Esperienze"
-              />
-              <div class="etichetta">Esperienze</div>
-            </div>
-
-            <!-- Servizi -->
-            <div class="elemento-menu">
-              <div class="badge-novita">NOVITÀ</div>
-              <img
-                src="https://img.icons8.com/emoji/48/bellhop-bell.png"
-                alt="Servizi"
-              />
-              <div class="etichetta">Servizi</div>
-            </div>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu-personalizzato">
+          <!-- Alloggi -->
+          <div id="elemento-menu" class="elemento-menu">
+            <img src="assets/icons8-house-64.png" alt="Alloggi" />
+            <div class="etichetta">Alloggi</div>
           </div>
 
-          <div class="navbar-text d-flex align-items-center">
-            <a
-              class="opacity-6 text-decoration-none nav-custom-fs ms-4"
-              href="#"
-              >Inizia ad ospitare</a
-            >
-            <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
+          <!-- Esperienze -->
+          <div class="elemento-menu">
+            <div class="badge-novita">NOVITÀ</div>
+            <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+            <div class="etichetta">Esperienze</div>
+          </div>
 
-            <div class="dropdown me-2">
-              <ion-icon
-                class="hamburger-icon dropdown-toggle mb-0"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                name="menu-sharp"
-              ></ion-icon>
-              <img
-                src="assets/propic.png"
-                alt="avatar-1"
-                width="20px"
-                height="20px"
-                class="rounded-5 ms-2"
-              />
+          <!-- Servizi -->
+          <div class="elemento-menu">
+            <div class="badge-novita">NOVITÀ</div>
+            <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+            <div class="etichetta">Servizi</div>
+          </div>
+        </div>
 
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Account</a></li>
-                <li><a class="dropdown-item" href="#">Change account</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Payments</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Settings</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </li>
-              </ul>
+        <div class="navbar-text d-flex align-items-center">
+          <a class="opacity-6 text-decoration-none nav-custom-fs ms-4" href="#">Inizia ad ospitare</a>
+          <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
+
+          <div class="dropdown me-2">
+            <ion-icon class="hamburger-icon dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false"
+              name="menu-sharp"></ion-icon>
+            <img src="assets/propic.png" alt="avatar-1" width="20px" height="20px" class="rounded-5 ms-2" />
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Change account</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Payments</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="search-bar">
+      <div class="search-section hidden-searchBar flex-grow-1">
+        <label>Dove</label>
+        <input id="dropdown" class="dropdown input-field" type="text" placeholder="Cerca destinazioni"
+          data-bs-toggle="dropdown" />
+        <ul id="dropdown-menu" class="dropdown-menu">
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/freccia.webp" alt="freccia" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
+                <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/milano.webp" alt="milano" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
+                <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/parigi.webp" alt="parigi" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
+                <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/firenze.webp" alt="firenze" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Firenze</p>
+                <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="search-section hidden-searchBar">
+        <label>Check-in</label>
+        <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker" />
+      </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="d-none">
+        <p>Inizia la Ricerca</p>
+      </div>
+      <div class="search-section hidden-searchBar">
+        <label>Check-out</label>
+        <input id="checkOut" type="date" value="2025-06-03" placeholder="Aggiungi date" class="datepickerOut" />
+      </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="search-section hidden-searchBar flex-grow-1">
+        <label>Chi</label>
+        <input id="dropdown" class="dropdown input-field input" type="text" readonly placeholder="Aggiungi ospiti"
+          data-bs-toggle="dropdown" />
+        <ul id="dropdown-menu2" class="dropdown-menu">
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div">
+                <p class="mb-0 ms-3">Adulti</p>
+                <p class="mb-0 ms-3">Da 13 in su</p>
+              </div>
+              <div>
+                <button class="button-chi btn-outline-secondary meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div">
+                <p class="mb-0 ms-3">Bambini</p>
+                <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+              </div>
+              <div>
+                <button class="button-chi meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div">
+                <p class="mb-0 ms-3">Neonati</p>
+                <p class="mb-0 ms-3">fino a 2 anni</p>
+              </div>
+              <div>
+                <button id="meno" class="button-chi">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span id="num">0</span>
+                <button id="piu" class="button-chi">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex flex-column size-div">
+                <p class="mb-0 ms-3">Animali domestici</p>
+                <p class="mb-0 ms-3 text-decoration-underline">
+                  Viaggi con un animale di servizio?
+                </p>
+              </div>
+              <div>
+                <button id="meno" class="button-chi">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span id="num">0</span>
+                <button id="piu" class="button-chi">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="menu-personalizzato nascosto">
+      <!-- Alloggi -->
+      <div id="elemento-menu" class="elemento-menu">
+        <img src="assets/icons8-house-64.png" alt="Alloggi" />
+        <div class="etichetta">Alloggi</div>
+      </div>
+
+      <!-- Esperienze -->
+      <div class="elemento-menu">
+        <div class="badge-novita">NOVITÀ</div>
+        <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+        <div class="etichetta">Esperienze</div>
+      </div>
+
+      <!-- Servizi -->
+      <div class="elemento-menu">
+        <div class="badge-novita">NOVITÀ</div>
+        <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+        <div class="etichetta">Servizi</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="gallerie">
+      <section id="gallery-1" class="mt-5 pb">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4><a href="citta.html">Milano: alloggi popolari ></a></h4>
+          <div class="d-flex align-items-center gap-2">
+            <div class="previousButton d-none d-md-block">
+              <button class="carousel-control-prev" type="button" onclick="scrollCarousel(-1)">
+                <i class="bi bi-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+            <div class="nextButton d-none d-md-block">
+              <button class="carousel-control-next" type="button" onclick="scrollCarousel(1)">
+                <i class="bi bi-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
-      </nav>
-      <div class="search-bar">
-        <div class="search-section hidden-searchBar flex-grow-1">
-          <label>Dove</label>
-          <input
-            id="dropdown"
-            class="dropdown input-field"
-            type="text"
-            placeholder="Cerca destinazioni"
-            data-bs-toggle="dropdown"
-          />
-          <ul id="dropdown-menu" class="dropdown-menu">
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/freccia.webp"
-                  alt="freccia"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
-                  <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
+        <div id="carouselFirstRow" class="carousel slide">
+          <!-- Carosello -->
+          <div class="scrolling-wrapper" id="carousel1">
+            <!-- Card 1 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <img src="assets/stanze/0b6f1d1e-7f7b-40cb-b8d0-f25d4fe4602b.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Milano</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,8
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/0f8d8d87-03ec-4e7f-933c-56be68eb82ee.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Navigli</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,97
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/172ceed4-3c2c-4a9f-9000-ec54bcad7c2d.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Milano</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,8
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/1bbe2995-f95d-4337-8ed9-ed338832d3a3.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Ticinese</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,8
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/1f994268-22b9-41b6-b487-e78795b04fc3.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Navigli</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,91
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/215fe61d_original.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Milano</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/23b5c332-82ca-4e23-8e92-20b3a7a21998.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Porta Romana</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,9
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/264100f1-01c0-496d-bed2-60026714a2c6.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Bovisa</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery-2" class="mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4>
+            <a href="citta.html">Parigi: disponibili questo weekend ></a>
+          </h4>
+          <div class="d-flex align-items-center gap-2">
+            <div class="previousButton d-none d-md-block">
+              <button class="carousel-control-prev" type="button" onclick="scrollCarousel2(-1)">
+                <i class="bi bi-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+            <div class="nextButton d-none d-md-block">
+              <button class="carousel-control-next" type="button" onclick="scrollCarousel2(1)">
+                <i class="bi bi-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="carouselSecondRow" class="carousel slide">
+          <!-- Carosello 2 -->
+          <div class="scrolling-wrapper" id="carousel2">
+            <!-- Card 1 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/30f6bfcb-645f-47d0-a05d-48e86db858a7.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Parigi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host
+                      professionista
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/6321bbb3-0a99-41e8-bfe6-33d4eef9f510.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Stanza condivisa &middot; Parigi
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,63
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart flex-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/a557bb4a-4ba2-4f11-961f-c79c2b578648.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Parigi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,95
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Parigi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,83
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/c1d8ede4-431f-4b0e-8176-a90a8ad4b794.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Nanterre</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,7
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/42d5a276-0230-4adb-8abd-d8c12b8a9bac.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Stanza condivisa &middot; Vanves
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/727d4620-4c58-4d77-a1ae-079d6e6d3f6b.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Stanza condivisa &middot; Pantin
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,82
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Parigi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,84
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery-3" class="mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4>
+            <a href="citta.html">Roma: disponibili il prossimo mese ></a>
+          </h4>
+          <div class="d-flex align-items-center gap-2">
+            <div class="previousButton d-none d-md-block">
+              <button class="carousel-control-prev" type="button" onclick="scrollCarousel3(-1)">
+                <i class="bi bi-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+            <div class="nextButton d-none d-md-block">
+              <button class="carousel-control-next" type="button" onclick="scrollCarousel3(1)">
+                <i class="bi bi-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="carouselSecondRow" class="carousel slide">
+          <!-- Carosello 3 -->
+          <div class="scrolling-wrapper" id="carousel3">
+            <!-- Card 1 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/bb3011e3-6e9f-4e22-9b39-847c53273ff9.png" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Flaminio</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,76
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/bad83fd4-341c-4ad7-bbfb-65415562c21e.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Portuense</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,9
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart flex-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/bb1d23cb-1c92-4a09-b6c8-a5cde986053d.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Roma</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,36
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Roma</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/fd5f6fc5-c4a0-432a-9035-efa4b4d452d2.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Tuscolano</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,46
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/42d5a276-0230-4adb-8abd-d8c12b8a9bac.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Appartamento &middot; Pietralata
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,96
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/ca85c570-8f73-4cfa-a616-6c6f7fcffd3c.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza condivisa &middot; Roma</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,9
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Loft &middot; Roma</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,92
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery-4" class="mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4><a href="citta.html">Firenze: alloggi ></a></h4>
+          <div class="d-flex align-items-center gap-2">
+            <div class="previousButton d-none d-md-block">
+              <button class="carousel-control-prev" type="button" onclick="scrollCarousel4(-1)">
+                <i class="bi bi-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+            <div class="nextButton d-none d-md-block">
+              <button class="carousel-control-next" type="button" onclick="scrollCarousel4(1)">
+                <i class="bi bi-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="carouselSecondRow" class="carousel slide">
+          <!-- Carosello 4 -->
+          <div class="scrolling-wrapper" id="carousel4">
+            <!-- Card 1 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/37275cca-04c8-4fd0-a226-a790436fdf41.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Firenze</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,94
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/5ed70808-2afd-4ea1-8b8f-53ec281c20ca.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Rifredi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,77
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart flex-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/bb1d23cb-1c92-4a09-b6c8-a5cde986053d.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Appartamento &middot; Centro Storico
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; Nuovo
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Rifredi</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,71
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/fd5f6fc5-c4a0-432a-9035-efa4b4d452d2.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Stanza a Novoli</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,67
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/ab400d10-230c-43c0-b93c-7734fa8cc667.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">Appartamento &middot; Soffiano</h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,94
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill invisible">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/778d3799-e436-468d-81ea-bde01e287d06.jpg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Stanza condivisa &middot; Firenze
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 4,62
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card-container">
+              <div class="card">
+                <div class="cardPicture">
+                  <div class="badgeCard">
+                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                    <div class="heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                        focusable="false">
+                        <path
+                          d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <img src="assets/stanze/37275cca-04c8-4fd0-a226-a790436fdf41.jpeg" />
+                </div>
+                <div class="cardDescription">
+                  <div>
+                    <h5 class="card-title">
+                      Appartamento &middot; Sesto Fiorentino
+                    </h5>
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      <span class="permanenza"></span> &middot; Host privato
+                    </p>
+                    <p>
+                      <span class="costo"></span> per
+                      <span class="notti"></span> &middot; &starf; 5,0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="mt-5 py-2">
+    <div id="colonne-footer" class="container-fluid">
+      <div class="row text-start">
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Assistenza</strong></li>
+            <li><a href="#" class="footer-links">Centro Assistenza</a></li>
+            <li><a href="#" class="footer-links">AirCover</a></li>
+            <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
+            <li>
+              <a href="#" class="footer-links">Supporto alla disabilita'</a>
             </li>
             <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/milano.webp"
-                  alt="milano"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
-                  <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
-                </div>
-              </div>
+              <a href="#" class="footer-links">Opzioni di cancellazione</a>
             </li>
             <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/parigi.webp"
-                  alt="parigi"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
-                  <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/firenze.webp"
-                  alt="firenze"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Firenze</p>
-                  <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
-                </div>
-              </div>
+              <a href="#" class="footer-links">Segnala problema nel quartiere</a>
             </li>
           </ul>
         </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="search-section hidden-searchBar">
-          <label>Check-in</label>
-          <input
-            id="checkIn"
-            type="date"
-            value="2025-05-26"
-            placeholder="Aggiungi date"
-            class="datepicker"
-          />
-        </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="d-none">
-          <p>Inizia la Ricerca</p>
-        </div>
-        <div class="search-section hidden-searchBar">
-          <label>Check-out</label>
-          <input
-            id="checkOut"
-            type="date"
-            value="2025-06-03"
-            placeholder="Aggiungi date"
-            class="datepicker"
-          />
-        </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="search-section hidden-searchBar flex-grow-1">
-          <label>Chi</label>
-          <input
-            id="dropdown"
-            class="dropdown input-field input"
-            type="text"
-            readonly
-            placeholder="Aggiungi ospiti"
-            data-bs-toggle="dropdown"
-          />
-          <ul id="dropdown-menu2" class="dropdown-menu">
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Ospitare</strong></li>
             <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div class="d-flex flex-column size-div">
-                  <p class="mb-0 ms-3">Adulti</p>
-                  <p class="mb-0 ms-3">Da 13 in su</p>
-                </div>
-                <div>
-                  <button class="button-chi btn-outline-secondary meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
+              <a href="#" class="footer-links">Centro Apri un Airbnb</a>
             </li>
             <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div class="d-flex flex-column size-div">
-                  <p class="mb-0 ms-3">Bambini</p>
-                  <p class="mb-0 ms-3">Da 2 a 12 anni</p>
-                </div>
-                <div>
-                  <button class="button-chi meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
+              <a href="#" class="footer-links">AirCover per gli host</a>
+            </li>
+            <li><a href="#" class="footer-links">Risorse per gli host</a></li>
+            <li>
+              <a href="#" class="footer-links">Forum della community</a>
             </li>
             <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div class="d-flex flex-column size-div">
-                  <p class="mb-0 ms-3">Neonati</p>
-                  <p class="mb-0 ms-3">fino a 2 anni</p>
-                </div>
-                <div>
-                  <button id="meno" class="button-chi">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span id="num">0</span>
-                  <button id="piu" class="button-chi">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
+              <a href="#" class="footer-links">Ospitare responsabilmente</a>
             </li>
             <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3"
-              >
-                <div class="d-flex flex-column size-div">
-                  <p class="mb-0 ms-3">Animali domestici</p>
-                  <p class="mb-0 ms-3 text-decoration-underline">
-                    Viaggi con un animale di servizio?
-                  </p>
-                </div>
-                <div>
-                  <button id="meno" class="button-chi">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span id="num">0</span>
-                  <button id="piu" class="button-chi">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
+              <a href="#" class="footer-links">Partecipa a una lezione gratuita sull'ospitalita'</a>
+            </li>
+            <li><a href="#" class="footer-links">Trova un co-host</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Airbnb</strong></li>
+            <li><a href="#" class="footer-links">2025 Summer Release</a></li>
+            <li><a href="#" class="footer-links">Newsroom</a></li>
+            <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
+            <li>
+              <a href="#" class="footer-links">Opportunita' di lavoro</a>
+            </li>
+            <li><a href="#" class="footer-links">Investitori</a></li>
+            <li><a href="#" class="footer-links">Gift card</a></li>
+            <li>
+              <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
             </li>
           </ul>
         </div>
-        <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
-          <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </div>
+    <div id="social-icons-links"
+      class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap">
+      <div id="social-links" style="padding-top: 15px">
+        <p>
+          © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
+            Privacy</a>
+          &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a href="#" class="footer-links">
+            Mappa del sito</a>
+          &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
+        </p>
+      </div>
+      <div id="social-icons">
+        <button title="Scegli la lingua" class="pe-3">
+          <span><ion-icon name="globe-outline" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 14px"></ion-icon> </span>Italiano (IT)
+        </button>
+        <button title="Scegli una valuta" class="pe-3">
+          <span><ion-icon name="logo-euro" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 12px"></ion-icon></span>EUR
+        </button>
+        <div class="d-flex align-items-center justify-content-between" style="gap: 15px">
+          <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
         </div>
       </div>
-      <div class="menu-personalizzato nascosto">
-        <!-- Alloggi -->
-        <div id="elemento-menu" class="elemento-menu">
-          <img src="assets/icons8-house-64.png" alt="Alloggi" />
-          <div class="etichetta">Alloggi</div>
-        </div>
+    </div>
+  </footer>
 
-        <!-- Esperienze -->
-        <div class="elemento-menu">
-          <div class="badge-novita">NOVITÀ</div>
-          <img
-            src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
-            alt="Esperienze"
-          />
-          <div class="etichetta">Esperienze</div>
-        </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script>
+    //INPUT CHECK-IN
+    flatpickr(".datepicker", {
+      altInput: true,
+      altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
+      dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
+      minDate: "today", // Opzionale: disabilita le date passate
+      defaultDate: "today", // Imposta oggi come valore predefinito
+      //maxDate per data di checkout massima
+      locale: "it",  // per avere il calendario in lingua italiana
 
-        <!-- Servizi -->
-        <div class="elemento-menu">
-          <div class="badge-novita">NOVITÀ</div>
-          <img
-            src="https://img.icons8.com/emoji/48/bellhop-bell.png"
-            alt="Servizi"
-          />
-          <div class="etichetta">Servizi</div>
-        </div>
-      </div>
-    </header>
+    });
 
-    <main>
-      <div id="gallerie">
-        <section id="gallery-1" class="mt-5 pb">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4><a href="citta.html">Milano: alloggi popolari ></a></h4>
-            <div class="d-flex align-items-center gap-2">
-              <div class="previousButton d-none d-md-block">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  onclick="scrollCarousel(-1)"
-                >
-                  <i class="bi bi-chevron-left"></i>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-              <div class="nextButton d-none d-md-block">
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  onclick="scrollCarousel(1)"
-                >
-                  <i class="bi bi-chevron-right"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="carouselFirstRow" class="carousel slide">
-            <!-- Carosello -->
-            <div class="scrolling-wrapper" id="carousel1">
-              <!-- Card 1 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
+    //per calcolare il giorno successivo a quello inserito nel check-in
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
 
-                    <img
-                      src="assets/stanze/0b6f1d1e-7f7b-40cb-b8d0-f25d4fe4602b.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Milano</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,8
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/0f8d8d87-03ec-4e7f-933c-56be68eb82ee.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Navigli</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,97
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/172ceed4-3c2c-4a9f-9000-ec54bcad7c2d.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Milano</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,8
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/1bbe2995-f95d-4337-8ed9-ed338832d3a3.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Ticinese</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,8
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/1f994268-22b9-41b6-b487-e78795b04fc3.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Navigli</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,91
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img src="assets/stanze/215fe61d_original.jpg" />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Milano</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 7 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/23b5c332-82ca-4e23-8e92-20b3a7a21998.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Porta Romana</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,9
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 8 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/264100f1-01c0-496d-bed2-60026714a2c6.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Bovisa</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="gallery-2" class="mt-5">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4>
-              <a href="citta.html">Parigi: disponibili questo weekend ></a>
-            </h4>
-            <div class="d-flex align-items-center gap-2">
-              <div class="previousButton d-none d-md-block">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  onclick="scrollCarousel2(-1)"
-                >
-                  <i class="bi bi-chevron-left"></i>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-              <div class="nextButton d-none d-md-block">
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  onclick="scrollCarousel2(1)"
-                >
-                  <i class="bi bi-chevron-right"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="carouselSecondRow" class="carousel slide">
-            <!-- Carosello 2 -->
-            <div class="scrolling-wrapper" id="carousel2">
-              <!-- Card 1 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/30f6bfcb-645f-47d0-a05d-48e86db858a7.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Parigi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host
-                        professionista
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/6321bbb3-0a99-41e8-bfe6-33d4eef9f510.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Stanza condivisa &middot; Parigi
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,63
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart flex-end">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/a557bb4a-4ba2-4f11-961f-c79c2b578648.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Parigi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,95
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Parigi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,83
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/c1d8ede4-431f-4b0e-8176-a90a8ad4b794.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Nanterre</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,7
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/42d5a276-0230-4adb-8abd-d8c12b8a9bac.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Stanza condivisa &middot; Vanves
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 7 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/727d4620-4c58-4d77-a1ae-079d6e6d3f6b.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Stanza condivisa &middot; Pantin
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,82
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 8 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Parigi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,84
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="gallery-3" class="mt-5">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4>
-              <a href="citta.html">Roma: disponibili il prossimo mese ></a>
-            </h4>
-            <div class="d-flex align-items-center gap-2">
-              <div class="previousButton d-none d-md-block">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  onclick="scrollCarousel3(-1)"
-                >
-                  <i class="bi bi-chevron-left"></i>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-              <div class="nextButton d-none d-md-block">
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  onclick="scrollCarousel3(1)"
-                >
-                  <i class="bi bi-chevron-right"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="carouselSecondRow" class="carousel slide">
-            <!-- Carosello 3 -->
-            <div class="scrolling-wrapper" id="carousel3">
-              <!-- Card 1 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/bb3011e3-6e9f-4e22-9b39-847c53273ff9.png"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Flaminio</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,76
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/bad83fd4-341c-4ad7-bbfb-65415562c21e.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Portuense</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,9
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart flex-end">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/bb1d23cb-1c92-4a09-b6c8-a5cde986053d.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Roma</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,36
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Roma</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/fd5f6fc5-c4a0-432a-9035-efa4b4d452d2.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Tuscolano</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,46
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/42d5a276-0230-4adb-8abd-d8c12b8a9bac.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Appartamento &middot; Pietralata
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,96
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 7 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/ca85c570-8f73-4cfa-a616-6c6f7fcffd3c.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza condivisa &middot; Roma</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,9
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 8 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Loft &middot; Roma</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,92
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="gallery-4" class="mt-5">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4><a href="citta.html">Firenze: alloggi ></a></h4>
-            <div class="d-flex align-items-center gap-2">
-              <div class="previousButton d-none d-md-block">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  onclick="scrollCarousel4(-1)"
-                >
-                  <i class="bi bi-chevron-left"></i>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-              <div class="nextButton d-none d-md-block">
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  onclick="scrollCarousel4(1)"
-                >
-                  <i class="bi bi-chevron-right"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="carouselSecondRow" class="carousel slide">
-            <!-- Carosello 4 -->
-            <div class="scrolling-wrapper" id="carousel4">
-              <!-- Card 1 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/37275cca-04c8-4fd0-a226-a790436fdf41.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Firenze</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,94
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/5ed70808-2afd-4ea1-8b8f-53ec281c20ca.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Rifredi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,77
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart flex-end">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/bb1d23cb-1c92-4a09-b6c8-a5cde986053d.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Appartamento &middot; Centro Storico
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; Nuovo
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/65aaa7ab-cdc1-42f7-947b-779c1d791567.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Rifredi</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,71
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/fd5f6fc5-c4a0-432a-9035-efa4b4d452d2.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Stanza a Novoli</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,67
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/ab400d10-230c-43c0-b93c-7734fa8cc667.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">Appartamento &middot; Soffiano</h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,94
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 7 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill invisible"
-                        >Amato dagli ospiti</span
-                      >
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/778d3799-e436-468d-81ea-bde01e287d06.jpg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Stanza condivisa &middot; Firenze
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 4,62
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 8 -->
-              <div class="card-container">
-                <div class="card">
-                  <div class="cardPicture">
-                    <div class="badgeCard">
-                      <span class="badge rounded-pill">Amato dagli ospiti</span>
-                      <div class="heart">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                          role="presentation"
-                          focusable="false"
-                        >
-                          <path
-                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <img
-                      src="assets/stanze/37275cca-04c8-4fd0-a226-a790436fdf41.jpeg"
-                    />
-                  </div>
-                  <div class="cardDescription">
-                    <div>
-                      <h5 class="card-title">
-                        Appartamento &middot; Sesto Fiorentino
-                      </h5>
-                    </div>
-                    <div class="card-text">
-                      <p>
-                        <span class="permanenza"></span> &middot; Host privato
-                      </p>
-                      <p>
-                        <span class="costo"></span> per
-                        <span class="notti"></span> &middot; &starf; 5,0
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+    //INPUT CHECK-OUT
+    flatpickr(".datepickerOut", {
+      altInput: true,
+      altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
+      dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
+      minDate: tomorrow, // Opzionale: disabilita le date passate
+      defaultDate: tomorrow, // Imposta il giorno successivo come valore predefinito
+      //maxDate per data di checkout massima
+      locale: "it"  // per avere il calendario in lingua italiana
+    });
+  </script>
+</body>
 
-    <footer class="mt-5 py-2">
-      <div id="colonne-footer" class="container-fluid">
-        <div class="row text-start">
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Assistenza</strong></li>
-              <li><a href="#" class="footer-links">Centro Assistenza</a></li>
-              <li><a href="#" class="footer-links">AirCover</a></li>
-              <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
-              <li>
-                <a href="#" class="footer-links">Supporto alla disabilita'</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Opzioni di cancellazione</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Segnala problema nel quartiere</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Ospitare</strong></li>
-              <li>
-                <a href="#" class="footer-links">Centro Apri un Airbnb</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">AirCover per gli host</a>
-              </li>
-              <li><a href="#" class="footer-links">Risorse per gli host</a></li>
-              <li>
-                <a href="#" class="footer-links">Forum della community</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Ospitare responsabilmente</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Partecipa a una lezione gratuita sull'ospitalita'</a
-                >
-              </li>
-              <li><a href="#" class="footer-links">Trova un co-host</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Airbnb</strong></li>
-              <li><a href="#" class="footer-links">2025 Summer Release</a></li>
-              <li><a href="#" class="footer-links">Newsroom</a></li>
-              <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
-              <li>
-                <a href="#" class="footer-links">Opportunita' di lavoro</a>
-              </li>
-              <li><a href="#" class="footer-links">Investitori</a></li>
-              <li><a href="#" class="footer-links">Gift card</a></li>
-              <li>
-                <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        id="social-icons-links"
-        class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap"
-      >
-        <div id="social-links" style="padding-top: 15px">
-          <p>
-            © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
-              Privacy</a
-            >
-            &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a
-              href="#"
-              class="footer-links"
-            >
-              Mappa del sito</a
-            >
-            &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
-          </p>
-        </div>
-        <div id="social-icons">
-          <button title="Scegli la lingua" class="pe-3">
-            <span
-              ><ion-icon
-                name="globe-outline"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 14px"
-              ></ion-icon> </span
-            >Italiano (IT)
-          </button>
-          <button title="Scegli una valuta" class="pe-3">
-            <span
-              ><ion-icon
-                name="logo-euro"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 12px"
-              ></ion-icon></span
-            >EUR
-          </button>
-          <div
-            class="d-flex align-items-center justify-content-between"
-            style="gap: 15px"
-          >
-            <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js"></script>
-    <script>
-      flatpickr(".datepicker", {
-        dateFormat: "d-m-Y", // Formato della data: 2025-05-30
-        minDate: "today", // Opzionale: disabilita le date passate
-        defaultDate: "today", // Imposta oggi come valore predefinito
-        //maxDate per data di checkout massima
-      });
-    </script>
-  </body>
 </html>
