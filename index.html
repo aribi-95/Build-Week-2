@@ -78,7 +78,7 @@
       </div>
     </nav>
     <div class="search-bar">
-      <div class="search-section hidden-searchBar flex-grow-1">
+      <div id="searchSection"  class="search-section hidden-searchBar flex-grow-1">
         <label>Dove</label>
         <input id="dropdown" class="dropdown input-field" type="text" placeholder="Cerca destinazioni"
           data-bs-toggle="dropdown" />
@@ -138,11 +138,11 @@
       <div class="search-section hidden-searchBar flex-grow-1">
         <label>Chi</label>
         <input id="dropdown" class="dropdown input-field input" type="text" readonly placeholder="Aggiungi ospiti"
-          data-bs-toggle="dropdown" />
+          data-bs-toggle="dropdown" data-bs-auto-close="outside" />
         <ul id="dropdown-menu2" class="dropdown-menu">
           <li>
-            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-              <div class="d-flex flex-column size-div">
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo" >
+              <div class="d-flex flex-column size-div nomeRow" data-type="adulti">
                 <p class="mb-0 ms-3">Adulti</p>
                 <p class="mb-0 ms-3">Da 13 in su</p>
               </div>
@@ -159,12 +159,12 @@
           </li>
           <li>
             <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-              <div class="d-flex flex-column size-div">
+              <div class="d-flex flex-column size-div nomeRow" data-type="bambini">
                 <p class="mb-0 ms-3">Bambini</p>
                 <p class="mb-0 ms-3">Da 2 a 12 anni</p>
               </div>
               <div>
-                <button class="button-chi meno">
+                <button class="button-chi btn-outline-secondary meno">
                   <ion-icon name="remove-outline"></ion-icon>
                 </button>
                 <span class="num">0</span>
@@ -176,16 +176,16 @@
           </li>
           <li>
             <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-              <div class="d-flex flex-column size-div">
+              <div class="d-flex flex-column size-div nomeRow" data-type="neonati">
                 <p class="mb-0 ms-3">Neonati</p>
                 <p class="mb-0 ms-3">fino a 2 anni</p>
               </div>
               <div>
-                <button id="meno" class="button-chi">
+                <button class="button-chi btn-outline-secondary meno">
                   <ion-icon name="remove-outline"></ion-icon>
                 </button>
-                <span id="num">0</span>
-                <button id="piu" class="button-chi">
+                <span class="num">0</span>
+                <button class="button-chi piu">
                   <ion-icon name="add-outline"></ion-icon>
                 </button>
               </div>
@@ -193,18 +193,18 @@
           </li>
           <li>
             <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex flex-column size-div">
+              <div class="d-flex flex-column size-div nomeRow" data-type="animali">
                 <p class="mb-0 ms-3">Animali domestici</p>
                 <p class="mb-0 ms-3 text-decoration-underline">
                   Viaggi con un animale di servizio?
                 </p>
               </div>
               <div>
-                <button id="meno" class="button-chi">
+                <button class="button-chi btn-outline-secondary meno">
                   <ion-icon name="remove-outline"></ion-icon>
                 </button>
-                <span id="num">0</span>
-                <button id="piu" class="button-chi">
+                <span class="num">0</span>
+                <button class="button-chi piu">
                   <ion-icon name="add-outline"></ion-icon>
                 </button>
               </div>
