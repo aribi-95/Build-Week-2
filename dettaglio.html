@@ -1,559 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
-    <!--ICONE BOOTSTRAP-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="dettaglio.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <title>Clone Airbnb - Pagina appartamento</title>
-  </head>
 
-  <body>
-    <header></header>
-    <main class="mb-5" style="margin: 20px 100px">
-      <section id="main-imgs">
-        <div class="d-flex justify-content-between align-items-center">
-          <h1>Un piccolo angolo tranquillo nel cuore di Milano</h1>
-          <div class="me-3 d-flex align-items-center" id="apt-links">
-            <a href="#" class="d-flex"
-              ><ion-icon name="share-outline" class="outline"></ion-icon>
-              Condividi</a
-            >
-            <a href="#" class="d-flex align-items-center"
-              ><ion-icon name="heart-outline" class="outline"></ion-icon>
-              Salva</a
-            >
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clone Airbnb - Pagina appartamento</title>
+  <link rel="icon" href="assets/iconairbnb.png">
+  <!--CSS BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <!--ICONE BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!--CSS PERSONALIZZATI-->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="dettaglio.css" />
+  <!--IONICONS-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--FLATPICKR-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+  
+</head>
+
+<body>
+  <header></header>
+  <main class="mb-5" style="margin: 20px 100px">
+    <section id="main-imgs">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1>Un piccolo angolo tranquillo nel cuore di Milano</h1>
+        <div class="me-3 d-flex align-items-center" id="apt-links">
+          <a href="#" class="d-flex"><ion-icon name="share-outline" class="outline"></ion-icon>
+            Condividi</a>
+          <a href="#" class="d-flex align-items-center"><ion-icon name="heart-outline" class="outline"></ion-icon>
+            Salva</a>
         </div>
-        <div id="img-grid" class="image-grid">
-          <div class="image-box">
-            <img
-              class="main-img"
-              src="assets/stanze/2bbdeea1-ca15-47fa-a705-4ac536edcb0b.jpg"
-              alt="Main view"
-            />
-          </div>
-          <div class="image-box second">
-            <div class="image-row">
-              <div>
-                <img
-                  src="assets/stanze/34814c2c-264a-41d2-8394-14b82fe6eda9.jpeg"
-                  alt="Secondary view"
-                />
-              </div>
-              <div>
-                <img
-                  src="assets/stanze/38db0ba7-0d32-430a-8e84-c66a31c73324.jpeg"
-                  alt="Secondary view"
-                />
-              </div>
+      </div>
+      <div id="img-grid" class="image-grid">
+        <div class="image-box">
+          <img class="main-img" src="assets/stanze/2bbdeea1-ca15-47fa-a705-4ac536edcb0b.jpg" alt="Main view" />
+        </div>
+        <div class="image-box second">
+          <div class="image-row">
+            <div>
+              <img src="assets/stanze/34814c2c-264a-41d2-8394-14b82fe6eda9.jpeg" alt="Secondary view" />
             </div>
-            <div class="image-row">
-              <div>
-                <img
-                  src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg"
-                  alt="Secondary view"
-                />
-              </div>
-              <div>
-                <img
-                  src="assets/stanze/0f8d8d87-03ec-4e7f-933c-56be68eb82ee.jpeg"
-                  alt="Secondary view"
-                />
-              </div>
+            <div>
+              <img src="assets/stanze/38db0ba7-0d32-430a-8e84-c66a31c73324.jpeg" alt="Secondary view" />
+            </div>
+          </div>
+          <div class="image-row">
+            <div>
+              <img src="assets/stanze/a77ab52b-50aa-45be-995c-c1a2510cee20.jpg" alt="Secondary view" />
+            </div>
+            <div>
+              <img src="assets/stanze/0f8d8d87-03ec-4e7f-933c-56be68eb82ee.jpeg" alt="Secondary view" />
             </div>
           </div>
         </div>
-        <div id="quick-info" class="mt-4">
-          <h4>Stanza - Milano, Italia</h4>
-          <p>1 letto singolo &bull; Bagno condiviso</p>
+      </div>
+      <div id="quick-info" class="mt-4">
+        <h4>Stanza - Milano, Italia</h4>
+        <p>1 letto singolo &bull; Bagno condiviso</p>
+      </div>
+    </section>
+
+    <section id="prenotazione" class="container">
+      <div class="row">
+        <!-- Colonna 1: booking-info -->
+        <div class="col-md-8" id="booking-info">
+          <section id="booking-info">
+            <div id="soggiorna-da" class="d-flex" style="margin-top: 80px; gap: 20px">
+              <div>
+                <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              </div>
+              <div>
+                <h6>Soggiorna da //</h6>
+                <p class="custom-opacity">Superhost - 6 anni da host</p>
+              </div>
+            </div>
+
+            <hr />
+            <div id="dettagli-soggiorno">
+              <div class="d-flex p-2 pt-4" style="gap: 15px">
+                <p>
+                  <ion-icon class="icone-dettaglio" name="earth-outline"></ion-icon>
+                </p>
+                <div>
+                  <h6>
+                    Consigliatissimo dagli ospiti di questo paese: Italia
+                  </h6>
+                  <p class="custom-opacity">
+                    Il 100% degli ospiti provenienti da questo paese (Italia)
+                    che hanno soggiornato nell'alloggio nell'ultimo anno ha
+                    assegnato 5 stelle come valutazione complessiva.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex p-2" style="gap: 15px">
+                <p>
+                  <ion-icon name="checkmark-done-outline" class="icone-dettaglio"></ion-icon>
+                </p>
+                <div>
+                  <h6>Self check-in</h6>
+                  <p class="custom-opacity">
+                    Puoi effettuare il check-in con il personale
+                    dell'edificio.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex p-2" style="gap: 15px">
+                <p>
+                  <ion-icon name="calendar-outline" class="icone-dettaglio"></ion-icon>
+                </p>
+                <div>
+                  <h6>
+                    Cancellazione gratuita a 10 giorni dal pernottamento
+                  </h6>
+                  <p class="custom-opacity">
+                    Se dovessi cambiare idea, riceverai un rimborso totale.
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </div>
+
+            <div id="alloggio" class="py-4">
+              <h4 class="mb-3">A proposito di questo alloggio</h4>
+              <p>
+                Quartiere storico e pittoresco del centro di Milano. Musei e
+                divertimenti nelle vicinanze. Ristoranti del mondo e
+                minimarket.
+              </p>
+              <h6>Durante il tuo soggiorno</h6>
+              <p>
+                Sono facilmente raggiugibile per qualsiasi informazione o
+                risoluzione necessaria!
+              </p>
+            </div>
+            <hr />
+            <div id="cosa-troverai">
+              <h4 class="mb-4">Cosa troverai</h4>
+              <div class="d-flex">
+                <div class="row d-flex flex-column">
+                  <div class="col py-2">
+                    <ion-icon name="flower-outline"></ion-icon> Vista sul
+                    cortile
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="restaurant-outline"></ion-icon>Cucina
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
+                    Netflix
+                  </div>
+                </div>
+
+                <div class="row d-flex flex-column">
+                  <div class="col py-2">
+                    <ion-icon name="wifi-outline"></ion-icon>Wi-fi
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="aperture-outline"></ion-icon> Lavatrice
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="rose-outline"></ion-icon> Cortile
+                  </div>
+                </div>
+              </div>
+              <button id="altri-servizi" class="my-5">
+                Mostra altri servizi
+              </button>
+            </div>
+          </section>
         </div>
-      </section>
-
-      <section id="prenotazione" class="container">
-        <div class="row">
-          <!-- Colonna 1: booking-info -->
-          <div class="col-md-8" id="booking-info">
-            <section id="booking-info">
-              <div
-                id="soggiorna-da"
-                class="d-flex"
-                style="margin-top: 80px; gap: 20px"
-              >
-                <div>
-                  <img
-                    src="assets/propic.png"
-                    alt="avatar-1"
-                    width="50px"
-                    height="50px"
-                    class="rounded-5 ms-2"
-                  />
-                </div>
-                <div>
-                  <h6>Soggiorna da //</h6>
-                  <p class="custom-opacity">Superhost - 6 anni da host</p>
-                </div>
+        <!-- Colonna 2: form -->
+        <div class="col-md-4" id="formPrenota">
+          <div id="form-sticky-wrapper">
+            <div id="occasione" class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2">
+              <img src="assets/Animation - 1748628240106.gif" />
+              <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
+            </div>
+            <div class="p-4 shadow rounded-3 bg-light">
+              <div class="d-flex">
+                <h4 class="prezzoNotte"></h4>
+                <span class="align-self-center">&nbsp;&nbsp;a notte</span>
               </div>
-
-              <hr />
-              <div id="dettagli-soggiorno">
-                <div class="d-flex p-2 pt-4" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      class="icone-dettaglio"
-                      name="earth-outline"
-                    ></ion-icon>
-                  </p>
+              <form>
+                <div class="d-flex mt-3">
                   <div>
-                    <h6>
-                      Consigliatissimo dagli ospiti di questo paese: Italia
-                    </h6>
-                    <p class="custom-opacity">
-                      Il 100% degli ospiti provenienti da questo paese (Italia)
-                      che hanno soggiornato nell'alloggio nell'ultimo anno ha
-                      assegnato 5 stelle come valutazione complessiva.
-                    </p>
-                  </div>
-                </div>
-                <div class="d-flex p-2" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      class="icone-dettaglio"
-                    ></ion-icon>
-                  </p>
-                  <div>
-                    <h6>Self check-in</h6>
-                    <p class="custom-opacity">
-                      Puoi effettuare il check-in con il personale
-                      dell'edificio.
-                    </p>
-                  </div>
-                </div>
-                <div class="d-flex p-2" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      name="calendar-outline"
-                      class="icone-dettaglio"
-                    ></ion-icon>
-                  </p>
-                  <div>
-                    <h6>
-                      Cancellazione gratuita a 10 giorni dal pernottamento
-                    </h6>
-                    <p class="custom-opacity">
-                      Se dovessi cambiare idea, riceverai un rimborso totale.
-                    </p>
-                  </div>
-                </div>
-                <hr />
-              </div>
-
-              <div id="alloggio" class="py-4">
-                <h4 class="mb-3">A proposito di questo alloggio</h4>
-                <p>
-                  Quartiere storico e pittoresco del centro di Milano. Musei e
-                  divertimenti nelle vicinanze. Ristoranti del mondo e
-                  minimarket.
-                </p>
-                <h6>Durante il tuo soggiorno</h6>
-                <p>
-                  Sono facilmente raggiugibile per qualsiasi informazione o
-                  risoluzione necessaria!
-                </p>
-              </div>
-              <hr />
-              <div id="cosa-troverai">
-                <h4 class="mb-4">Cosa troverai</h4>
-                <div class="d-flex">
-                  <div class="row d-flex flex-column">
-                    <div class="col py-2">
-                      <ion-icon name="flower-outline"></ion-icon> Vista sul
-                      cortile
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="restaurant-outline"></ion-icon>Cucina
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
-                      Netflix
-                    </div>
-                  </div>
-
-                  <div class="row d-flex flex-column">
-                    <div class="col py-2">
-                      <ion-icon name="wifi-outline"></ion-icon>Wi-fi
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="aperture-outline"></ion-icon> Lavatrice
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="rose-outline"></ion-icon> Cortile
-                    </div>
-                  </div>
-                </div>
-                <button id="altri-servizi" class="my-5">
-                  Mostra altri servizi
-                </button>
-              </div>
-            </section>
-          </div>
-          <!-- Colonna 2: form -->
-          <div class="col-md-4" id="formPrenota">
-            <div id="form-sticky-wrapper">
-              <div
-                id="occasione"
-                class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2"
-              >
-                <img src="assets/Animation - 1748628240106.gif" />
-                <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
-              </div>
-              <div class="p-4 shadow rounded-3 bg-light">
-                <h4>Prenota ora</h4>
-                <form>
-                  <div class="mb-3">
                     <label for="checkin" class="form-label">Check-in</label>
-                    <input
-                      type="date"
-                      class="form-control datepicker"
-                      id="checkIn"
-                    />
+                    <input type="date" class="form-control datepicker" id="checkIn" />
                   </div>
-                  <div class="mb-3">
+                  <div>
                     <label for="checkout" class="form-label">Check-out</label>
-                    <input
-                      type="date"
-                      class="form-control datepicker"
-                      id="checkOut"
-                    />
+                    <input type="date" class="form-control datepickerOut" id="checkOut" />
                   </div>
-                  <div class="mb-3">
-                    <label for="guests" class="form-label">Ospiti</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="guests"
-                      min="1"
-                      value="1"
-                    />
+                </div>
+                <div class="mb-3">
+                  <label for="guests" class="form-label">Ospiti</label>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <input id="dropdownForm" class="dropdown input-field input" type="text" readonly
+                      placeholder="1 ospite" data-bs-toggle="dropdown" data-bs-auto-close="outside" />
+                    <ul id="dropdown-menu2" class="dropdown-menu">
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div">
+                            <p class="mb-0 ms-3">Adulti</p>
+                            <p class="mb-0 ms-3">Da 13 in su</p>
+                          </div>
+                          <div>
+                            <button type="button" class="button-chi btn-outline-secondary">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div">
+                            <p class="mb-0 ms-3">Bambini</p>
+                            <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+                          </div>
+                          <div>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div">
+                            <p class="mb-0 ms-3">Neonati</p>
+                            <p class="mb-0 ms-3">fino a 2 anni</p>
+                          </div>
+                          <div>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span id="num">0</span>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3">
+                          <div class="d-flex flex-column size-div">
+                            <p class="mb-0 ms-3">Animali domestici</p>
+                            <p class="mb-0 ms-3 text-decoration-underline">
+                              Viaggi con un animale di servizio?
+                            </p>
+                          </div>
+                          <div>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span id="num">0</span>
+                            <button type="button" class="button-chi">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <i class="bi bi-chevron-down"></i>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    Prenota
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr />
-      <section>
-        <section id="recensioni">
-          <div class="row gx-5">
-            <div class="col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Lorena</h6>
-                  <p>6 anni su Airbnb</p>
                 </div>
-              </div>
-
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 1 settimana fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>
-                  Ancora una volta, soggiorno perfetto con tutto il necessario e
-                  Christelle e' stata sempre estremamente disponibile,
-                  offrendoci di lasciare i bagagli l'ultimo giorno.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Hazariah</h6>
-                  <p>9 anni su Airbnb</p>
+                <button type="submit" class="btn w-100">
+                  Prenota
+                </button>
+                <p>Non riceverai alcun addebito in questa fase</p>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-decoration-underline" role="button"><span class="prezzoNotte"> x</span><span id="notti"></span></div>
+                    <span id="costoNottiTotale"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Costi di pulizia</span>
+                    <span id="costoPulizia"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Costi del servizio AirBnB</span>
+                    <span id="costoServizio"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Tasse</span>
+                    <span id="costoTasse"></span>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between fw-bold">
+                    <span>Totale</span>
+                    <span id="costoTotale"></span>
+                  </div>
                 </div>
-              </div>
-
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star-half" class="star"></ion-icon
-                  ><ion-icon name="star-outline" class="star"></ion-icon>
-                  <span style="font-weight: 500">&middot; 2 settimane fa</span>
-                  &middot;
-                  <span class="custom-opacity">Ha soggiornato una notte </span>
-                </p>
-                <p>
-                  Adoro il posto, lo condividi solo con il proprietario che e'
-                  davvero gentile.
-                </p>
-              </div>
+              </form>
             </div>
-          </div>
-          <div class="row gx-5">
-            <div class="col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Gabriella</h6>
-                  <p>2 anni su Airbnb</p>
-                </div>
-              </div>
-
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star-half" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 1 settimana fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>Ottimo Airbnb.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Samayah</h6>
-                  <p>1 anno su Airbnb</p>
-                </div>
-              </div>
-
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 4 settimane fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>
-                  Onestamente uno dei posti migliori in cui abbia mai
-                  soggiornato con il miglior host. Rilassato, riservato e
-                  amichevole, ho davvero apprezzato la pulizia e la cura.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <hr />
-      <section id="dove-sarai">
-        <h6>Dove sarai</h6>
-        <p>Navigli, Milano</p>
-      </section>
-    </main>
-
-    <footer class="mt-5 py-2">
-      <div id="colonne-footer" class="container-fluid">
-        <div class="row text-start">
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Assistenza</strong></li>
-              <li><a href="#" class="footer-links">Centro Assistenza</a></li>
-              <li><a href="#" class="footer-links">AirCover</a></li>
-              <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
-              <li>
-                <a href="#" class="footer-links">Supporto alla disabilita'</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Opzioni di cancellazione</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Segnala problema nel quartiere</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Ospitare</strong></li>
-              <li>
-                <a href="#" class="footer-links">Centro Apri un Airbnb</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">AirCover per gli host</a>
-              </li>
-              <li><a href="#" class="footer-links">Risorse per gli host</a></li>
-              <li>
-                <a href="#" class="footer-links">Forum della community</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Ospitare responsabilmente</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Partecipa a una lezione gratuita sull'ospitalita'</a
-                >
-              </li>
-              <li><a href="#" class="footer-links">Trova un co-host</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Airbnb</strong></li>
-              <li><a href="#" class="footer-links">2025 Summer Release</a></li>
-              <li><a href="#" class="footer-links">Newsroom</a></li>
-              <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
-              <li>
-                <a href="#" class="footer-links">Opportunita' di lavoro</a>
-              </li>
-              <li><a href="#" class="footer-links">Investitori</a></li>
-              <li><a href="#" class="footer-links">Gift card</a></li>
-              <li>
-                <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      <div
-        id="social-icons-links"
-        class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap"
-      >
-        <div id="social-links" style="padding-top: 15px">
-          <p>
-            © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
-              Privacy</a
-            >
-            &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a
-              href="#"
-              class="footer-links"
-            >
-              Mappa del sito</a
-            >
-            &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
-          </p>
-        </div>
-        <div id="social-icons">
-          <button title="Scegli la lingua" class="pe-3">
-            <span
-              ><ion-icon
-                name="globe-outline"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 14px"
-              ></ion-icon> </span
-            >Italiano (IT)
-          </button>
-          <button title="Scegli una valuta" class="pe-3">
-            <span
-              ><ion-icon
-                name="logo-euro"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 12px"
-              ></ion-icon></span
-            >EUR
-          </button>
-          <div
-            class="d-flex align-items-center justify-content-between"
-            style="gap: 15px"
-          >
-            <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
+    </section>
+    <hr />
+    <section>
+      <section id="recensioni">
+        <div class="row gx-5">
+          <div class="col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Lorena</h6>
+                <p>6 anni su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 1 settimana fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>
+                Ancora una volta, soggiorno perfetto con tutto il necessario e
+                Christelle e' stata sempre estremamente disponibile,
+                offrendoci di lasciare i bagagli l'ultimo giorno.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Hazariah</h6>
+                <p>9 anni su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star-half" class="star"></ion-icon><ion-icon
+                  name="star-outline" class="star"></ion-icon>
+                <span style="font-weight: 500">&middot; 2 settimane fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato una notte </span>
+              </p>
+              <p>
+                Adoro il posto, lo condividi solo con il proprietario che e'
+                davvero gentile.
+              </p>
+            </div>
           </div>
         </div>
+        <div class="row gx-5">
+          <div class="col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Gabriella</h6>
+                <p>2 anni su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star-half" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 1 settimana fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>Ottimo Airbnb.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Samayah</h6>
+                <p>1 anno su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 4 settimane fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>
+                Onestamente uno dei posti migliori in cui abbia mai
+                soggiornato con il miglior host. Rilassato, riservato e
+                amichevole, ho davvero apprezzato la pulizia e la cura.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <hr />
+    <section id="dove-sarai">
+      <h6>Dove sarai</h6>
+      <p>Navigli, Milano</p>
+    </section>
+  </main>
+
+  <footer class="mt-5 py-2">
+    <div id="colonne-footer" class="container-fluid">
+      <div class="row text-start">
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Assistenza</strong></li>
+            <li><a href="#" class="footer-links">Centro Assistenza</a></li>
+            <li><a href="#" class="footer-links">AirCover</a></li>
+            <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
+            <li>
+              <a href="#" class="footer-links">Supporto alla disabilita'</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Opzioni di cancellazione</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Segnala problema nel quartiere</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Ospitare</strong></li>
+            <li>
+              <a href="#" class="footer-links">Centro Apri un Airbnb</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">AirCover per gli host</a>
+            </li>
+            <li><a href="#" class="footer-links">Risorse per gli host</a></li>
+            <li>
+              <a href="#" class="footer-links">Forum della community</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Ospitare responsabilmente</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Partecipa a una lezione gratuita sull'ospitalita'</a>
+            </li>
+            <li><a href="#" class="footer-links">Trova un co-host</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Airbnb</strong></li>
+            <li><a href="#" class="footer-links">2025 Summer Release</a></li>
+            <li><a href="#" class="footer-links">Newsroom</a></li>
+            <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
+            <li>
+              <a href="#" class="footer-links">Opportunita' di lavoro</a>
+            </li>
+            <li><a href="#" class="footer-links">Investitori</a></li>
+            <li><a href="#" class="footer-links">Gift card</a></li>
+            <li>
+              <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
+    </div>
+    <div id="social-icons-links"
+      class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap">
+      <div id="social-links" style="padding-top: 15px">
+        <p>
+          © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
+            Privacy</a>
+          &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a href="#" class="footer-links">
+            Mappa del sito</a>
+          &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
+        </p>
+      </div>
+      <div id="social-icons">
+        <button title="Scegli la lingua" class="pe-3">
+          <span><ion-icon name="globe-outline" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 14px"></ion-icon> </span>Italiano (IT)
+        </button>
+        <button title="Scegli una valuta" class="pe-3">
+          <span><ion-icon name="logo-euro" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 12px"></ion-icon></span>EUR
+        </button>
+        <div class="d-flex align-items-center justify-content-between" style="gap: 15px">
+          <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 
-    <!-- PER OTTENERE I VALORI INSERITI NEI FORM DELL'ALTRA SCHEDA
-  <script>
-  // Recupera parametri dalla query string
-  const params = new URLSearchParams(window.location.search);
-  const checkIn = params.get("checkin");
-  const checkOut = params.get("checkout");
+  <script src="dettaglio.js"></script>
+</body>
 
-  if (checkIn && checkOut) {
-    document.getElementById("checkIn").value = checkIn;
-    document.getElementById("checkOut").value = checkOut;
-  }
-</script>-->
-  </body>
 </html>

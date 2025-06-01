@@ -159,3 +159,51 @@ h1 {
   top: 20px;
   z-index: 10;
 }
+
+form>div.d-flex.mt-3>div:nth-child(1)>label, form>div.d-flex.mt-3>div:nth-child(2)>label, div:nth-child(2) > form > div.mb-3 > label  {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0;
+}
+
+input.form-control.datepicker.input, input.form-control.datepickerOut.input{
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+form > div.d-flex.mt-3 > div:nth-child(1), form > div.d-flex.mt-3 > div:nth-child(2), div:nth-child(2) > form > div.mb-3 {
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#dropdownForm{
+background: none;
+border: none;
+width: 100%;
+outline: none;
+}
+
+div:nth-child(2) > form > button{
+  background-color: #fb345a;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  height: 48px;
+}
+
+div:nth-child(2) > form > button:hover{
+  background-color: #fb345a;
+  color: white;
+  transform: scale(1.05);
+}
+
+div:nth-child(2) > form > p{
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
