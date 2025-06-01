@@ -153,3 +153,9 @@ h1 {
   line-height: 16px;
   margin: 0;
 }
+
+#formPrenota > #form-sticky-wrapper {
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+}
