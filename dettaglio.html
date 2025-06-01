@@ -94,7 +94,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section id="prenotazione" class="container">
         <div class="row">
           <!-- Colonna 1: booking-info -->
           <div class="col-md-8" id="booking-info">
@@ -224,46 +224,48 @@
           </div>
           <!-- Colonna 2: form -->
           <div class="col-md-4" id="formPrenota">
-            <div
-              id="occasione"
-              class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2"
-            >
-              <img src="assets/Animation - 1748628240106.gif" />
-              <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
-            </div>
-            <div class="p-4 shadow rounded-3 bg-light">
-              <h4>Prenota ora</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="checkin" class="form-label">Check-in</label>
-                  <input
-                    type="date"
-                    class="form-control datepicker"
-                    id="checkIn"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="checkout" class="form-label">Check-out</label>
-                  <input
-                    type="date"
-                    class="form-control datepicker"
-                    id="checkOut"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="guests" class="form-label">Ospiti</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="guests"
-                    min="1"
-                    value="1"
-                  />
-                </div>
-                <button type="submit" class="btn btn-primary w-100">
-                  Prenota
-                </button>
-              </form>
+            <div id="form-sticky-wrapper">
+              <div
+                id="occasione"
+                class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2"
+              >
+                <img src="assets/Animation - 1748628240106.gif" />
+                <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
+              </div>
+              <div class="p-4 shadow rounded-3 bg-light">
+                <h4>Prenota ora</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">Check-in</label>
+                    <input
+                      type="date"
+                      class="form-control datepicker"
+                      id="checkIn"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkout" class="form-label">Check-out</label>
+                    <input
+                      type="date"
+                      class="form-control datepicker"
+                      id="checkOut"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="guests" class="form-label">Ospiti</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="guests"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Prenota
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
