@@ -43,12 +43,24 @@ function scrollCarousel4(direction) {
   });
 }
 
+////////////////si espande il tasto CERCA//////////////////////////////////
 const inputFields = document.querySelectorAll(".input-field");
 const searchBtn = document.getElementById("searchBtn");
 const searchIcon = document.getElementById("searchIcon");
+const searchbar = document.querySelector(".search-bar");
+const searchsection = document.getElementById("searchSection");
+const dropdown = document.getElementById ("dropdown");
+const classeInput = document.querySelector(".input")
+
+
 
 inputFields.forEach((field) => {
   field.addEventListener("focus", () => {
+    searchbar.classList.add("searchBarMod");
+    searchsection.classList.add("searchSectionMod");
+    dropdown.classList.add("dropdownMod");
+    classeInput.style.backgroundColor = "#ebebeb";
+    
     searchBtn.classList.add("expanded");
     searchBtn.innerHTML =
       '<ion-icon name="search-outline"></ion-icon> <span>Cerca</span>';
@@ -57,6 +69,10 @@ inputFields.forEach((field) => {
   field.addEventListener("blur", () => {
     setTimeout(() => {
       if (![...inputFields].some((f) => f === document.activeElement)) {
+        searchbar.classList.remove("searchBarMod");
+        searchsection.classList.remove("searchSectionMod");
+        dropdown.classList.remove("dropdownMod");
+        classeInput.style.backgroundColor = "";
         searchBtn.classList.remove("expanded");
         searchBtn.innerHTML = '<ion-icon name="search-outline"></ion-icon>';
       }
@@ -125,31 +141,72 @@ document.querySelectorAll(".heart").forEach((heart) => {
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-const meno = document.querySelectorAll(".meno");
-const piu = document.querySelectorAll(".piu");
-const num = document.querySelectorAll(".num");
+
+////////////////Gestione OSPITI//////////////////////////////////
 const outputInput = document.querySelector(".input");
-console.log(meno, piu, num, outputInput);
+const nomeRows = document.querySelectorAll('.nomeRow');
 
-function aggiornaInput(value) {
-  num.textContent = value;
-  outputInput.value = value;
-  meno.disabled = value === 0;
-}
+nomeRows.forEach(row => {
+  const tipo = row.getAttribute("data-type");
+  const container = row.closest("li"); 
 
-piu.addEventListener("click", () => {
-  let valore = parseInt(num.textContent, 10);
-  console.log(valore);
-  valore++;
-  aggiornaInput(valore);
-});
-meno.addEventListener("click", () => {
-  let valore = parseInt(num.textContent, 10);
-  if (valore > 0) {
-    valore--;
-    aggiornaInput(valore);
+  const meno = container.querySelector(".meno");
+  const piu = container.querySelector(".piu");
+  const num = container.querySelector(".num");
+
+  function aggBottMeno() {
+    const value = parseInt(num.textContent, 10);
+    meno.disabled = value === 0;
   }
-}); /*da sistemare deve gestire un array */
+
+  function aggTestoInput() {
+    let adulti = 0, bambini = 0, neonati = 0, animali = 0;
+
+    nomeRows.forEach(r => {
+      const tipo = r.getAttribute("data-type");
+      const numSpan = r.closest("li").querySelector(".num");
+      const val = parseInt(numSpan.textContent, 10);
+
+      if (tipo === 'adulti') adulti = val;
+      if (tipo === 'bambini') bambini = val;
+      if (tipo === 'neonati') neonati = val;
+      if (tipo === 'animali') animali = val;
+    });
+
+    let parts = [];
+    const totalePersone = adulti + bambini + neonati;
+
+    if (totalePersone > 0) parts.push(`${totalePersone} ${totalePersone === 1 ? 'Ospite' : 'Ospiti'}`);
+    if (animali > 0) parts.push(`${animali} ${animali === 1 ? 'animale' : 'animali'}`);
+
+    outputInput.value = parts.length > 0 ? parts.join(', ') : 'Aggiungi ospiti';
+  }
+
+  piu.addEventListener("click", () => {
+    let valore = parseInt(num.textContent, 10);
+    valore++;
+    num.textContent = valore;
+    aggBottMeno();
+    aggTestoInput();
+  });
+
+  meno.addEventListener("click", () => {
+    let valore = parseInt(num.textContent, 10);
+    if (valore > 0) {
+      valore--;
+      num.textContent = valore;
+      aggBottMeno();
+      aggTestoInput();
+    }
+  });
+
+  aggBottMeno();
+});
+
+//////////////////cambiare sfondo mentre c'è focus su un input ////////////////////
+/*const inputFields2 = document.querySelectorAll(".input-field");
+console.log(inputFields2);*/
+
 
 /*funzione per trasferire i valori dei form in un'altra pagina (da rivedere)
   function vaiADettaglio() {
