@@ -1,5 +1,28 @@
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+#apt-links {
+  gap: 10px;
+}
+
+#apt-links a {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  gap: 6px;
+}
+
+#apt-links a:hover {
+  background-color: #f7f7f7;
+  border-radius: 15px;
+}
+
+#apt-links .outline {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .custom-opacity {
@@ -59,11 +82,45 @@ h1 {
   }
 }
 
+#dettagli-soggiorno {
+  line-height: 1.25rem;
+}
+
+#dettagli-soggiorno h6 {
+  font-size: 0.875rem;
+  margin-bottom: 0.1rem;
+}
+
+#dettagli-soggiorno p {
+  font-size: 0.875rem;
+}
+
+#dettagli-soggiorno p > .icone-dettaglio {
+  font-size: 1.5rem;
+}
+
 #alloggio h4 {
   padding-bottom: 0;
 }
 #alloggio p {
   line-height: 1.5;
+}
+
+#cosa-troverai .row.d-flex.flex-column {
+  flex-basis: 50%;
+}
+
+#recensioni .col-md-6 {
+  width: 45%;
+}
+
+#recensioni .paragrafo-piccolo {
+  margin-bottom: 2px;
+  font-size: 0.875rem;
+}
+
+#recensioni .star {
+  font-size: 10px;
 }
 
 @media (max-width: 768px) {
@@ -80,14 +137,17 @@ h1 {
   #apt-links {
     display: none;
   }
+  #cosa-troverai .row.d-flex.flex-column {
+    flex-basis: 100%;
+  }
 }
 
-#occasione img{
+#occasione img {
   width: 30px;
   height: 30px;
 }
 
-#occasione p{
+#occasione p {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 16px;

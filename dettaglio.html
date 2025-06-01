@@ -38,9 +38,15 @@
       <section id="main-imgs">
         <div class="d-flex justify-content-between align-items-center">
           <h1>Un piccolo angolo tranquillo nel cuore di Milano</h1>
-          <div class="me-3 g-5" id="apt-links">
-            <a href="#"><ion-icon name="share-outline"></ion-icon> Condividi</a>
-            <a href="#"><ion-icon name="heart-outline"></ion-icon> Salva</a>
+          <div class="me-3 d-flex align-items-center" id="apt-links">
+            <a href="#" class="d-flex"
+              ><ion-icon name="share-outline" class="outline"></ion-icon>
+              Condividi</a
+            >
+            <a href="#" class="d-flex align-items-center"
+              ><ion-icon name="heart-outline" class="outline"></ion-icon>
+              Salva</a
+            >
           </div>
         </div>
         <div id="img-grid" class="image-grid">
@@ -114,36 +120,58 @@
               </div>
 
               <hr />
-              <div class="d-flex p-3 pt-4">
-                <p><ion-icon name="earth-outline"></ion-icon></p>
-                <div>
-                  <h6>Consigliatissimo dagli ospiti di questo paese: Italia</h6>
-                  <p class="custom-opacity">
-                    Il 100% degli ospiti provenienti da questo paese (Italia)
-                    che hanno soggiornato nell'alloggio nell'ultimo anno ha
-                    assegnato 5 stelle come valutazione complessiva.
+              <div id="dettagli-soggiorno">
+                <div class="d-flex p-2 pt-4" style="gap: 15px">
+                  <p>
+                    <ion-icon
+                      class="icone-dettaglio"
+                      name="earth-outline"
+                    ></ion-icon>
                   </p>
+                  <div>
+                    <h6>
+                      Consigliatissimo dagli ospiti di questo paese: Italia
+                    </h6>
+                    <p class="custom-opacity">
+                      Il 100% degli ospiti provenienti da questo paese (Italia)
+                      che hanno soggiornato nell'alloggio nell'ultimo anno ha
+                      assegnato 5 stelle come valutazione complessiva.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="d-flex p-3">
-                <p><ion-icon name="checkmark-done-outline"></ion-icon></p>
-                <div>
-                  <h6>Self check-in</h6>
-                  <p class="custom-opacity">
-                    Puoi effettuare il check-in con il personale dell'edificio.
+                <div class="d-flex p-2" style="gap: 15px">
+                  <p>
+                    <ion-icon
+                      name="checkmark-done-outline"
+                      class="icone-dettaglio"
+                    ></ion-icon>
                   </p>
+                  <div>
+                    <h6>Self check-in</h6>
+                    <p class="custom-opacity">
+                      Puoi effettuare il check-in con il personale
+                      dell'edificio.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="d-flex p-3">
-                <p><ion-icon name="calendar-outline"></ion-icon></p>
-                <div>
-                  <h6>Cancellazione gratuita a 10 giorni dal pernottamento</h6>
-                  <p class="custom-opacity">
-                    Se dovessi cambiare idea, riceverai un rimborso totale.
+                <div class="d-flex p-2" style="gap: 15px">
+                  <p>
+                    <ion-icon
+                      name="calendar-outline"
+                      class="icone-dettaglio"
+                    ></ion-icon>
                   </p>
+                  <div>
+                    <h6>
+                      Cancellazione gratuita a 10 giorni dal pernottamento
+                    </h6>
+                    <p class="custom-opacity">
+                      Se dovessi cambiare idea, riceverai un rimborso totale.
+                    </p>
+                  </div>
                 </div>
+                <hr />
               </div>
-              <hr />
 
               <div id="alloggio" class="py-4">
                 <h4 class="mb-3">A proposito di questo alloggio</h4>
@@ -158,33 +186,39 @@
                   risoluzione necessaria!
                 </p>
               </div>
+              <hr />
               <div id="cosa-troverai">
-                <h4>Cosa troverai</h4>
-                <div class="row d-flex flex-column">
-                  <div class="col">
-                    <ion-icon name="flower-outline"></ion-icon> Vista sul
-                    cortile
-                  </div>
-                  <div class="col">
-                    <ion-icon name="restaurant-outline"></ion-icon>Cucina
-                  </div>
-                  <div class="col">
-                    <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
-                    Netflix
+                <h4 class="mb-4">Cosa troverai</h4>
+                <div class="d-flex">
+                  <div class="row d-flex flex-column">
+                    <div class="col py-2">
+                      <ion-icon name="flower-outline"></ion-icon> Vista sul
+                      cortile
+                    </div>
+                    <div class="col py-2">
+                      <ion-icon name="restaurant-outline"></ion-icon>Cucina
+                    </div>
+                    <div class="col py-2">
+                      <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
+                      Netflix
+                    </div>
                   </div>
 
                   <div class="row d-flex flex-column">
-                    <div class="col">
+                    <div class="col py-2">
                       <ion-icon name="wifi-outline"></ion-icon>Wi-fi
                     </div>
-                    <div class="col">
+                    <div class="col py-2">
                       <ion-icon name="aperture-outline"></ion-icon> Lavatrice
                     </div>
-                    <div class="col">
+                    <div class="col py-2">
                       <ion-icon name="rose-outline"></ion-icon> Cortile
                     </div>
                   </div>
                 </div>
+                <button id="altri-servizi" class="my-5">
+                  Mostra altri servizi
+                </button>
               </div>
             </section>
           </div>
@@ -234,12 +268,12 @@
           </div>
         </div>
       </section>
-
+      <hr />
       <section>
         <section id="recensioni">
-          <div class="row">
-            <div class="col">
-              <div class="d-flex" style="margin-top: 80px; gap: 20px">
+          <div class="row gx-5">
+            <div class="col-md-6">
+              <div class="d-flex" style="margin-top: 60px; gap: 20px">
                 <img
                   src="assets/propic.png"
                   alt="avatar-1"
@@ -254,9 +288,19 @@
               </div>
 
               <div>
-                <p>
-                  ***** <strong>1 settimana fa</strong> - Ha soggiornato qualche
-                  notte
+                <p class="paragrafo-piccolo">
+                  <ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><span style="font-weight: 500">
+                    &middot; 1 settimana fa</span
+                  >
+                  &middot;
+                  <span class="custom-opacity"
+                    >Ha soggiornato qualche notte
+                  </span>
                 </p>
                 <p>
                   Ancora una volta, soggiorno perfetto con tutto il necessario e
@@ -265,8 +309,8 @@
                 </p>
               </div>
             </div>
-            <div class="col">
-              <div class="d-flex" style="margin-top: 80px; gap: 20px">
+            <div class="col-md-6">
+              <div class="d-flex" style="margin-top: 60px; gap: 20px">
                 <img
                   src="assets/propic.png"
                   alt="avatar-1"
@@ -275,27 +319,32 @@
                   class="rounded-5 ms-2"
                 />
                 <div>
-                  <h6>Lorena</h6>
-                  <p>6 anni su Airbnb</p>
+                  <h6>Hazariah</h6>
+                  <p>9 anni su Airbnb</p>
                 </div>
               </div>
 
               <div>
-                <p>
-                  ***** <strong>1 settimana fa</strong> - Ha soggiornato qualche
-                  notte
+                <p class="paragrafo-piccolo">
+                  <ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star-half" class="star"></ion-icon
+                  ><ion-icon name="star-outline" class="star"></ion-icon>
+                  <span style="font-weight: 500">&middot; 2 settimane fa</span>
+                  &middot;
+                  <span class="custom-opacity">Ha soggiornato una notte </span>
                 </p>
                 <p>
-                  Ancora una volta, soggiorno perfetto con tutto il necessario e
-                  Christelle e' stata sempre estremamente disponibile,
-                  offrendoci di lasciare i bagagli l'ultimo giorno.
+                  Adoro il posto, lo condividi solo con il proprietario che e'
+                  davvero gentile.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="d-flex" style="margin-top: 80px; gap: 20px">
+          <div class="row gx-5">
+            <div class="col-md-6">
+              <div class="d-flex" style="margin-top: 60px; gap: 20px">
                 <img
                   src="assets/propic.png"
                   alt="avatar-1"
@@ -304,25 +353,31 @@
                   class="rounded-5 ms-2"
                 />
                 <div>
-                  <h6>Lorena</h6>
-                  <p>6 anni su Airbnb</p>
+                  <h6>Gabriella</h6>
+                  <p>2 anni su Airbnb</p>
                 </div>
               </div>
 
               <div>
-                <p>
-                  ***** <strong>1 settimana fa</strong> - Ha soggiornato qualche
-                  notte
+                <p class="paragrafo-piccolo">
+                  <ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star-half" class="star"></ion-icon
+                  ><span style="font-weight: 500">
+                    &middot; 1 settimana fa</span
+                  >
+                  &middot;
+                  <span class="custom-opacity"
+                    >Ha soggiornato qualche notte
+                  </span>
                 </p>
-                <p>
-                  Ancora una volta, soggiorno perfetto con tutto il necessario e
-                  Christelle e' stata sempre estremamente disponibile,
-                  offrendoci di lasciare i bagagli l'ultimo giorno.
-                </p>
+                <p>Ottimo Airbnb.</p>
               </div>
             </div>
-            <div class="col">
-              <div class="d-flex" style="margin-top: 80px; gap: 20px">
+            <div class="col-md-6">
+              <div class="d-flex" style="margin-top: 60px; gap: 20px">
                 <img
                   src="assets/propic.png"
                   alt="avatar-1"
@@ -331,37 +386,43 @@
                   class="rounded-5 ms-2"
                 />
                 <div>
-                  <h6>Lorena</h6>
-                  <p>6 anni su Airbnb</p>
+                  <h6>Samayah</h6>
+                  <p>1 anno su Airbnb</p>
                 </div>
               </div>
 
               <div>
-                <p>
-                  ***** <strong>1 settimana fa</strong> - Ha soggiornato qualche
-                  notte
+                <p class="paragrafo-piccolo">
+                  <ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><ion-icon name="star" class="star"></ion-icon
+                  ><span style="font-weight: 500">
+                    &middot; 4 settimane fa</span
+                  >
+                  &middot;
+                  <span class="custom-opacity"
+                    >Ha soggiornato qualche notte
+                  </span>
                 </p>
                 <p>
-                  Ancora una volta, soggiorno perfetto con tutto il necessario e
-                  Christelle e' stata sempre estremamente disponibile,
-                  offrendoci di lasciare i bagagli l'ultimo giorno.
+                  Onestamente uno dei posti migliori in cui abbia mai
+                  soggiornato con il miglior host. Rilassato, riservato e
+                  amichevole, ho davvero apprezzato la pulizia e la cura.
                 </p>
               </div>
             </div>
           </div>
         </section>
       </section>
+      <hr />
+      <section id="dove-sarai">
+        <h6>Dove sarai</h6>
+        <p>Navigli, Milano</p>
+      </section>
     </main>
-    <span class="ms-5"
-      ><a href="localbw2.html"
-        >Link di collegamento alla Homepage - provvisorio</a
-      ></span
-    >
-    <span class="ms-5"
-      ><a href="localbw2city.html"
-        >Link di collegamento alla pagina citta' - provvisorio</a
-      ></span
-    >
+
     <footer class="mt-5 py-2">
       <div id="colonne-footer" class="container-fluid">
         <div class="row text-start">
@@ -480,7 +541,7 @@
       crossorigin="anonymous"
     ></script>
 
-  <!-- PER OTTENERE I VALORI INSERITI NEI FORM DELL'ALTRA SCHEDA
+    <!-- PER OTTENERE I VALORI INSERITI NEI FORM DELL'ALTRA SCHEDA
   <script>
   // Recupera parametri dalla query string
   const params = new URLSearchParams(window.location.search);
@@ -492,6 +553,5 @@
     document.getElementById("checkOut").value = checkOut;
   }
 </script>-->
-  
   </body>
 </html>
