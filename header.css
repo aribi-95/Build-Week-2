@@ -246,6 +246,9 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
 .nascosto {
     display: none;
 }
+.inRicDi {
+    display: none;
+}
 
 @media (max-width: 743px) {
     .navbar {
@@ -257,7 +260,7 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
         padding: 0;
         position: fixed;
         top: 85px;
-        z-index: 998;
+        z-index: 2;
         width: 100%;
         padding: 10px 0;
         border-radius: 50px;
@@ -269,11 +272,11 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
     }
 
 
-    .d-none {
+    .inRicDi {
         display: block !important;
     }
 
-    .d-none p {
+    .inRicDi p {
         margin: 0;
         font-weight: bold;
         font-size: 20px;
@@ -289,7 +292,7 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
         gap: 10px;
         position: fixed;
         width: 100%;
-        z-index: 1000;
+        z-index: 3;
     }
 
 }
