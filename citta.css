@@ -70,6 +70,7 @@ body {
 }
 
 .cardAppartamentoCitta a {
+    position: relative;
     text-decoration: none;
 }
 
@@ -194,4 +195,52 @@ body {
 .contenutoIcona:hover {
     background: rgb(241, 241, 241);
     transform: scale(1.2);
+}
+
+.leaflet-popup-content .badgeCard {
+    display: none;
+}
+
+.badgeCard {
+    width: 90.5%;
+    padding: 0 5%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+span.badge {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding-inline: 9.5px;
+}
+
+.heart svg {
+    display: block;
+    fill: rgba(0, 0, 0, 0.5);
+    height: 22px;
+    width: 22px;
+    stroke: white;
+    stroke-width: 2;
+    overflow: visible;
+    transition: transform 0.2s ease;
+}
+
+.heart svg:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    fill: #ff385c;
+}
+
+.heart.active svg {
+    fill: #ff385c;
 }
