@@ -1,741 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="citta.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!--FLATPICKR-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+        <title>Clone AirBnb - pagina citta'</title>
+        <link rel="icon" href="assets/iconairbnb.png" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="citta.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>Clone AirBnb - pagina citta'</title>
-    <link rel="icon" href="assets/iconairbnb.png" />
-</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="index.html"><img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="menu-personalizzato">
+                        <!-- Alloggi -->
+                        <div id="elemento-menu" class="elemento-menu">
+                            <img src="assets/icons8-house-64.png" alt="Alloggi" />
+                            <div class="etichetta">Alloggi</div>
+                        </div>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a href="index.html"><img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="menu-personalizzato">
-                    <!-- Alloggi -->
-                    <div id="elemento-menu" class="elemento-menu">
-                        <img src="assets/icons8-house-64.png" alt="Alloggi" />
-                        <div class="etichetta">Alloggi</div>
+                        <!-- Esperienze -->
+                        <div class="elemento-menu">
+                            <div class="badge-novita">NOVITÀ</div>
+                            <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+                            <div class="etichetta">Esperienze</div>
+                        </div>
+
+                        <!-- Servizi -->
+                        <div class="elemento-menu">
+                            <div class="badge-novita">NOVITÀ</div>
+                            <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+                            <div class="etichetta">Servizi</div>
+                        </div>
                     </div>
 
-                    <!-- Esperienze -->
-                    <div class="elemento-menu">
-                        <div class="badge-novita">NOVITÀ</div>
-                        <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
-                            alt="Esperienze" />
-                        <div class="etichetta">Esperienze</div>
-                    </div>
+                    <div class="navbar-text d-flex align-items-center">
+                        <a class="opacity-6 text-decoration-none nav-custom-fs ms-4" href="#">Inizia ad ospitare</a>
+                        <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
 
-                    <!-- Servizi -->
-                    <div class="elemento-menu">
-                        <div class="badge-novita">NOVITÀ</div>
-                        <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
-                        <div class="etichetta">Servizi</div>
+                        <div class="dropdown me-2">
+                            <ion-icon class="hamburger-icon dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" name="menu-sharp"></ion-icon>
+                            <img src="assets/propic.png" alt="avatar-1" width="20px" height="20px" class="rounded-5 ms-2" />
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Account</a></li>
+                                <li><a class="dropdown-item" href="#">Change account</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Payments</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </nav>
+            <div class="search-bar">
+                <div id="searchSection" class="search-section hidden-searchBar flex-grow-1">
+                    <label>Dove</label>
+                    <input id="dropdown" class="dropdown input-field" type="text" placeholder="Cerca destinazioni" data-bs-toggle="dropdown" />
+                    <ul id="dropdown-menu" class="dropdown-menu">
+                        <li>
+                            <div class="d-flex align-items-center pb-3">
+                                <img class="dimensione-icone" src="assets/freccia.webp" alt="freccia" />
+                                <div>
+                                    <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
+                                    <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center pb-3">
+                                <img class="dimensione-icone" src="assets/milano.webp" alt="milano" />
+                                <div>
+                                    <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
+                                    <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center pb-3">
+                                <img class="dimensione-icone" src="assets/parigi.webp" alt="parigi" />
+                                <div>
+                                    <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
+                                    <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center pb-3">
+                                <img class="dimensione-icone" src="assets/firenze.webp" alt="firenze" />
+                                <div>
+                                    <p class="mb-0 ms-3 fw-bold">Firenze</p>
+                                    <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="divider hidden-searchBar"></div>
+                <div class="search-section hidden-searchBar">
+                    <label>Check-in</label>
+                    <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker input-field" />
+                </div>
+                <div class="divider hidden-searchBar"></div>
+                <div class="d-none">
+                    <p>Inizia la Ricerca</p>
+                </div>
+                <div class="search-section hidden-searchBar">
+                    <label>Check-out</label>
+                    <input id="checkOut" type="date" value="2025-06-03" placeholder="Aggiungi date" class="datepickerOut input-field" />
+                </div>
+                <div class="divider hidden-searchBar"></div>
+                <div class="search-section hidden-searchBar flex-grow-1">
+                    <label>Chi</label>
+                    <input id="dropdown" class="dropdown input-field input" type="text" readonly placeholder="Aggiungi ospiti" data-bs-toggle="dropdown" data-bs-auto-close="outside" />
+                    <ul id="dropdown-menu2" class="dropdown-menu">
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                                <div class="d-flex flex-column size-div nomeRow" data-type="adulti">
+                                    <p class="mb-0 ms-3">Adulti</p>
+                                    <p class="mb-0 ms-3">Da 13 in su</p>
+                                </div>
+                                <div>
+                                    <button class="button-chi btn-outline-secondary meno">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+                                    <span class="num">0</span>
+                                    <button class="button-chi piu">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                                <div class="d-flex flex-column size-div nomeRow" data-type="bambini">
+                                    <p class="mb-0 ms-3">Bambini</p>
+                                    <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+                                </div>
+                                <div>
+                                    <button class="button-chi btn-outline-secondary meno">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+                                    <span class="num">0</span>
+                                    <button class="button-chi piu">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                                <div class="d-flex flex-column size-div nomeRow" data-type="neonati">
+                                    <p class="mb-0 ms-3">Neonati</p>
+                                    <p class="mb-0 ms-3">fino a 2 anni</p>
+                                </div>
+                                <div>
+                                    <button class="button-chi btn-outline-secondary meno">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+                                    <span class="num">0</span>
+                                    <button class="button-chi piu">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center pb-3">
+                                <div class="d-flex flex-column size-div nomeRow" data-type="animali">
+                                    <p class="mb-0 ms-3">Animali domestici</p>
+                                    <p class="mb-0 ms-3 text-decoration-underline">Viaggi con un animale di servizio?</p>
+                                </div>
+                                <div>
+                                    <button class="button-chi btn-outline-secondary meno">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+                                    <span class="num">0</span>
+                                    <button class="button-chi piu">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="menu-personalizzato nascosto">
+                <!-- Alloggi -->
+                <div id="elemento-menu" class="elemento-menu">
+                    <img src="assets/icons8-house-64.png" alt="Alloggi" />
+                    <div class="etichetta">Alloggi</div>
+                </div>
 
-                <div class="navbar-text d-flex align-items-center">
-                    <a class="opacity-6 text-decoration-none nav-custom-fs ms-4" href="#">Inizia ad ospitare</a>
-                    <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
+                <!-- Esperienze -->
+                <div class="elemento-menu">
+                    <div class="badge-novita">NOVITÀ</div>
+                    <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+                    <div class="etichetta">Esperienze</div>
+                </div>
 
-                    <div class="dropdown me-2">
-                        <ion-icon class="hamburger-icon dropdown-toggle mb-0" data-bs-toggle="dropdown"
-                            aria-expanded="false" name="menu-sharp"></ion-icon>
-                        <img src="assets/propic.png" alt="avatar-1" width="20px" height="20px" class="rounded-5 ms-2" />
+                <!-- Servizi -->
+                <div class="elemento-menu">
+                    <div class="badge-novita">NOVITÀ</div>
+                    <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+                    <div class="etichetta">Servizi</div>
+                </div>
+            </div>
+        </header>
 
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
-                            <li><a class="dropdown-item" href="#">Change account</a></li>
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-7 col-xl-8" id="file-appartamenti">
+                    <section id="appartamenti" class="my-2">
+                        <div class="my-3">
+                            <h6 class="mb-0">6 alloggi: Milano</h6>
+                            <a href="#" class="comeOrdiniamo text-decoration-none mt-0">Come ordiniamo i risultati</a>
+                        </div>
+                        <div class="row mt-3 mb-1">
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento1" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/1a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/1b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/1c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento1" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento1" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Appartamento &middot; Legnano</h5>
+                                        <p class="card-text my-0 text-truncate">Suite | Milano-Fiera Milano-Malpensa MXP 15'</p>
+                                        <p class="card-text my-0 text-truncate">Cancellazione gratuita</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Host professionista</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">84 €</strong> notte &middot; <u>168 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento2" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/2a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/2b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/2c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento2" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento2" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Loft &middot; Navigli</h5>
+                                        <p class="card-text my-0 text-truncate">Loft moderno | Milano centro storico 10'</p>
+                                        <p class="card-text my-0 text-truncate">Colazione inclusa</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Host esperto</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">198 €</strong> notte &middot; <u>396 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="badge rounded-pill">Superhost</span>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento3" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/3a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/3b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/3c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento3" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento3" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Bilocale &middot; Porta Romana</h5>
+                                        <p class="card-text my-0 text-truncate">Accogliente e tranquillo | Metro M3 a 2 min</p>
+                                        <p class="card-text my-0 text-truncate">Cancellazione flessibile</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Superhost</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">152 €</strong> notte &middot; <u>304 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento4" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/4a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/4b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/4c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento4" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento4" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Studio &middot; Brera</h5>
+                                        <p class="card-text my-0 text-truncate">Elegante monolocale | Quartiere artistico</p>
+                                        <p class="card-text my-0 text-truncate">Check-in autonomo</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Host locale</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">220 €</strong> notte &middot; <u>440 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="badge rounded-pill">Amato dagli ospiti</span>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento5" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/5a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/5b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/5c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento5" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento5" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Attico &middot; CityLife</h5>
+                                        <p class="card-text my-0 text-truncate">Vista panoramica | 2 camere & terrazzo</p>
+                                        <p class="card-text my-0 text-truncate">Animali ammessi</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Host professionista</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">320 €</strong> notte &middot; <u>640 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
+                                <div class="badgeCard z-1">
+                                    <div class="heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="dettaglio.html">
+                                    <div id="appartamento6" class="carousel slide">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carouselInnerCitta carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/6a.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/6b.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="carousel-img-wrapper">
+                                                    <img src="/assets/stanze/6c.webp" class="d-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev citta" type="button" data-bs-target="#appartamento6" data-bs-slide="prev">
+                                            <span class="visually-hidden">Previous</span>
+                                            <ion-icon name="chevron-back-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                        <button class="carousel-control-next citta" type="button" data-bs-target="#appartamento6" data-bs-slide="next">
+                                            <span class="visually-hidden">Next</span>
+                                            <ion-icon name="chevron-forward-outline" size="small" style="color: black"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-truncate">Mini Loft &middot; Isola</h5>
+                                        <p class="card-text my-0 text-truncate">Design nordico | A pochi passi da Bosco Verticale</p>
+                                        <p class="card-text my-0 text-truncate">Self check-in</p>
+                                        <p class="card-text my-0 text-truncate">10-12 lug &middot; Host attento</p>
+                                        <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">165 €</strong> notte &middot; <u>330 € in totale</u></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="d-none d-md-block col-md-5 col-xl-4" style="position: sticky; top: 170px; height: calc(100vh - 170px)">
+                    <div id="mapDesktop" style="width: 100%; height: 100%"></div>
+                </div>
+            </div>
+
+            <div>
+                <button id="openMapButton" class="btn btn-primary d-block d-md-none fixed-bottom">Apri mappa</button>
+
+                <div id="hiddenMap" class="d-none position-absolute top-0 end-0 z-2" style="background-color: rgba(0, 255, 255, 0.5); width: 100vw; height: 100vh">
+                    <div id="mapMobile" class="z-2" style="width: 100%; height: 100%"></div>
+                    <button id="closeMapButton" class="btn btn-danger position-absolute m-3 top-0 end-0 z-3">&times;</button>
+                </div>
+            </div>
+        </main>
+
+        <span class="ms-5"><a href="index.html">Link di collegamento alla Homepage - provvisorio</a></span>
+
+        <footer class="mt-5 py-2">
+            <div id="colonne-footer" class="container-fluid">
+                <div class="row text-start">
+                    <div class="col-6 col-md-3 mb-3">
+                        <ul>
+                            <li><strong>Assistenza</strong></li>
+                            <li><a href="#" class="footer-links">Centro Assistenza</a></li>
+                            <li><a href="#" class="footer-links">AirCover</a></li>
+                            <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
                             <li>
-                                <a class="dropdown-item" href="#">Payments</a>
+                                <a href="#" class="footer-links">Supporto alla disabilita'</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Settings</a>
+                                <a href="#" class="footer-links">Opzioni di cancellazione</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a href="#" class="footer-links">Segnala problema nel quartiere</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-3">
+                        <ul>
+                            <li><strong>Ospitare</strong></li>
+                            <li>
+                                <a href="#" class="footer-links">Centro Apri un Airbnb</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-links">AirCover per gli host</a>
+                            </li>
+                            <li><a href="#" class="footer-links">Risorse per gli host</a></li>
+                            <li>
+                                <a href="#" class="footer-links">Forum della community</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-links">Ospitare responsabilmente</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-links">Partecipa a una lezione gratuita sull'ospitalita'</a>
+                            </li>
+                            <li><a href="#" class="footer-links">Trova un co-host</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-3">
+                        <ul>
+                            <li><strong>Airbnb</strong></li>
+                            <li><a href="#" class="footer-links">2025 Summer Release</a></li>
+                            <li><a href="#" class="footer-links">Newsroom</a></li>
+                            <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
+                            <li>
+                                <a href="#" class="footer-links">Opportunita' di lavoro</a>
+                            </li>
+                            <li><a href="#" class="footer-links">Investitori</a></li>
+                            <li><a href="#" class="footer-links">Gift card</a></li>
+                            <li>
+                                <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div class="search-bar">
-            <div id="searchSection" class="search-section hidden-searchBar flex-grow-1">
-                <label>Dove</label>
-                <input id="dropdown" class="dropdown input-field" type="text" placeholder="Cerca destinazioni"
-                    data-bs-toggle="dropdown" />
-                <ul id="dropdown-menu" class="dropdown-menu">
-                    <li>
-                        <div class="d-flex align-items-center pb-3">
-                            <img class="dimensione-icone" src="assets/freccia.webp" alt="freccia" />
-                            <div>
-                                <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
-                                <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center pb-3">
-                            <img class="dimensione-icone" src="assets/milano.webp" alt="milano" />
-                            <div>
-                                <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
-                                <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center pb-3">
-                            <img class="dimensione-icone" src="assets/parigi.webp" alt="parigi" />
-                            <div>
-                                <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
-                                <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center pb-3">
-                            <img class="dimensione-icone" src="assets/firenze.webp" alt="firenze" />
-                            <div>
-                                <p class="mb-0 ms-3 fw-bold">Firenze</p>
-                                <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="divider hidden-searchBar"></div>
-            <div class="search-section hidden-searchBar">
-                <label>Check-in</label>
-                <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker" />
-            </div>
-            <div class="divider hidden-searchBar"></div>
-            <div class="d-none">
-                <p>Inizia la Ricerca</p>
-            </div>
-            <div class="search-section hidden-searchBar">
-                <label>Check-out</label>
-                <input id="checkOut" type="date" value="2025-06-03" placeholder="Aggiungi date" class="datepickerOut" />
-            </div>
-            <div class="divider hidden-searchBar"></div>
-            <div class="search-section hidden-searchBar flex-grow-1">
-                <label>Chi</label>
-                <input id="dropdown" class="dropdown input-field input" type="text" readonly
-                    placeholder="Aggiungi ospiti" data-bs-toggle="dropdown" data-bs-auto-close="outside" />
-                <ul id="dropdown-menu2" class="dropdown-menu">
-                    <li>
-                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-                            <div class="d-flex flex-column size-div nomeRow" data-type="adulti">
-                                <p class="mb-0 ms-3">Adulti</p>
-                                <p class="mb-0 ms-3">Da 13 in su</p>
-                            </div>
-                            <div>
-                                <button class="button-chi btn-outline-secondary meno">
-                                    <ion-icon name="remove-outline"></ion-icon>
-                                </button>
-                                <span class="num">0</span>
-                                <button class="button-chi piu">
-                                    <ion-icon name="add-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-                            <div class="d-flex flex-column size-div nomeRow" data-type="bambini">
-                                <p class="mb-0 ms-3">Bambini</p>
-                                <p class="mb-0 ms-3">Da 2 a 12 anni</p>
-                            </div>
-                            <div>
-                                <button class="button-chi btn-outline-secondary meno">
-                                    <ion-icon name="remove-outline"></ion-icon>
-                                </button>
-                                <span class="num">0</span>
-                                <button class="button-chi piu">
-                                    <ion-icon name="add-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
-                            <div class="d-flex flex-column size-div nomeRow" data-type="neonati">
-                                <p class="mb-0 ms-3">Neonati</p>
-                                <p class="mb-0 ms-3">fino a 2 anni</p>
-                            </div>
-                            <div>
-                                <button class="button-chi btn-outline-secondary meno">
-                                    <ion-icon name="remove-outline"></ion-icon>
-                                </button>
-                                <span class="num">0</span>
-                                <button class="button-chi piu">
-                                    <ion-icon name="add-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
-                            <div class="d-flex flex-column size-div nomeRow" data-type="animali">
-                                <p class="mb-0 ms-3">Animali domestici</p>
-                                <p class="mb-0 ms-3 text-decoration-underline">
-                                    Viaggi con un animale di servizio?
-                                </p>
-                            </div>
-                            <div>
-                                <button class="button-chi btn-outline-secondary meno">
-                                    <ion-icon name="remove-outline"></ion-icon>
-                                </button>
-                                <span class="num">0</span>
-                                <button class="button-chi piu">
-                                    <ion-icon name="add-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
-                <ion-icon name="search-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="menu-personalizzato nascosto">
-            <!-- Alloggi -->
-            <div id="elemento-menu" class="elemento-menu">
-                <img src="assets/icons8-house-64.png" alt="Alloggi" />
-                <div class="etichetta">Alloggi</div>
-            </div>
-
-            <!-- Esperienze -->
-            <div class="elemento-menu">
-                <div class="badge-novita">NOVITÀ</div>
-                <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
-                <div class="etichetta">Esperienze</div>
-            </div>
-
-            <!-- Servizi -->
-            <div class="elemento-menu">
-                <div class="badge-novita">NOVITÀ</div>
-                <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
-                <div class="etichetta">Servizi</div>
-            </div>
-        </div>
-    </header>
-
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-7 col-xl-8" id="file-appartamenti">
-                <section id="appartamenti" class="my-2">
-                    <div class="my-3">
-                        <h6 class="mb-0">6 alloggi: Milano</h6>
-                        <a href="#" class="comeOrdiniamo text-decoration-none mt-0">Come ordiniamo i risultati</a>
+            <div id="social-icons-links" class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap">
+                <div id="social-links" style="padding-top: 15px">
+                    <p>© 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links"> Privacy</a> &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a href="#" class="footer-links"> Mappa del sito</a> &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a></p>
+                </div>
+                <div id="social-icons">
+                    <button title="Scegli la lingua" class="pe-3">
+                        <span><ion-icon name="globe-outline" class="footer-icons ps-2" style="padding-top: 12px; font-size: 14px"></ion-icon> </span>Italiano (IT)
+                    </button>
+                    <button title="Scegli una valuta" class="pe-3">
+                        <span><ion-icon name="logo-euro" class="footer-icons ps-2" style="padding-top: 12px; font-size: 12px"></ion-icon></span>EUR
+                    </button>
+                    <div class="d-flex align-items-center justify-content-between" style="gap: 15px">
+                        <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
+                        <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
+                        <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
                     </div>
-                    <div class="row mt-3 mb-1">
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento1" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento1" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/1a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/1b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/1c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento1" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento1" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Appartamento &middot; Legnano</h5>
-                                    <p class="card-text my-0 text-truncate">Suite | Milano-Fiera Milano-Malpensa MXP 15'
-                                    </p>
-                                    <p class="card-text my-0 text-truncate">Cancellazione gratuita</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Host professionista</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">84
-                                            €</strong> notte &middot; <u>168 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento2" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento2" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/2a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/2b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/2c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento2" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento2" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Loft &middot; Navigli</h5>
-                                    <p class="card-text my-0 text-truncate">Loft moderno | Milano centro storico 10'</p>
-                                    <p class="card-text my-0 text-truncate">Colazione inclusa</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Host esperto</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">198
-                                            €</strong> notte &middot; <u>396 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <span class="badge rounded-pill">Superhost</span>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento3" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento3" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/3a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/3b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/3c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento3" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento3" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Bilocale &middot; Porta Romana</h5>
-                                    <p class="card-text my-0 text-truncate">Accogliente e tranquillo | Metro M3 a 2 min
-                                    </p>
-                                    <p class="card-text my-0 text-truncate">Cancellazione flessibile</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Superhost</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">152
-                                            €</strong> notte &middot; <u>304 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento4" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento4" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/4a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/4b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/4c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento4" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento4" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Studio &middot; Brera</h5>
-                                    <p class="card-text my-0 text-truncate">Elegante monolocale | Quartiere artistico
-                                    </p>
-                                    <p class="card-text my-0 text-truncate">Check-in autonomo</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Host locale</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">220
-                                            €</strong> notte &middot; <u>440 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <span class="badge rounded-pill">Amato dagli ospiti</span>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento5" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento5" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/5a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/5b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/5c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento5" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento5" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Attico &middot; CityLife</h5>
-                                    <p class="card-text my-0 text-truncate">Vista panoramica | 2 camere & terrazzo</p>
-                                    <p class="card-text my-0 text-truncate">Animali ammessi</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Host professionista</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">320
-                                            €</strong> notte &middot; <u>640 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cardAppartamentoCitta card col-6 col-xl-4 text-decoration-none">
-                            <div class="badgeCard z-1">
-                                <div class="heart">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                        role="presentation" focusable="false">
-                                        <path
-                                            d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="dettaglio.html">
-                                <div id="appartamento6" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#appartamento6" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carouselInnerCitta carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/6a.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/6b.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="carousel-img-wrapper">
-                                                <img src="/assets/stanze/6c.webp" class="d-block" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev citta" type="button"
-                                        data-bs-target="#appartamento6" data-bs-slide="prev">
-                                        <span class="visually-hidden">Previous</span>
-                                        <ion-icon name="chevron-back-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                    <button class="carousel-control-next citta" type="button"
-                                        data-bs-target="#appartamento6" data-bs-slide="next">
-                                        <span class="visually-hidden">Next</span>
-                                        <ion-icon name="chevron-forward-outline" size="small"
-                                            style="color: black"></ion-icon>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-truncate">Mini Loft &middot; Isola</h5>
-                                    <p class="card-text my-0 text-truncate">Design nordico | A pochi passi da Bosco
-                                        Verticale</p>
-                                    <p class="card-text my-0 text-truncate">Self check-in</p>
-                                    <p class="card-text my-0 text-truncate">10-12 lug &middot; Host attento</p>
-                                    <p class="card-text my-2 text-truncate"><strong class="prezzoAppartamento">165
-                                            €</strong> notte &middot; <u>330 € in totale</u></p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="d-none d-md-block col-md-5 col-xl-4"
-                style="position: sticky; top: 40px; height: calc(100vh - 40px)">
-                <div id="mapDesktop" style="width: 100%; height: 100%"></div>
-            </div>
-        </div>
-
-        <div>
-            <button id="openMapButton" class="btn btn-primary d-block d-md-none fixed-bottom">Apri mappa</button>
-
-            <div id="hiddenMap" class="d-none position-absolute top-0 end-0 z-2"
-                style="background-color: rgba(0, 255, 255, 0.5); width: 100vw; height: 100vh">
-                <div id="mapMobile" class="z-2" style="width: 100%; height: 100%"></div>
-                <button id="closeMapButton"
-                    class="btn btn-danger position-absolute m-3 top-0 end-0 z-3">&times;</button>
-            </div>
-        </div>
-    </main>
-
-    <span class="ms-5"><a href="index.html">Link di collegamento alla Homepage - provvisorio</a></span>
-
-    <footer class="mt-5 py-2">
-        <div id="colonne-footer" class="container-fluid">
-            <div class="row text-start">
-                <div class="col-6 col-md-3 mb-3">
-                    <ul>
-                        <li><strong>Assistenza</strong></li>
-                        <li><a href="#" class="footer-links">Centro Assistenza</a></li>
-                        <li><a href="#" class="footer-links">AirCover</a></li>
-                        <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
-                        <li>
-                            <a href="#" class="footer-links">Supporto alla disabilita'</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-links">Opzioni di cancellazione</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-links">Segnala problema nel quartiere</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <ul>
-                        <li><strong>Ospitare</strong></li>
-                        <li>
-                            <a href="#" class="footer-links">Centro Apri un Airbnb</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-links">AirCover per gli host</a>
-                        </li>
-                        <li><a href="#" class="footer-links">Risorse per gli host</a></li>
-                        <li>
-                            <a href="#" class="footer-links">Forum della community</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-links">Ospitare responsabilmente</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-links">Partecipa a una lezione gratuita sull'ospitalita'</a>
-                        </li>
-                        <li><a href="#" class="footer-links">Trova un co-host</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <ul>
-                        <li><strong>Airbnb</strong></li>
-                        <li><a href="#" class="footer-links">2025 Summer Release</a></li>
-                        <li><a href="#" class="footer-links">Newsroom</a></li>
-                        <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
-                        <li>
-                            <a href="#" class="footer-links">Opportunita' di lavoro</a>
-                        </li>
-                        <li><a href="#" class="footer-links">Investitori</a></li>
-                        <li><a href="#" class="footer-links">Gift card</a></li>
-                        <li>
-                            <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-        <div id="social-icons-links"
-            class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap">
-            <div id="social-links" style="padding-top: 15px">
-                <p>© 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links"> Privacy</a> &bull;<a href="#"
-                        class="footer-links"> Termini</a> &bull;<a href="#" class="footer-links"> Mappa del sito</a>
-                    &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a></p>
-            </div>
-            <div id="social-icons">
-                <button title="Scegli la lingua" class="pe-3">
-                    <span><ion-icon name="globe-outline" class="footer-icons ps-2"
-                            style="padding-top: 12px; font-size: 14px"></ion-icon> </span>Italiano (IT)
-                </button>
-                <button title="Scegli una valuta" class="pe-3">
-                    <span><ion-icon name="logo-euro" class="footer-icons ps-2"
-                            style="padding-top: 12px; font-size: 12px"></ion-icon></span>EUR
-                </button>
-                <div class="d-flex align-items-center justify-content-between" style="gap: 15px">
-                    <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
-                    <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
-                    <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="citta.js"></script>
-</body>
-
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script src="citta.js"></script>
+    </body>
 </html>
