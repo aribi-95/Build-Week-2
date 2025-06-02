@@ -54,6 +54,12 @@ function intervalloDate() {
 
         if (checkOutValue < checkInValue) {
             alert("🕰️ Check-out prima del check-in? Ti serve un TARDIS, non un B&B.")
+            return;
+        }
+
+        if (checkOutValue == checkInValue) {
+            alert("La data di check-in e quella di check-out non possono coincidere. Seleziona una data valida.")
+            return;
         }
 
         console.log("checkIn:", checkInValue);
@@ -84,5 +90,69 @@ function intervalloDate() {
         document.getElementById("costoTotale").textContent = `${costoTotale}€`
         
     }
-
 }
+
+////////////////Gestione OSPITI//////////////////////////////////
+const outputInput = document.getElementById("dropdownForm");
+const nomeRows = document.querySelectorAll('.nomeRow');
+
+nomeRows.forEach(row => {
+  const tipo = row.getAttribute("data-type");
+  const container = row.closest("li"); 
+
+  const meno = container.querySelector(".meno");
+  const piu = container.querySelector(".piu");
+  const num = container.querySelector(".num");
+
+  function aggBottMeno() {
+    const value = parseInt(num.textContent, 10);
+    meno.disabled = value === 0;
+  }
+
+  function aggTestoInput() {
+  let adulti = 0, bambini = 0, neonati = 0, animali = 0;
+
+  nomeRows.forEach(r => {
+    const tipo = r.getAttribute("data-type");
+    const numSpan = r.closest("li").querySelector(".num");
+    const val = parseInt(numSpan.textContent, 10);
+
+    if (tipo === 'adulti') adulti = val;
+    if (tipo === 'bambini') bambini = val;
+    if (tipo === 'neonati') neonati = val;
+    if (tipo === 'animali') animali = val;
+  });
+
+  let parts = [];
+  const totalePersone = adulti + bambini;
+
+  if (totalePersone > 0) parts.push(`${totalePersone} ${totalePersone === 1 ? 'ospite' : 'ospiti'}`);
+  if (animali > 0) parts.push(`${animali} ${animali === 1 ? 'animale' : 'animali'}`);
+  if (neonati > 0) parts.push(`${neonati} ${neonati === 1 ? 'neonato' : 'neonati'}`);
+
+  const testoFinale = parts.length > 0 ? parts.join(', ') : 'Aggiungi ospiti';
+
+  outputInput.value = testoFinale;
+  outputInput.placeholder = testoFinale; // 🔹 aggiorna anche il placeholder
+}
+
+  piu.addEventListener("click", () => {
+    let valore = parseInt(num.textContent, 10);
+    valore++;
+    num.textContent = valore;
+    aggBottMeno();
+    aggTestoInput();
+  });
+
+  meno.addEventListener("click", () => {
+    let valore = parseInt(num.textContent, 10);
+    if (valore > 0) {
+      valore--;
+      num.textContent = valore;
+      aggBottMeno();
+      aggTestoInput();
+    }
+  });
+
+  aggBottMeno();
+});
