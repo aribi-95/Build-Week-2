@@ -176,10 +176,11 @@ nomeRows.forEach(row => {
     });
 
     let parts = [];
-    const totalePersone = adulti + bambini + neonati;
+    const totalePersone = adulti + bambini;
 
     if (totalePersone > 0) parts.push(`${totalePersone} ${totalePersone === 1 ? 'Ospite' : 'Ospiti'}`);
     if (animali > 0) parts.push(`${animali} ${animali === 1 ? 'animale' : 'animali'}`);
+    if (neonati > 0) parts.push(`${neonati} ${neonati === 1 ? 'neonato' : 'neonati'}`);
 
     outputInput.value = parts.length > 0 ? parts.join(', ') : 'Aggiungi ospiti';
   }
@@ -224,3 +225,11 @@ console.log(inputFields2);*/
     window.location.href = `dettaglio.html?checkin=${checkIn}&checkout=${checkOut}`;
   }
 */
+
+
+/* porta a dettaglio.html quando clicco su una card*/
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    window.location.href = "dettaglio.html";
+  });
+});
