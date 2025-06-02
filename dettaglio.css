@@ -153,6 +153,11 @@ h1 {
   }
   #img-grid {
     order: 1;
+    width: 100%;
+  }
+  .main-img {
+    border-radius: 15px;
+    padding-bottom: 5px;
   }
   #titolo-dettaglio {
     display: flex;
@@ -183,6 +188,7 @@ h1 {
   #cosa-troverai .row.d-flex.flex-column {
     flex-basis: 100%;
   }
+  
 }
 
 #occasione img {
@@ -324,6 +330,11 @@ div:nth-child(2) > form > p {
 
 .full-list li {
   list-style: none;
+}
+
+.full-list.house-rules {
+  line-height: 2;
+  font-weight: 400;
 }
 
 .non-incluso {
