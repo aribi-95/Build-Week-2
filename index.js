@@ -135,15 +135,6 @@ function intervalloDate() {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//funzione per colorare di rosso il cuore quando viene premuto (appartamento nei preferiti)
-document.querySelectorAll(".heart").forEach((heart) => {
-  heart.addEventListener("click", () => {
-    heart.classList.toggle("active");
-  });
-});
-///////////////////////////////////////////////////////////////////////////////////////////////
-
-
 ////////////////Gestione OSPITI//////////////////////////////////
 const outputInput = document.querySelector(".input");
 const nomeRows = document.querySelectorAll('.nomeRow');
@@ -227,9 +218,40 @@ console.log(inputFields2);*/
 */
 
 
-/* porta a dettaglio.html quando clicco su una card*/
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
+// Quando si clicca sull'immagine, vai alla pagina di dettaglio
+document.querySelectorAll(".cardPicture img").forEach(img => {
+  img.addEventListener("click", () => {
     window.location.href = "dettaglio.html";
+  });
+});
+
+// Blocca la propagazione del click sui badge
+document.querySelectorAll(".badgeCard, .badgeCard *").forEach(el => {
+  el.addEventListener("click", e => {
+    e.stopPropagation();
+  });
+});
+
+// funzione per colorare di rosso il cuore quando viene premuto (appartamento nei preferiti)
+document.querySelectorAll(".heart").forEach((heart) => {
+  heart.addEventListener("click", (e) => {
+    e.stopPropagation(); // impedisce il click sull'immagine dietro
+    heart.classList.toggle("active");
+  });
+});
+
+document.querySelectorAll(".heart, .heart *").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.stopPropagation();
+    el.closest(".heart").classList.toggle("active");
+  });
+});
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Rendi il cuore cliccabile (toggle preferito) e blocca la propagazione
+document.querySelectorAll(".heart").forEach(heart => {
+  heart.addEventListener("click", (e) => {
+    e.stopPropagation(); // ⛔ evita che clicchi anche l'immagine
+    heart.classList.toggle("active");
   });
 });
