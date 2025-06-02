@@ -72,7 +72,12 @@ div.search-bar > div:nth-child(3) > input.datepicker.form-control.input, div.sea
 }
 
 main {
-  margin-top: 70px;
+  margin-top: 170px;
+}
+@media (max-width: 744px) {
+  main{
+    margin-top: 70px;
+  }
 }
 
 #gallerie {
