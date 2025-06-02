@@ -592,37 +592,184 @@
                 <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
               </div>
               <div class="p-4 shadow rounded-3 bg-light">
-                <h4>Prenota ora</h4>
+                <div class="d-flex">
+                  <h4 class="prezzoNotte"></h4>
+                  <span class="align-self-center">&nbsp;&nbsp;a notte</span>
+                </div>
                 <form>
-                  <div class="mb-3">
-                    <label for="checkin" class="form-label">Check-in</label>
-                    <input
-                      type="date"
-                      class="form-control datepicker"
-                      id="checkIn"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="checkout" class="form-label">Check-out</label>
-                    <input
-                      type="date"
-                      class="form-control datepicker"
-                      id="checkOut"
-                    />
+                  <div class="d-flex mt-3">
+                    <div>
+                      <label for="checkin" class="form-label">Check-in</label>
+                      <input
+                        type="date"
+                        class="form-control datepicker"
+                        id="checkIn"
+                      />
+                    </div>
+                    <div>
+                      <label for="checkout" class="form-label">Check-out</label>
+                      <input
+                        type="date"
+                        class="form-control datepickerOut"
+                        id="checkOut"
+                      />
+                    </div>
                   </div>
                   <div class="mb-3">
                     <label for="guests" class="form-label">Ospiti</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="guests"
-                      min="1"
-                      value="1"
-                    />
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <input
+                        id="dropdownForm"
+                        class="dropdown input-field input"
+                        type="text"
+                        readonly
+                        placeholder="Aggiungi ospiti"
+                        data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside"
+                      />
+                      <ul id="dropdown-menu2" class="dropdown-menu">
+                        <li>
+                          <div
+                            class="d-flex justify-content-between align-items-center pb-3 bordo"
+                          >
+                            <div
+                              class="d-flex flex-column size-div nomeRow"
+                              data-type="adulti"
+                            >
+                              <p class="mb-0 ms-3">Adulti</p>
+                              <p class="mb-0 ms-3">Da 13 in su</p>
+                            </div>
+                            <div>
+                              <button
+                                class="button-chi btn-outline-secondary meno"
+                                type="button"
+                              >
+                                <ion-icon name="remove-outline"></ion-icon>
+                              </button>
+                              <span class="num">0</span>
+                              <button class="button-chi piu" type="button">
+                                <ion-icon name="add-outline"></ion-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="d-flex justify-content-between align-items-center pb-3 bordo"
+                          >
+                            <div
+                              class="d-flex flex-column size-div nomeRow"
+                              data-type="bambini"
+                            >
+                              <p class="mb-0 ms-3">Bambini</p>
+                              <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+                            </div>
+                            <div>
+                              <button
+                                class="button-chi btn-outline-secondary meno"
+                                type="button"
+                              >
+                                <ion-icon name="remove-outline"></ion-icon>
+                              </button>
+                              <span class="num">0</span>
+                              <button class="button-chi piu" type="button">
+                                <ion-icon name="add-outline"></ion-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="d-flex justify-content-between align-items-center pb-3 bordo"
+                          >
+                            <div
+                              class="d-flex flex-column size-div nomeRow"
+                              data-type="neonati"
+                            >
+                              <p class="mb-0 ms-3">Neonati</p>
+                              <p class="mb-0 ms-3">fino a 2 anni</p>
+                            </div>
+                            <div>
+                              <button
+                                class="button-chi btn-outline-secondary meno"
+                                type="button"
+                              >
+                                <ion-icon name="remove-outline"></ion-icon>
+                              </button>
+                              <span class="num">0</span>
+                              <button class="button-chi piu" type="button">
+                                <ion-icon name="add-outline"></ion-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="d-flex justify-content-between align-items-center pb-3"
+                          >
+                            <div
+                              class="d-flex flex-column size-div nomeRow"
+                              data-type="animali"
+                            >
+                              <p class="mb-0 ms-3">Animali domestici</p>
+                              <p class="mb-0 ms-3 text-decoration-underline">
+                                Viaggi con un animale di servizio?
+                              </p>
+                            </div>
+                            <div>
+                              <button
+                                class="button-chi btn-outline-secondary meno"
+                                type="button"
+                              >
+                                <ion-icon name="remove-outline"></ion-icon>
+                              </button>
+                              <span class="num">0</span>
+                              <button class="button-chi piu" type="button">
+                                <ion-icon name="add-outline"></ion-icon>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <i class="bi bi-chevron-down"></i>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    Prenota
-                  </button>
+                  <button type="submit" class="btn w-100">Prenota</button>
+                  <p>Non riceverai alcun addebito in questa fase</p>
+                  <div class="d-flex flex-column gap-3">
+                    <div class="d-flex justify-content-between">
+                      <div class="text-decoration-underline" role="button">
+                        <span class="prezzoNotte"> x</span
+                        ><span id="notti"></span>
+                      </div>
+                      <span id="costoNottiTotale"></span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-decoration-underline" role="button"
+                        >Costi di pulizia</span
+                      >
+                      <span id="costoPulizia"></span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-decoration-underline" role="button"
+                        >Costi del servizio AirBnB</span
+                      >
+                      <span id="costoServizio"></span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-decoration-underline" role="button"
+                        >Tasse</span
+                      >
+                      <span id="costoTasse"></span>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between fw-bold">
+                      <span>Totale</span>
+                      <span id="costoTotale"></span>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -781,6 +928,7 @@
       <section id="dove-sarai">
         <h6>Dove sarai</h6>
         <p>Navigli, Milano</p>
+        <div id="map" style="height: 400px"></div>
       </section>
     </main>
 
