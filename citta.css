@@ -244,3 +244,12 @@ span.badge {
 .heart.active svg {
     fill: #ff385c;
 }
+
+main {
+    margin-top: 170px;
+}
+@media (max-width: 744px) {
+    main {
+        margin-top: 70px;
+    }
+}
