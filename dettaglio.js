@@ -220,7 +220,7 @@ chiudiPagamento.addEventListener("click", () => {
 
 //Chiudi cliccando fuori dal contenuto
 window.addEventListener("click", (e) => {
-  if (e.target === modal) {
+  if (e.target === modalPagamento) {
     modalPagamento.classList.add("hidden");
   }
 });

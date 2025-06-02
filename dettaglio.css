@@ -380,7 +380,15 @@ div:nth-child(2) > form > p {
   padding: 0;
   border: 0;
   outline: none;
+  transition: transform 0.3s linear;
 }
+
+.paymentother button:hover {
+  background-color: #b9a9ac68;
+  border: 1px solid #FB345A ;
+  transform: scale(1.05);
+}
+
 .paymentother button svg {
   height: 18px;
 }
