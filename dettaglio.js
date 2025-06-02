@@ -5,7 +5,7 @@ window.onload = function () {
 //INPUT CHECK-IN
 flatpickr(".datepicker", {
     altInput: true,
-    altFormat: "d-m-Y", // quello che l'utente vede (es: 1 giu)
+    altFormat: "j M", // quello che l'utente vede (es: 1 giu)
     dateFormat: "Y-m-d", // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
     minDate: "today", // Opzionale: disabilita le date passate
     defaultDate: "today", // Imposta oggi come valore predefinito
@@ -20,7 +20,7 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 //INPUT CHECK-OUT
 flatpickr(".datepickerOut", {
     altInput: true,
-    altFormat: "d-m-Y", // quello che l'utente vede (es: 1 giu)
+    altFormat: "j M", // quello che l'utente vede (es: 1 giu)
     dateFormat: "Y-m-d", // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
     minDate: tomorrow, // Opzionale: disabilita le date passate
     defaultDate: tomorrow, // Imposta il giorno successivo come valore predefinito
