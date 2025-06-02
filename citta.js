@@ -1,3 +1,30 @@
+//INPUT CHECK-IN
+flatpickr(".datepicker", {
+    altInput: true,
+    altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
+    dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
+    minDate: "today", // Opzionale: disabilita le date passate
+    defaultDate: "today", // Imposta oggi come valore predefinito
+    //maxDate per data di checkout massima
+    locale: "it",  // per avere il calendario in lingua italiana
+
+});
+
+//per calcolare il giorno successivo a quello inserito nel check-in
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+//INPUT CHECK-OUT
+flatpickr(".datepickerOut", {
+    altInput: true,
+    altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
+    dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
+    minDate: tomorrow, // Opzionale: disabilita le date passate
+    defaultDate: tomorrow, // Imposta il giorno successivo come valore predefinito
+    //maxDate per data di checkout massima
+    locale: "it"  // per avere il calendario in lingua italiana
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Prendo gli elementi HTML con gli appartamenti
     const copiaAppartamento = (n) => {
