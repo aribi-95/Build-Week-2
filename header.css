@@ -339,7 +339,7 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input:hover {
         gap: 10px;
     }
 
-    .navbar-text a {
+    body > header > nav > div > div.navbar-text.d-flex.align-items-center > a {
         display: none;
     }
 
