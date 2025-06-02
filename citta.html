@@ -23,9 +23,6 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a href="index.html"><img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="menu-personalizzato">
                         <!-- Alloggi -->
                         <div id="elemento-menu" class="elemento-menu">
@@ -122,7 +119,7 @@
                     <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker input-field" />
                 </div>
                 <div class="divider hidden-searchBar"></div>
-                <div class="d-none">
+                <div class="inRicDi">
                     <p>Inizia la Ricerca</p>
                 </div>
                 <div class="search-section hidden-searchBar">
@@ -558,7 +555,7 @@
             <div>
                 <button id="openMapButton" class="btn btn-primary d-block d-md-none fixed-bottom">Apri mappa</button>
 
-                <div id="hiddenMap" class="d-none position-absolute top-0 end-0 z-2" style="background-color: rgba(0, 255, 255, 0.5); width: 100vw; height: 100vh">
+                <div id="hiddenMap" class="d-none position-absolute top-0 end-0 " style="width: 100vw; height: 100vh; z-index:4">
                     <div id="mapMobile" class="z-2" style="width: 100%; height: 100%"></div>
                     <button id="closeMapButton" class="btn btn-danger position-absolute m-3 top-0 end-0 z-3">&times;</button>
                 </div>

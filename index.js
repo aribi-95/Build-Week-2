@@ -198,8 +198,8 @@ nomeRows.forEach(row => {
 
     // Redireziona verso dettaglio.html con le date nella query string
     window.location.href = `dettaglio.html?checkin=${checkIn}&checkout=${checkOut}`;
-  }
-*/
+  }*/
+
 
 
 // Quando si clicca sull'immagine, vai alla pagina di dettaglio
@@ -239,3 +239,6 @@ document.querySelectorAll(".heart").forEach(heart => {
     heart.classList.toggle("active");
   });
 });
+
+
+ 
