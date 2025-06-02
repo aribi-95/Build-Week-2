@@ -12,6 +12,7 @@
   <!--ICONE BOOTSTRAP-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <!--CSS PERSONALIZZATI-->
+  <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="dettaglio.css" />
   <!--IONICONS-->
@@ -24,14 +25,11 @@
 </head>
 
 <body>
-  <header>
+   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" />
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <a href="index.html"><img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" /></a>
+        
         <div class="menu-personalizzato">
           <!-- Alloggi -->
           <div id="elemento-menu" class="elemento-menu">
@@ -48,7 +46,7 @@
 
           <!-- Servizi -->
           <div class="elemento-menu">
-            <div class="badge-novita">NOVITÀ</div>
+            <div class="badge-novita ">NOVITÀ</div>
             <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
             <div class="etichetta">Servizi</div>
           </div>
@@ -127,7 +125,7 @@
       <div class="divider hidden-searchBar"></div>
       <div class="search-section hidden-searchBar">
         <label>Check-in</label>
-        <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker" />
+        <input id="checkIn"  class="input-field" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker" />
       </div>
       <div class="divider hidden-searchBar"></div>
       <div class="d-none">
@@ -135,7 +133,7 @@
       </div>
       <div class="search-section hidden-searchBar">
         <label>Check-out</label>
-        <input id="checkOut" type="date" value="2025-06-03" placeholder="Aggiungi date" class="datepickerOut" />
+        <input id="checkOut" class="input-field" type="date" value="2025-06-03" placeholder="Aggiungi date" class="datepickerOut" />
       </div>
       <div class="divider hidden-searchBar"></div>
       <div class="search-section hidden-searchBar flex-grow-1">

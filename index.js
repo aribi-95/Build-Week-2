@@ -47,20 +47,9 @@ function scrollCarousel4(direction) {
 const inputFields = document.querySelectorAll(".input-field");
 const searchBtn = document.getElementById("searchBtn");
 const searchIcon = document.getElementById("searchIcon");
-const searchbar = document.querySelector(".search-bar");
-const searchsection = document.getElementById("searchSection");
-const dropdown = document.getElementById ("dropdown");
-const classeInput = document.querySelector(".input")
-
-
-
+console.log(inputFields ,searchBtn, searchIcon);
 inputFields.forEach((field) => {
   field.addEventListener("focus", () => {
-    searchbar.classList.add("searchBarMod");
-    searchsection.classList.add("searchSectionMod");
-    dropdown.classList.add("dropdownMod");
-    classeInput.style.backgroundColor = "#ebebeb";
-    
     searchBtn.classList.add("expanded");
     searchBtn.innerHTML =
       '<ion-icon name="search-outline"></ion-icon> <span>Cerca</span>';
@@ -69,16 +58,13 @@ inputFields.forEach((field) => {
   field.addEventListener("blur", () => {
     setTimeout(() => {
       if (![...inputFields].some((f) => f === document.activeElement)) {
-        searchbar.classList.remove("searchBarMod");
-        searchsection.classList.remove("searchSectionMod");
-        dropdown.classList.remove("dropdownMod");
-        classeInput.style.backgroundColor = "";
         searchBtn.classList.remove("expanded");
         searchBtn.innerHTML = '<ion-icon name="search-outline"></ion-icon>';
       }
     }, 100);
   });
 });
+
 
 ////////////////CALCOLO DATA PERMANENZA//////////////////////////////////
 function intervalloDate() {
@@ -197,9 +183,7 @@ nomeRows.forEach(row => {
   aggBottMeno();
 });
 
-//////////////////cambiare sfondo mentre c'è focus su un input ////////////////////
-/*const inputFields2 = document.querySelectorAll(".input-field");
-console.log(inputFields2);*/
+
 
 
 /*funzione per trasferire i valori dei form in un'altra pagina (da rivedere)
