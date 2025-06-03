@@ -61,14 +61,14 @@ nav img {
 }
 
 .navbar-text a:hover,
-#dropdown-menu li>div:hover {
+#dropdown-menu li > div:hover {
     background-color: #f4f4f4;
     padding: 8px;
     border-radius: 15px;
 }
 
-div.search-bar>div:nth-child(3)>input.datepicker.form-control.input,
-div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
+div.search-bar > div:nth-child(3) > input.datepicker.form-control.input,
+div.search-bar > div:nth-child(6) > input.datepickerOut.form-control.input {
     width: 120px;
 }
 
@@ -216,13 +216,10 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
     transition: transform 0.3s ease;
 }
 
-
-
 .elemento-menu .etichetta {
     margin-top: 15px;
     font-size: 16px;
 }
-
 
 .badge-novita {
     position: absolute;
@@ -271,7 +268,6 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
         flex-direction: column;
     }
 
-
     .inRicDi {
         display: block !important;
     }
@@ -294,7 +290,6 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input {
         width: 100%;
         z-index: 3;
     }
-
 }
 
 .size-div {
@@ -320,15 +315,13 @@ input#dropdown:hover {
     background-color: #ebebeb;
 }
 
-div.search-bar>div:nth-child(3)>input.datepicker.form-control.input:hover,
-div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input:hover {
+div.search-bar > div:nth-child(3) > input.datepicker.form-control.input:hover,
+div.search-bar > div:nth-child(6) > input.datepickerOut.form-control.input:hover {
     background-color: #ebebeb;
 }
 
-
-
 @media (min-width: 744px) and (max-width: 991px) {
-    .navbar>.container-fluid {
+    .navbar > .container-fluid {
         flex-wrap: nowrap;
         position: relative;
         bottom: 25px;
@@ -347,15 +340,13 @@ div.search-bar>div:nth-child(6)>input.datepickerOut.form-control.input:hover {
         position: relative;
         left: 15px;
     }
-
 }
 
 @media (min-width: 744px) {
     header {
         position: fixed;
-        top: 5px;
+        top: 0;
         z-index: 1000;
         width: 100%;
     }
-
 }
