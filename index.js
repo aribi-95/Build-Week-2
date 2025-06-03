@@ -186,28 +186,49 @@ nomeRows.forEach(row => {
 
 
 
-/*funzione per trasferire i valori dei form in un'altra pagina (da rivedere)
+/*funzione per trasferire i valori dei form in un'altra pagina*/
   function vaiADettaglio() {
     const checkIn = document.getElementById("checkIn").value;
     const checkOut = document.getElementById("checkOut").value;
 
-    if (!checkIn || !checkOut) {
-      alert("Seleziona entrambe le date!");
-      return;
-    }
-
     // Redireziona verso dettaglio.html con le date nella query string
     window.location.href = `dettaglio.html?checkin=${checkIn}&checkout=${checkOut}`;
-  }*/
+  }
 
 
 
-// Quando si clicca sull'immagine, vai alla pagina di dettaglio
+// Quando si clicca sull'immagine, vai alla pagina di dettaglio e porta con sè i valori di check-in e check-out
 document.querySelectorAll(".cardPicture img").forEach(img => {
   img.addEventListener("click", () => {
-    window.location.href = "dettaglio.html";
+    const checkIn = document.getElementById("checkIn")?.value;
+    const checkOut = document.getElementById("checkOut")?.value;
+
+    // Verifica che i campi esistano e abbiano un valore
+    const queryParams = new URLSearchParams();
+
+    if (checkIn) queryParams.append("checkin", checkIn);
+    if (checkOut) queryParams.append("checkout", checkOut);
+
+    window.location.href = `dettaglio.html?${queryParams.toString()}`;
   });
 });
+
+// Quando si clicca sul titolo di ogni sezione, vai alla pagina città e porta con sè i valori di check-in e check-out
+document.querySelectorAll("h4").forEach(title => {
+  title.addEventListener("click", () => {
+    const checkIn = document.getElementById("checkIn")?.value;
+    const checkOut = document.getElementById("checkOut")?.value;
+
+    // Verifica che i campi esistano e abbiano un valore
+    const queryParams = new URLSearchParams();
+
+    if (checkIn) queryParams.append("checkin", checkIn);
+    if (checkOut) queryParams.append("checkout", checkOut);
+
+    window.location.href = `citta.html?${queryParams.toString()}`;
+  });
+});
+
 
 // Blocca la propagazione del click sui badge
 document.querySelectorAll(".badgeCard, .badgeCard *").forEach(el => {

@@ -23,9 +23,8 @@ main {
 
 
 
-h4 a {
-  text-decoration: none;
-  color: black;
+h4 {
+  cursor: pointer;
 }
 
 .title h2 {

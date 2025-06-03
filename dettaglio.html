@@ -1,1103 +1,922 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clone Airbnb - Pagina appartamento</title>
-    <link rel="icon" href="assets/iconairbnb.png" />
-    <!--CSS BOOTSTRAP-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
-    <!--ICONE BOOTSTRAP-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <!--CSS PERSONALIZZATI-->
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="dettaglio.css" />
-    <!--IONICONS-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <!--FLATPICKR-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
-    <!--LEAFLET-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a href="index.html"
-            ><img
-              src="assets/logo-pink.png"
-              alt="AirBnb Logo"
-              width="110px"
-              class="ms-3"
-          /></a>
-          <div class="menu-personalizzato">
-            <!-- Alloggi -->
-            <div id="elemento-menu" class="elemento-menu">
-              <img src="assets/icons8-house-64.png" alt="Alloggi" />
-              <div class="etichetta">Alloggi</div>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clone Airbnb - Pagina appartamento</title>
+  <link rel="icon" href="assets/iconairbnb.png" />
+  <!--CSS BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <!--ICONE BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!--CSS PERSONALIZZATI-->
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="dettaglio.css" />
+  <!--IONICONS-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--FLATPICKR-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+  <!--LEAFLET-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
 
-            <!-- Esperienze -->
-            <div class="elemento-menu">
-              <div class="badge-novita">NOVITÀ</div>
-              <img
-                src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
-                alt="Esperienze"
-              />
-              <div class="etichetta">Esperienze</div>
-            </div>
-
-            <!-- Servizi -->
-            <div class="elemento-menu">
-              <div class="badge-novita">NOVITÀ</div>
-              <img
-                src="https://img.icons8.com/emoji/48/bellhop-bell.png"
-                alt="Servizi"
-              />
-              <div class="etichetta">Servizi</div>
-            </div>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="index.html"><img src="assets/logo-pink.png" alt="AirBnb Logo" width="110px" class="ms-3" /></a>
+        <div class="menu-personalizzato">
+          <!-- Alloggi -->
+          <div id="elemento-menu" class="elemento-menu">
+            <img src="assets/icons8-house-64.png" alt="Alloggi" />
+            <div class="etichetta">Alloggi</div>
           </div>
 
-          <div class="navbar-text d-flex align-items-center">
-            <a
-              class="opacity-6 text-decoration-none nav-custom-fs ms-4"
-              href="#"
-              >Inizia ad ospitare</a
-            >
-            <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
+          <!-- Esperienze -->
+          <div class="elemento-menu">
+            <div class="badge-novita">NOVITÀ</div>
+            <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+            <div class="etichetta">Esperienze</div>
+          </div>
 
-            <div class="dropdown me-2">
-              <ion-icon
-                class="hamburger-icon dropdown-toggle mb-0"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                name="menu-sharp"
-              ></ion-icon>
-              <img
-                src="assets/propic.png"
-                alt="avatar-1"
-                width="20px"
-                height="20px"
-                class="rounded-5 ms-2"
-              />
-
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Account</a></li>
-                <li><a class="dropdown-item" href="#">Change account</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Payments</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Settings</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </li>
-              </ul>
-            </div>
+          <!-- Servizi -->
+          <div class="elemento-menu">
+            <div class="badge-novita">NOVITÀ</div>
+            <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+            <div class="etichetta">Servizi</div>
           </div>
         </div>
-      </nav>
-      <div class="search-bar">
-        <div
-          id="searchSection"
-          class="search-section hidden-searchBar flex-grow-1"
-        >
-          <label>Dove</label>
-          <input
-            id="dropdown"
-            class="dropdown input-field"
-            type="text"
-            placeholder="Cerca destinazioni"
-            data-bs-toggle="dropdown"
-          />
-          <ul id="dropdown-menu" class="dropdown-menu">
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/freccia.webp"
-                  alt="freccia"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
-                  <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/milano.webp"
-                  alt="milano"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
-                  <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/parigi.webp"
-                  alt="parigi"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
-                  <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="d-flex align-items-center pb-3">
-                <img
-                  class="dimensione-icone"
-                  src="assets/firenze.webp"
-                  alt="firenze"
-                />
-                <div>
-                  <p class="mb-0 ms-3 fw-bold">Firenze</p>
-                  <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="search-section hidden-searchBar">
-          <label>Check-in</label>
-          <input
-            id="checkIn"
-            type="date"
-            value="2025-05-26"
-            placeholder="Aggiungi date"
-            class="datepicker input-field"
-          />
-        </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="inRicDi">
-          <p>Inizia la Ricerca</p>
-        </div>
-        <div class="search-section hidden-searchBar">
-          <label>Check-out</label>
-          <input
-            id="checkOut"
-            type="date"
-            value="2025-06-03"
-            placeholder="Aggiungi date"
-            class="datepickerOut input-field"
-          />
-        </div>
-        <div class="divider hidden-searchBar"></div>
-        <div class="search-section hidden-searchBar flex-grow-1">
-          <label>Chi</label>
-          <input
-            id="dropdown"
-            class="dropdown input-field input"
-            type="text"
-            readonly
-            placeholder="Aggiungi ospiti"
-            data-bs-toggle="dropdown"
-            data-bs-auto-close="outside"
-          />
-          <ul id="dropdown-menu2" class="dropdown-menu">
-            <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div
-                  class="d-flex flex-column size-div nomeRow"
-                  data-type="adulti"
-                >
-                  <p class="mb-0 ms-3">Adulti</p>
-                  <p class="mb-0 ms-3">Da 13 in su</p>
-                </div>
-                <div>
-                  <button class="button-chi btn-outline-secondary meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div
-                  class="d-flex flex-column size-div nomeRow"
-                  data-type="bambini"
-                >
-                  <p class="mb-0 ms-3">Bambini</p>
-                  <p class="mb-0 ms-3">Da 2 a 12 anni</p>
-                </div>
-                <div>
-                  <button class="button-chi btn-outline-secondary meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 bordo"
-              >
-                <div
-                  class="d-flex flex-column size-div nomeRow"
-                  data-type="neonati"
-                >
-                  <p class="mb-0 ms-3">Neonati</p>
-                  <p class="mb-0 ms-3">fino a 2 anni</p>
-                </div>
-                <div>
-                  <button class="button-chi btn-outline-secondary meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                class="d-flex justify-content-between align-items-center pb-3"
-              >
-                <div
-                  class="d-flex flex-column size-div nomeRow"
-                  data-type="animali"
-                >
-                  <p class="mb-0 ms-3">Animali domestici</p>
-                  <p class="mb-0 ms-3 text-decoration-underline">
-                    Viaggi con un animale di servizio?
-                  </p>
-                </div>
-                <div>
-                  <button class="button-chi btn-outline-secondary meno">
-                    <ion-icon name="remove-outline"></ion-icon>
-                  </button>
-                  <span class="num">0</span>
-                  <button class="button-chi piu">
-                    <ion-icon name="add-outline"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
-          <ion-icon name="search-outline"></ion-icon>
+
+        <div class="navbar-text d-flex align-items-center">
+          <a class="opacity-6 text-decoration-none nav-custom-fs ms-4" href="#">Inizia ad ospitare</a>
+          <ion-icon name="globe-outline" class="bg-icon"></ion-icon>
+
+          <div class="dropdown me-2">
+            <ion-icon class="hamburger-icon dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false"
+              name="menu-sharp"></ion-icon>
+            <img src="assets/propic.png" alt="avatar-1" width="20px" height="20px" class="rounded-5 ms-2" />
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Change account</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Payments</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Log out</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="menu-personalizzato nascosto">
-        <!-- Alloggi -->
-        <div id="elemento-menu" class="elemento-menu">
-          <img src="assets/icons8-house-64.png" alt="Alloggi" />
-          <div class="etichetta">Alloggi</div>
-        </div>
-
-        <!-- Esperienze -->
-        <div class="elemento-menu">
-          <div class="badge-novita">NOVITÀ</div>
-          <img
-            src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000"
-            alt="Esperienze"
-          />
-          <div class="etichetta">Esperienze</div>
-        </div>
-
-        <!-- Servizi -->
-        <div class="elemento-menu">
-          <div class="badge-novita">NOVITÀ</div>
-          <img
-            src="https://img.icons8.com/emoji/48/bellhop-bell.png"
-            alt="Servizi"
-          />
-          <div class="etichetta">Servizi</div>
-        </div>
+    </nav>
+    <div class="search-bar">
+      <div id="searchSection" class="search-section hidden-searchBar flex-grow-1">
+        <label>Dove</label>
+        <input id="dropdown" class="dropdown input-field" type="text" placeholder="Cerca destinazioni"
+          data-bs-toggle="dropdown" />
+        <ul id="dropdown-menu" class="dropdown-menu">
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/freccia.webp" alt="freccia" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Nelle vicinanze</p>
+                <p class="mb-0 ms-3">scopri le opzioni intorno a te</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/milano.webp" alt="milano" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Milano,Lombardia</p>
+                <p class="mb-0 ms-3">Per attrazioni come "Duomo di Milano"</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/parigi.webp" alt="parigi" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Parigi,Francia</p>
+                <p class="mb-0 ms-3">Per la sua animata vita notturna</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center pb-3">
+              <img class="dimensione-icone" src="assets/firenze.webp" alt="firenze" />
+              <div>
+                <p class="mb-0 ms-3 fw-bold">Firenze</p>
+                <p class="mb-0 ms-3">Per attrazioni come "Ponte Vecchio"</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </header>
-
-    <main class="mb-5">
-      <section id="main-imgs">
-        <div id="contenitore-order-responsive">
-          <div class="d-flex justify-content-between" id="titolo-dettaglio">
-            <h1>Un piccolo angolo tranquillo nel cuore di Milano</h1>
-            <div class="me-3 d-flex align-items-center" id="apt-links">
-              <a href="#" class="d-flex"
-                ><ion-icon name="share-outline" class="outline"></ion-icon>
-                Condividi</a
-              >
-              <a href="#" class="d-flex align-items-center"
-                ><ion-icon name="heart-outline" class="outline"></ion-icon>
-                Salva</a
-              >
-            </div>
-          </div>
-          <div id="img-grid" class="image-grid">
-            <div class="image-box">
-              <img
-                class="main-img"
-                src="assets/stanze/3a.webp"
-                alt="Main view"
-              />
-            </div>
-            <div class="image-box second">
-              <div class="image-row">
-                <div>
-                  <img
-                    src="assets/stanze/34814c2c-264a-41d2-8394-14b82fe6eda9.jpeg"
-                    alt="Secondary view"
-                  />
-                </div>
-                <div>
-                  <img src="assets/stanze/1c.webp" alt="Secondary view" />
-                </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="search-section hidden-searchBar">
+        <label>Check-in</label>
+        <input id="checkIn" type="date" value="2025-05-26" placeholder="Aggiungi date" class="datepicker input-field" />
+      </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="inRicDi">
+        <p>Inizia la Ricerca</p>
+      </div>
+      <div class="search-section hidden-searchBar">
+        <label>Check-out</label>
+        <input id="checkOut" type="date" value="2025-06-03" placeholder="Aggiungi date"
+          class="datepickerOut input-field" />
+      </div>
+      <div class="divider hidden-searchBar"></div>
+      <div class="search-section hidden-searchBar flex-grow-1">
+        <label>Chi</label>
+        <input id="dropdown" class="dropdown input-field input" type="text" readonly placeholder="Aggiungi ospiti"
+          data-bs-toggle="dropdown" data-bs-auto-close="outside" />
+        <ul id="dropdown-menu2" class="dropdown-menu">
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div nomeRow" data-type="adulti">
+                <p class="mb-0 ms-3">Adulti</p>
+                <p class="mb-0 ms-3">Da 13 in su</p>
               </div>
-              <div class="image-row">
-                <div>
-                  <img src="assets/stanze/1b.webp" alt="Secondary view" />
-                </div>
-                <div>
-                  <img src="assets/stanze/1a.webp" alt="Secondary view" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="quick-info" class="mt-4">
-          <h4>Stanza - Milano, Italia</h4>
-          <p>1 letto singolo &bull; Bagno condiviso</p>
-        </div>
-      </section>
-
-      <section id="prenotazione" class="container">
-        <div class="row">
-          <!-- Colonna 1: booking-info -->
-          <div class="col-md-8" id="booking-info">
-            <section id="booking-info">
-              <div
-                id="soggiorna-da"
-                class="d-flex"
-                style="margin-top: 80px; gap: 20px"
-              >
-                <div>
-                  <img
-                    src="assets/propic.png"
-                    alt="avatar-1"
-                    width="50px"
-                    height="50px"
-                    class="rounded-5 ms-2"
-                  />
-                </div>
-                <div>
-                  <h6>Soggiorna da //</h6>
-                  <p class="custom-opacity">Superhost - 6 anni da host</p>
-                </div>
-              </div>
-
-              <hr />
-              <div id="dettagli-soggiorno">
-                <div class="d-flex p-2 pt-4" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      class="icone-dettaglio"
-                      name="earth-outline"
-                    ></ion-icon>
-                  </p>
-                  <div>
-                    <h6>
-                      Consigliatissimo dagli ospiti di questo paese: Italia
-                    </h6>
-                    <p class="custom-opacity">
-                      Il 100% degli ospiti provenienti da questo paese (Italia)
-                      che hanno soggiornato nell'alloggio nell'ultimo anno ha
-                      assegnato 5 stelle come valutazione complessiva.
-                    </p>
-                  </div>
-                </div>
-                <div class="d-flex p-2" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      class="icone-dettaglio"
-                    ></ion-icon>
-                  </p>
-                  <div>
-                    <h6>Self check-in</h6>
-                    <p class="custom-opacity">
-                      Puoi effettuare il check-in con il personale
-                      dell'edificio.
-                    </p>
-                  </div>
-                </div>
-                <div class="d-flex p-2" style="gap: 15px">
-                  <p>
-                    <ion-icon
-                      name="calendar-outline"
-                      class="icone-dettaglio"
-                    ></ion-icon>
-                  </p>
-                  <div>
-                    <h6>
-                      Cancellazione gratuita a 10 giorni dal pernottamento
-                    </h6>
-                    <p class="custom-opacity">
-                      Se dovessi cambiare idea, riceverai un rimborso totale.
-                    </p>
-                  </div>
-                </div>
-                <hr />
-              </div>
-
-              <div id="alloggio" class="py-4">
-                <h4 class="mb-3">A proposito di questo alloggio</h4>
-                <p>
-                  Quartiere storico e pittoresco del centro di Milano. Musei e
-                  divertimenti nelle vicinanze. Ristoranti del mondo e
-                  minimarket.
-                </p>
-                <h6>Durante il tuo soggiorno</h6>
-                <p>
-                  Sono facilmente raggiugibile per qualsiasi informazione o
-                  risoluzione necessaria!
-                </p>
-              </div>
-              <hr />
-              <div id="cosa-troverai" class="py-4">
-                <h4 class="mb-4">Cosa troverai</h4>
-                <div class="d-flex">
-                  <div class="row d-flex flex-column">
-                    <div class="col py-2">
-                      <ion-icon name="flower-outline"></ion-icon> Vista sul
-                      cortile
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="restaurant-outline"></ion-icon>Cucina
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
-                      Netflix
-                    </div>
-                  </div>
-
-                  <div class="row d-flex flex-column">
-                    <div class="col py-2">
-                      <ion-icon name="wifi-outline"></ion-icon>Wi-fi
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="aperture-outline"></ion-icon> Lavatrice
-                    </div>
-                    <div class="col py-2">
-                      <ion-icon name="rose-outline"></ion-icon> Cortile
-                    </div>
-                  </div>
-                </div>
-                <button id="altri-servizi" class="my-5">
-                  Mostra altri servizi
+              <div>
+                <button class="button-chi btn-outline-secondary meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
                 </button>
               </div>
-              <!-- Vertically centered scrollable modal -->
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div nomeRow" data-type="bambini">
+                <p class="mb-0 ms-3">Bambini</p>
+                <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+              </div>
+              <div>
+                <button class="button-chi btn-outline-secondary meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+              <div class="d-flex flex-column size-div nomeRow" data-type="neonati">
+                <p class="mb-0 ms-3">Neonati</p>
+                <p class="mb-0 ms-3">fino a 2 anni</p>
+              </div>
+              <div>
+                <button class="button-chi btn-outline-secondary meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex flex-column size-div nomeRow" data-type="animali">
+                <p class="mb-0 ms-3">Animali domestici</p>
+                <p class="mb-0 ms-3 text-decoration-underline">
+                  Viaggi con un animale di servizio?
+                </p>
+              </div>
+              <div>
+                <button class="button-chi btn-outline-secondary meno">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+                <span class="num">0</span>
+                <button class="button-chi piu">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div onclick="intervalloDate()" id="searchBtn" class="glass-icon">
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="menu-personalizzato nascosto">
+      <!-- Alloggi -->
+      <div id="elemento-menu" class="elemento-menu">
+        <img src="assets/icons8-house-64.png" alt="Alloggi" />
+        <div class="etichetta">Alloggi</div>
+      </div>
 
-              <div id="modal" class="modal hidden">
-                <div class="modal-body">
-                  <button id="close-button">&times;</button>
-                  <h4 class="my-4 p-2">Cosa troverai</h4>
-                  <h5 class="my-3 pb-2 ps-3">Camera da letto e lavanderia</h5>
-                  <ul class="full-list">
-                    <li>Grucce</li>
-                    <hr />
-                    <li>Biancheria da letto</li>
-                    <hr />
-                    <li>Spazio per conservare l'abbigliamento</li>
-                    <hr />
-                  </ul>
-                  <h5 class="my-4 p-2 ps-3">Cucina e zona pranzo</h5>
-                  <ul class="full-list">
-                    <li>Cucina</li>
-                    <hr />
-                    <li>Forno a microonde</li>
-                    <hr />
-                    <li>Servizi di base per cucinare</li>
-                    <hr />
-                  </ul>
-                  <h5 class="my-4 p-2 ps-3">Parcheggi e strutture</h5>
-                  <ul class="full-list">
-                    <li>Ascensore</li>
-                    <hr />
-                  </ul>
-                  <h5 class="my-4 p-2 ps-3">Privacy e Sicurezza</h5>
-                  <ul class="full-list">
-                    <li>Serratura della porta della camera da letto</li>
-                    <hr />
-                    <li>Allarme antincendio</li>
-                    <hr />
-                  </ul>
-                  <h5 class="my-4 p-2 ps-3">Non incluso</h5>
-                  <ul class="full-list">
-                    <li class="non-incluso">Lavatrice</li>
-                    <hr />
-                    <li class="non-incluso">Asciugatrice</li>
-                    <hr />
-                    <li class="non-incluso">
-                      Telecamere di sorveglianza esterne
-                    </li>
-                    <hr />
-                  </ul>
-                </div>
-              </div>
-            </section>
+      <!-- Esperienze -->
+      <div class="elemento-menu">
+        <div class="badge-novita">NOVITÀ</div>
+        <img src="https://img.icons8.com/?size=100&id=PhN968WBxlkp&format=png&color=000000" alt="Esperienze" />
+        <div class="etichetta">Esperienze</div>
+      </div>
+
+      <!-- Servizi -->
+      <div class="elemento-menu">
+        <div class="badge-novita">NOVITÀ</div>
+        <img src="https://img.icons8.com/emoji/48/bellhop-bell.png" alt="Servizi" />
+        <div class="etichetta">Servizi</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mb-5">
+    <section id="main-imgs">
+      <div id="contenitore-order-responsive">
+        <div class="d-flex justify-content-between" id="titolo-dettaglio">
+          <h1>Un piccolo angolo tranquillo nel cuore di Milano</h1>
+          <div class="me-3 d-flex align-items-center" id="apt-links">
+            <a href="#" class="d-flex"><ion-icon name="share-outline" class="outline"></ion-icon>
+              Condividi</a>
+            <a href="#" class="d-flex align-items-center"><ion-icon name="heart-outline" class="outline"></ion-icon>
+              Salva</a>
           </div>
-          <!-- Colonna 2: form -->
-          <div class="col-md-4" id="formPrenota">
-            <div id="form-sticky-wrapper">
-              <div
-                id="occasione"
-                class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2"
-              >
-                <img src="assets/Animation - 1748628240106.gif" />
-                <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
+        </div>
+        <div id="img-grid" class="image-grid">
+          <div class="image-box">
+            <img class="main-img" src="assets/stanze/3a.webp" alt="Main view" />
+          </div>
+          <div class="image-box second">
+            <div class="image-row">
+              <div>
+                <img src="assets/stanze/34814c2c-264a-41d2-8394-14b82fe6eda9.jpeg" alt="Secondary view" />
               </div>
-              <div class="p-4 shadow rounded-3 bg-light">
-                <div class="d-flex">
-                  <h4 class="prezzoNotte"></h4>
-                  <span class="align-self-center">&nbsp;&nbsp;a notte</span>
-                </div>
-                <form>
-                  <div class="d-flex mt-3">
-                    <div>
-                      <label for="checkin" class="form-label">Check-in</label>
-                      <input
-                        type="date"
-                        class="form-control datepicker"
-                        id="checkIn"
-                      />
-                    </div>
-                    <div>
-                      <label for="checkout" class="form-label">Check-out</label>
-                      <input
-                        type="date"
-                        class="form-control datepickerOut"
-                        id="checkOut"
-                      />
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="guests" class="form-label">Ospiti</label>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <input
-                        id="dropdownForm"
-                        class="dropdown input-field input"
-                        type="text"
-                        readonly
-                        placeholder="Aggiungi ospiti"
-                        data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
-                      />
-                      <ul id="dropdown-menu2" class="dropdown-menu">
-                        <li>
-                          <div
-                            class="d-flex justify-content-between align-items-center pb-3 bordo"
-                          >
-                            <div
-                              class="d-flex flex-column size-div nomeRow"
-                              data-type="adulti"
-                            >
-                              <p class="mb-0 ms-3">Adulti</p>
-                              <p class="mb-0 ms-3">Da 13 in su</p>
-                            </div>
-                            <div>
-                              <button
-                                class="button-chi btn-outline-secondary meno"
-                                type="button"
-                              >
-                                <ion-icon name="remove-outline"></ion-icon>
-                              </button>
-                              <span class="num">0</span>
-                              <button class="button-chi piu" type="button">
-                                <ion-icon name="add-outline"></ion-icon>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            class="d-flex justify-content-between align-items-center pb-3 bordo"
-                          >
-                            <div
-                              class="d-flex flex-column size-div nomeRow"
-                              data-type="bambini"
-                            >
-                              <p class="mb-0 ms-3">Bambini</p>
-                              <p class="mb-0 ms-3">Da 2 a 12 anni</p>
-                            </div>
-                            <div>
-                              <button
-                                class="button-chi btn-outline-secondary meno"
-                                type="button"
-                              >
-                                <ion-icon name="remove-outline"></ion-icon>
-                              </button>
-                              <span class="num">0</span>
-                              <button class="button-chi piu" type="button">
-                                <ion-icon name="add-outline"></ion-icon>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            class="d-flex justify-content-between align-items-center pb-3 bordo"
-                          >
-                            <div
-                              class="d-flex flex-column size-div nomeRow"
-                              data-type="neonati"
-                            >
-                              <p class="mb-0 ms-3">Neonati</p>
-                              <p class="mb-0 ms-3">fino a 2 anni</p>
-                            </div>
-                            <div>
-                              <button
-                                class="button-chi btn-outline-secondary meno"
-                                type="button"
-                              >
-                                <ion-icon name="remove-outline"></ion-icon>
-                              </button>
-                              <span class="num">0</span>
-                              <button class="button-chi piu" type="button">
-                                <ion-icon name="add-outline"></ion-icon>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            class="d-flex justify-content-between align-items-center pb-3"
-                          >
-                            <div
-                              class="d-flex flex-column size-div nomeRow"
-                              data-type="animali"
-                            >
-                              <p class="mb-0 ms-3">Animali domestici</p>
-                              <p class="mb-0 ms-3 text-decoration-underline">
-                                Viaggi con un animale di servizio?
-                              </p>
-                            </div>
-                            <div>
-                              <button
-                                class="button-chi btn-outline-secondary meno"
-                                type="button"
-                              >
-                                <ion-icon name="remove-outline"></ion-icon>
-                              </button>
-                              <span class="num">0</span>
-                              <button class="button-chi piu" type="button">
-                                <ion-icon name="add-outline"></ion-icon>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <i class="bi bi-chevron-down"></i>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn w-100">Prenota</button>
-                  <p>Non riceverai alcun addebito in questa fase</p>
-                  <div class="d-flex flex-column gap-3">
-                    <div class="d-flex justify-content-between">
-                      <div class="text-decoration-underline" role="button">
-                        <span class="prezzoNotte"> x</span
-                        ><span id="notti"></span>
-                      </div>
-                      <span id="costoNottiTotale"></span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <span class="text-decoration-underline" role="button"
-                        >Costi di pulizia</span
-                      >
-                      <span id="costoPulizia"></span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <span class="text-decoration-underline" role="button"
-                        >Costi del servizio AirBnB</span
-                      >
-                      <span id="costoServizio"></span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <span class="text-decoration-underline" role="button"
-                        >Tasse</span
-                      >
-                      <span id="costoTasse"></span>
-                    </div>
-                    <hr />
-                    <div class="d-flex justify-content-between fw-bold">
-                      <span>Totale</span>
-                      <span id="costoTotale"></span>
-                    </div>
-                  </div>
-                </form>
+              <div>
+                <img src="assets/stanze/1c.webp" alt="Secondary view" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div>
+                <img src="assets/stanze/1b.webp" alt="Secondary view" />
+              </div>
+              <div>
+                <img src="assets/stanze/1a.webp" alt="Secondary view" />
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <hr />
-      <section>
-        <section id="recensioni" class="mb-5">
-          <div class="row gx-5">
-            <div class="col-12 col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Lorena</h6>
-                  <p>6 anni su Airbnb</p>
-                </div>
-              </div>
+      </div>
 
+      <div id="quick-info" class="mt-4">
+        <h4>Stanza - Milano, Italia</h4>
+        <p>1 letto singolo &bull; Bagno condiviso</p>
+      </div>
+    </section>
+
+    <section id="prenotazione" class="container">
+      <div class="row">
+        <!-- Colonna 1: booking-info -->
+        <div class="col-md-8" id="booking-info">
+          <section id="booking-info">
+            <div id="soggiorna-da" class="d-flex" style="margin-top: 80px; gap: 20px">
               <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 1 settimana fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>
-                  Ancora una volta, soggiorno perfetto con tutto il necessario e
-                  Christelle e' stata sempre estremamente disponibile,
-                  offrendoci di lasciare i bagagli l'ultimo giorno.
-                </p>
+                <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              </div>
+              <div>
+                <h6>Soggiorna da //</h6>
+                <p class="custom-opacity">Superhost - 6 anni da host</p>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
+
+            <hr />
+            <div id="dettagli-soggiorno">
+              <div class="d-flex p-2 pt-4" style="gap: 15px">
+                <p>
+                  <ion-icon class="icone-dettaglio" name="earth-outline"></ion-icon>
+                </p>
                 <div>
-                  <h6>Hazariah</h6>
-                  <p>9 anni su Airbnb</p>
+                  <h6>
+                    Consigliatissimo dagli ospiti di questo paese: Italia
+                  </h6>
+                  <p class="custom-opacity">
+                    Il 100% degli ospiti provenienti da questo paese (Italia)
+                    che hanno soggiornato nell'alloggio nell'ultimo anno ha
+                    assegnato 5 stelle come valutazione complessiva.
+                  </p>
                 </div>
               </div>
-
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star-half" class="star"></ion-icon
-                  ><ion-icon name="star-outline" class="star"></ion-icon>
-                  <span style="font-weight: 500">&middot; 2 settimane fa</span>
-                  &middot;
-                  <span class="custom-opacity">Ha soggiornato una notte </span>
-                </p>
+              <div class="d-flex p-2" style="gap: 15px">
                 <p>
-                  Adoro il posto, lo condividi solo con il proprietario che e'
-                  davvero gentile.
+                  <ion-icon name="checkmark-done-outline" class="icone-dettaglio"></ion-icon>
                 </p>
+                <div>
+                  <h6>Self check-in</h6>
+                  <p class="custom-opacity">
+                    Puoi effettuare il check-in con il personale
+                    dell'edificio.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex p-2" style="gap: 15px">
+                <p>
+                  <ion-icon name="calendar-outline" class="icone-dettaglio"></ion-icon>
+                </p>
+                <div>
+                  <h6>
+                    Cancellazione gratuita a 10 giorni dal pernottamento
+                  </h6>
+                  <p class="custom-opacity">
+                    Se dovessi cambiare idea, riceverai un rimborso totale.
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </div>
+
+            <div id="alloggio" class="py-4">
+              <h4 class="mb-3">A proposito di questo alloggio</h4>
+              <p>
+                Quartiere storico e pittoresco del centro di Milano. Musei e
+                divertimenti nelle vicinanze. Ristoranti del mondo e
+                minimarket.
+              </p>
+              <h6>Durante il tuo soggiorno</h6>
+              <p>
+                Sono facilmente raggiugibile per qualsiasi informazione o
+                risoluzione necessaria!
+              </p>
+            </div>
+            <hr />
+            <div id="cosa-troverai" class="py-4">
+              <h4 class="mb-4">Cosa troverai</h4>
+              <div class="d-flex">
+                <div class="row d-flex flex-column">
+                  <div class="col py-2">
+                    <ion-icon name="flower-outline"></ion-icon> Vista sul
+                    cortile
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="restaurant-outline"></ion-icon>Cucina
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="tv-outline"></ion-icon> HDTV con Disney+,
+                    Netflix
+                  </div>
+                </div>
+
+                <div class="row d-flex flex-column">
+                  <div class="col py-2">
+                    <ion-icon name="wifi-outline"></ion-icon>Wi-fi
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="aperture-outline"></ion-icon> Lavatrice
+                  </div>
+                  <div class="col py-2">
+                    <ion-icon name="rose-outline"></ion-icon> Cortile
+                  </div>
+                </div>
+              </div>
+              <button id="altri-servizi" class="my-5">
+                Mostra altri servizi
+              </button>
+            </div>
+            <!-- Vertically centered scrollable modal -->
+
+            <div id="modal" class="modal hidden">
+              <div class="modal-body">
+                <button id="close-button">&times;</button>
+                <h4 class="my-4 p-2">Cosa troverai</h4>
+                <h5 class="my-3 pb-2 ps-3">Camera da letto e lavanderia</h5>
+                <ul class="full-list">
+                  <li>Grucce</li>
+                  <hr />
+                  <li>Biancheria da letto</li>
+                  <hr />
+                  <li>Spazio per conservare l'abbigliamento</li>
+                  <hr />
+                </ul>
+                <h5 class="my-4 p-2 ps-3">Cucina e zona pranzo</h5>
+                <ul class="full-list">
+                  <li>Cucina</li>
+                  <hr />
+                  <li>Forno a microonde</li>
+                  <hr />
+                  <li>Servizi di base per cucinare</li>
+                  <hr />
+                </ul>
+                <h5 class="my-4 p-2 ps-3">Parcheggi e strutture</h5>
+                <ul class="full-list">
+                  <li>Ascensore</li>
+                  <hr />
+                </ul>
+                <h5 class="my-4 p-2 ps-3">Privacy e Sicurezza</h5>
+                <ul class="full-list">
+                  <li>Serratura della porta della camera da letto</li>
+                  <hr />
+                  <li>Allarme antincendio</li>
+                  <hr />
+                </ul>
+                <h5 class="my-4 p-2 ps-3">Non incluso</h5>
+                <ul class="full-list">
+                  <li class="non-incluso">Lavatrice</li>
+                  <hr />
+                  <li class="non-incluso">Asciugatrice</li>
+                  <hr />
+                  <li class="non-incluso">
+                    Telecamere di sorveglianza esterne
+                  </li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Colonna 2: form -->
+        <div class="col-md-4" id="formPrenota">
+          <div id="form-sticky-wrapper">
+            <div id="occasione" class="p-4 shadow rounded-3 bg-light mb-4 d-flex align-items-center gap-2">
+              <img src="assets/Animation - 1748628240106.gif" />
+              <p>Occasione unica! Di solito, questo alloggio è prenotato</p>
+            </div>
+            <div class="p-4 shadow rounded-3 bg-light">
+              <div class="d-flex">
+                <h4 class="prezzoNotte"></h4>
+                <span class="align-self-center">&nbsp;&nbsp;a notte</span>
+              </div>
+              <form>
+                <div class="d-flex mt-3">
+                  <div>
+                    <label for="checkin" class="form-label">Check-in</label>
+                    <input type="date" class="form-control datepicker" id="checkIn" />
+                  </div>
+                  <div>
+                    <label for="checkout" class="form-label">Check-out</label>
+                    <input type="date" class="form-control datepickerOut" id="checkOut" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="guests" class="form-label">Ospiti</label>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <input id="dropdownForm" class="dropdown input-field input" type="text" readonly
+                      placeholder="Aggiungi ospiti" data-bs-toggle="dropdown" data-bs-auto-close="outside" />
+                    <ul id="dropdown-menu2" class="dropdown-menu">
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div nomeRow" data-type="adulti">
+                            <p class="mb-0 ms-3">Adulti</p>
+                            <p class="mb-0 ms-3">Da 13 in su</p>
+                          </div>
+                          <div>
+                            <button class="button-chi btn-outline-secondary meno" type="button">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button class="button-chi piu" type="button">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div nomeRow" data-type="bambini">
+                            <p class="mb-0 ms-3">Bambini</p>
+                            <p class="mb-0 ms-3">Da 2 a 12 anni</p>
+                          </div>
+                          <div>
+                            <button class="button-chi btn-outline-secondary meno" type="button">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button class="button-chi piu" type="button">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3 bordo">
+                          <div class="d-flex flex-column size-div nomeRow" data-type="neonati">
+                            <p class="mb-0 ms-3">Neonati</p>
+                            <p class="mb-0 ms-3">fino a 2 anni</p>
+                          </div>
+                          <div>
+                            <button class="button-chi btn-outline-secondary meno" type="button">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button class="button-chi piu" type="button">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pb-3">
+                          <div class="d-flex flex-column size-div nomeRow" data-type="animali">
+                            <p class="mb-0 ms-3">Animali domestici</p>
+                            <p class="mb-0 ms-3 text-decoration-underline">
+                              Viaggi con un animale di servizio?
+                            </p>
+                          </div>
+                          <div>
+                            <button class="button-chi btn-outline-secondary meno" type="button">
+                              <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span class="num">0</span>
+                            <button class="button-chi piu" type="button">
+                              <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                </div>
+                <button id="buttonPrenota" type="button" class="btn w-100">Prenota</button>
+                <p>Non riceverai alcun addebito in questa fase</p>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-decoration-underline" role="button">
+                      <span class="prezzoNotte"> x</span><span id="notti"></span>
+                    </div>
+                    <span id="costoNottiTotale"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Costi di pulizia</span>
+                    <span id="costoPulizia"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Costi del servizio AirBnB</span>
+                    <span id="costoServizio"></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-decoration-underline" role="button">Tasse</span>
+                    <span id="costoTasse"></span>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between fw-bold">
+                    <span>Totale</span>
+                    <span id="costoTotale"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <div id="creditCard" class="modal hidden">
+      <div class="modal-body">
+        <button id="closeButtonCard">&times;</button>
+        <form class="form">
+          <div class="paymentother">
+            <button name="apple-pay" type="button">
+              <svg xml:space="preserve" viewBox="0 0 512 210.2" y="0px" x="0px" id="Layer_1" version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M93.6,27.1C87.6,34.2,78,39.8,68.4,39c-1.2-9.6,3.5-19.8,9-26.1c6-7.3,16.5-12.5,25-12.9  C103.4,10,99.5,19.8,93.6,27.1 M102.3,40.9c-13.9-0.8-25.8,7.9-32.4,7.9c-6.7,0-16.8-7.5-27.8-7.3c-14.3,0.2-27.6,8.3-34.9,21.2  c-15,25.8-3.9,64,10.6,85c7.1,10.4,15.6,21.8,26.8,21.4c10.6-0.4,14.8-6.9,27.6-6.9c12.9,0,16.6,6.9,27.8,6.7  c11.6-0.2,18.9-10.4,26-20.8c8.1-11.8,11.4-23.3,11.6-23.9c-0.2-0.2-22.4-8.7-22.6-34.3c-0.2-21.4,17.5-31.6,18.3-32.2  C123.3,42.9,107.7,41.3,102.3,40.9 M182.6,11.9v155.9h24.2v-53.3h33.5c30.6,0,52.1-21,52.1-51.4c0-30.4-21.1-51.2-51.3-51.2H182.6z   M206.8,32.3h27.9c21,0,33,11.2,33,30.9c0,19.7-12,31-33.1,31h-27.8V32.3z M336.6,169c15.2,0,29.3-7.7,35.7-19.9h0.5v18.7h22.4V90.2  c0-22.5-18-37-45.7-37c-25.7,0-44.7,14.7-45.4,34.9h21.8c1.8-9.6,10.7-15.9,22.9-15.9c14.8,0,23.1,6.9,23.1,19.6v8.6l-30.2,1.8  c-28.1,1.7-43.3,13.2-43.3,33.2C298.4,155.6,314.1,169,336.6,169z M343.1,150.5c-12.9,0-21.1-6.2-21.1-15.7c0-9.8,7.9-15.5,23-16.4  l26.9-1.7v8.8C371.9,140.1,359.5,150.5,343.1,150.5z M425.1,210.2c23.6,0,34.7-9,44.4-36.3L512,54.7h-24.6l-28.5,92.1h-0.5  l-28.5-92.1h-25.3l41,113.5l-2.2,6.9c-3.7,11.7-9.7,16.2-20.4,16.2c-1.9,0-5.6-0.2-7.1-0.4v18.7C417.3,210,423.3,210.2,425.1,210.2z"
+                  id="XMLID_34_"></path>
+              </svg>
+            </button>
+            <button name="google-pay" type="button">
+              <svg fill="none" viewBox="0 0 80 39" height="39" width="80" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_134_34)">
+                  <path fill="#5F6368"
+                    d="M37.8 19.7V29H34.8V6H42.6C44.5 6 46.3001 6.7 47.7001 8C49.1001 9.2 49.8 11 49.8 12.9C49.8 14.8 49.1001 16.5 47.7001 17.8C46.3001 19.1 44.6 19.8 42.6 19.8L37.8 19.7ZM37.8 8.8V16.8H42.8C43.9 16.8 45.0001 16.4 45.7001 15.6C47.3001 14.1 47.3 11.6 45.8 10.1L45.7001 10C44.9001 9.2 43.9 8.7 42.8 8.8H37.8Z">
+                  </path>
+                  <path fill="#5F6368"
+                    d="M56.7001 12.8C58.9001 12.8 60.6001 13.4 61.9001 14.6C63.2001 15.8 63.8 17.4 63.8 19.4V29H61V26.8H60.9001C59.7001 28.6 58 29.5 56 29.5C54.3 29.5 52.8 29 51.6 28C50.5 27 49.8 25.6 49.8 24.1C49.8 22.5 50.4 21.2 51.6 20.2C52.8 19.2 54.5 18.8 56.5 18.8C58.3 18.8 59.7 19.1 60.8 19.8V19.1C60.8 18.1 60.4 17.1 59.6 16.5C58.8 15.8 57.8001 15.4 56.7001 15.4C55.0001 15.4 53.7 16.1 52.8 17.5L50.2001 15.9C51.8001 13.8 53.9001 12.8 56.7001 12.8ZM52.9001 24.2C52.9001 25 53.3001 25.7 53.9001 26.1C54.6001 26.6 55.4001 26.9 56.2001 26.9C57.4001 26.9 58.6 26.4 59.5 25.5C60.5 24.6 61 23.5 61 22.3C60.1 21.6 58.8 21.2 57.1 21.2C55.9 21.2 54.9 21.5 54.1 22.1C53.3 22.6 52.9001 23.3 52.9001 24.2Z">
+                  </path>
+                  <path fill="#5F6368"
+                    d="M80 13.3L70.1 36H67.1L70.8 28.1L64.3 13.4H67.5L72.2 24.7H72.3L76.9 13.4H80V13.3Z"></path>
+                  <path fill="#4285F4"
+                    d="M25.9 17.7C25.9 16.8 25.8 15.9 25.7 15H13.2V20.1H20.3C20 21.7 19.1 23.2 17.7 24.1V27.4H22C24.5 25.1 25.9 21.7 25.9 17.7Z">
+                  </path>
+                  <path fill="#34A853"
+                    d="M13.1999 30.5999C16.7999 30.5999 19.7999 29.3999 21.9999 27.3999L17.6999 24.0999C16.4999 24.8999 14.9999 25.3999 13.1999 25.3999C9.7999 25.3999 6.7999 23.0999 5.7999 19.8999H1.3999V23.2999C3.6999 27.7999 8.1999 30.5999 13.1999 30.5999Z">
+                  </path>
+                  <path fill="#FBBC04"
+                    d="M5.8001 19.8999C5.2001 18.2999 5.2001 16.4999 5.8001 14.7999V11.3999H1.4001C-0.499902 15.0999 -0.499902 19.4999 1.4001 23.2999L5.8001 19.8999Z">
+                  </path>
+                  <path fill="#EA4335"
+                    d="M13.2 9.39996C15.1 9.39996 16.9 10.1 18.3 11.4L22.1 7.59996C19.7 5.39996 16.5 4.09996 13.3 4.19996C8.3 4.19996 3.7 6.99996 1.5 11.5L5.9 14.9C6.8 11.7 9.8 9.39996 13.2 9.39996Z">
+                  </path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_134_34">
+                    <rect fill="white" height="38.1" width="80"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button name="paypal" type="button">
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" height="40">
+                <path fill="#003087"
+                  d="M166.9 110.6h119.3c73.7 0 128.7 38.6 128.7 108.7 0 81.3-67.3 118.7-146.7 118.7H202.5l-20.5 113.3H97.5l69.4-340.7z" />
+                <path fill="#009cde"
+                  d="M195.6 135.1h84.5c48.5 0 90.3 19.9 90.3 73.2 0 50.6-36.8 78.9-101.6 78.9h-68.2l-18 94.5h-67.6l40.6-207.7z" />
+                <path fill="#012169"
+                  d="M202.5 135.1h77.5c43.2 0 79.7 16.8 79.7 61.6 0 47.8-41.1 64.3-94.3 64.3h-61.4l-17.7 94.4h-56.7l40.6-220.3z" />
+              </svg>
+            </button>
+            <button name="klarna" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" height="40">
+      <rect width="400" height="100" rx="12" fill="#FFB3C7"/>
+      <text x="200" y="60" text-anchor="middle" fill="#000" font-size="42" font-family="Arial, sans-serif" font-weight="bold">
+        Klarna
+      </text>
+    </svg>
+  </button>
+          </div>
+          <div class="separator">
+            <hr class="line" />
+            <p>OPPURE</p>
+            <hr class="line" />
+          </div>
+          <div class="card-info">
+            <div class="input_container">
+              <label class="input_label">Proprietario della carta</label>
+              <input class="input_field" type="text" placeholder="Inserisci il tuo nome e cognome" />
+            </div>
+            <div class="input_container">
+              <label class="input_label">Numero carta</label>
+              <input class="input_field" type="number" placeholder="1234 5678 9012 3456" />
+            </div>
+            <div class="input_container">
+              <label class="input_label">Data di scadenza / CVV</label>
+              <div class="split">
+                <input class="input_field" style="width: 250px" type="text" placeholder="06/29" />
+                <input class="input_field" style="width: 110px" type="number" placeholder="CVV" />
               </div>
             </div>
           </div>
-          <div class="row gx-5">
-            <div class="col-12 col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Gabriella</h6>
-                  <p>2 anni su Airbnb</p>
-                </div>
-              </div>
-
+          <button class="checkout" style="cursor: pointer; margin-top: 10px;">
+            <span>Paga adesso</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <section>
+      <section id="recensioni" class="mb-5">
+        <div class="row gx-5">
+          <div class="col-12 col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
               <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star-half" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 1 settimana fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>Ottimo Airbnb.</p>
+                <h6>Lorena</h6>
+                <p>6 anni su Airbnb</p>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="d-flex" style="margin-top: 60px; gap: 20px">
-                <img
-                  src="assets/propic.png"
-                  alt="avatar-1"
-                  width="50px"
-                  height="50px"
-                  class="rounded-5 ms-2"
-                />
-                <div>
-                  <h6>Samayah</h6>
-                  <p>1 anno su Airbnb</p>
-                </div>
-              </div>
 
-              <div>
-                <p class="paragrafo-piccolo">
-                  <ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><ion-icon name="star" class="star"></ion-icon
-                  ><span style="font-weight: 500">
-                    &middot; 4 settimane fa</span
-                  >
-                  &middot;
-                  <span class="custom-opacity"
-                    >Ha soggiornato qualche notte
-                  </span>
-                </p>
-                <p>
-                  Onestamente uno dei posti migliori in cui abbia mai
-                  soggiornato con il miglior host. Rilassato, riservato e
-                  amichevole, ho davvero apprezzato la pulizia e la cura.
-                </p>
-              </div>
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 1 settimana fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>
+                Ancora una volta, soggiorno perfetto con tutto il necessario e
+                Christelle e' stata sempre estremamente disponibile,
+                offrendoci di lasciare i bagagli l'ultimo giorno.
+              </p>
             </div>
           </div>
-        </section>
+          <div class="col-12 col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Hazariah</h6>
+                <p>9 anni su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star-half" class="star"></ion-icon><ion-icon
+                  name="star-outline" class="star"></ion-icon>
+                <span style="font-weight: 500">&middot; 2 settimane fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato una notte </span>
+              </p>
+              <p>
+                Adoro il posto, lo condividi solo con il proprietario che e'
+                davvero gentile.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-5">
+          <div class="col-12 col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Gabriella</h6>
+                <p>2 anni su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star-half" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 1 settimana fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>Ottimo Airbnb.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="d-flex" style="margin-top: 60px; gap: 20px">
+              <img src="assets/propic.png" alt="avatar-1" width="50px" height="50px" class="rounded-5 ms-2" />
+              <div>
+                <h6>Samayah</h6>
+                <p>1 anno su Airbnb</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="paragrafo-piccolo">
+                <ion-icon name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><ion-icon name="star" class="star"></ion-icon><ion-icon
+                  name="star" class="star"></ion-icon><span style="font-weight: 500">
+                  &middot; 4 settimane fa</span>
+                &middot;
+                <span class="custom-opacity">Ha soggiornato qualche notte
+                </span>
+              </p>
+              <p>
+                Onestamente uno dei posti migliori in cui abbia mai
+                soggiornato con il miglior host. Rilassato, riservato e
+                amichevole, ho davvero apprezzato la pulizia e la cura.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
+    </section>
+    <hr />
+    <section id="dove-sarai" class="my-5">
+      <h4 class="mb-3">Dove sarai</h4>
+      <p class="mb-4">Centro di Milano, Italia</p>
+      <div id="map" style="height: 400px; border-radius: 5%"></div>
+      <p class="pt-4 mb-5" style="font-weight: 400">
+        Abbiamo verificato l'accuratezza della posizione di questo alloggio.
+        <span style="font-weight: 500; text-decoration: underline">Scopri di piu'</span>
+      </p>
       <hr />
-      <section id="dove-sarai" class="my-5">
-        <h4 class="mb-3">Dove sarai</h4>
-        <p class="mb-4">Centro di Milano, Italia</p>
-        <div id="map" style="height: 400px; border-radius: 5%"></div>
-        <p class="pt-4 mb-5" style="font-weight: 400">
-          Abbiamo verificato l'accuratezza della posizione di questo alloggio.
-          <span style="font-weight: 500; text-decoration: underline"
-            >Scopri di piu'</span
-          >
+    </section>
+    <section id="da-sapere">
+      <div class="container pt-4">
+        <div class="row">
+          <h4 class="mb-4" style="font-weight: 500">Da sapere</h4>
+          <div class="col-12 col-md-6 col-lg-4">
+            <ul class="full-list house-rules">
+              <li style="font-weight: 500">Regole della casa</li>
+              <li>Check-in dopo le ore 15:00</li>
+              <li>Check-out entro le ore 11:00</li>
+              <li>Massimo un ospite</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <ul class="full-list house-rules">
+              <li style="font-weight: 500">Alloggio e sicurezza</li>
+              <li>Nessun rilevatore di monossido di carbonio</li>
+              <li>Rilevatore di fumo</li>
+              <li>Alcuni spazi sono in comune</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <ul class="full-list house-rules">
+              <li style="font-weight: 500">Termini di cancellazione</li>
+              <li>
+                Cancellazione gratuita per 48 ore. Cancella entro la data
+                indicata per ricevere un rimborso parziale.
+              </li>
+              <li>Consulta i termini dell'host pre maggiori dettagli.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-5 py-2" style="background-color: #f7f7f7; border-top: 1px solid lightgray">
+    <div id="colonne-footer" class="container-fluid">
+      <div class="row text-start">
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Assistenza</strong></li>
+            <li><a href="#" class="footer-links">Centro Assistenza</a></li>
+            <li><a href="#" class="footer-links">AirCover</a></li>
+            <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
+            <li>
+              <a href="#" class="footer-links">Supporto alla disabilita'</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Opzioni di cancellazione</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Segnala problema nel quartiere</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Ospitare</strong></li>
+            <li>
+              <a href="#" class="footer-links">Centro Apri un Airbnb</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">AirCover per gli host</a>
+            </li>
+            <li><a href="#" class="footer-links">Risorse per gli host</a></li>
+            <li>
+              <a href="#" class="footer-links">Forum della community</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Ospitare responsabilmente</a>
+            </li>
+            <li>
+              <a href="#" class="footer-links">Partecipa a una lezione gratuita sull'ospitalita'</a>
+            </li>
+            <li><a href="#" class="footer-links">Trova un co-host</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <ul>
+            <li><strong>Airbnb</strong></li>
+            <li><a href="#" class="footer-links">2025 Summer Release</a></li>
+            <li><a href="#" class="footer-links">Newsroom</a></li>
+            <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
+            <li>
+              <a href="#" class="footer-links">Opportunita' di lavoro</a>
+            </li>
+            <li><a href="#" class="footer-links">Investitori</a></li>
+            <li><a href="#" class="footer-links">Gift card</a></li>
+            <li>
+              <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="social-icons-links"
+      class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap">
+      <div id="social-links" style="padding-top: 15px">
+        <p>
+          © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
+            Privacy</a>
+          &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a href="#" class="footer-links">
+            Mappa del sito</a>
+          &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
         </p>
-        <hr />
-      </section>
-      <section id="da-sapere">
-        <div class="container pt-4">
-          <div class="row">
-            <h4 class="mb-4" style="font-weight: 500">Da sapere</h4>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="full-list house-rules">
-                <li style="font-weight: 500">Regole della casa</li>
-                <li>Check-in dopo le ore 15:00</li>
-                <li>Check-out entro le ore 11:00</li>
-                <li>Massimo un ospite</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="full-list house-rules">
-                <li style="font-weight: 500">Alloggio e sicurezza</li>
-                <li>Nessun rilevatore di monossido di carbonio</li>
-                <li>Rilevatore di fumo</li>
-                <li>Alcuni spazi sono in comune</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="full-list house-rules">
-                <li style="font-weight: 500">Termini di cancellazione</li>
-                <li>
-                  Cancellazione gratuita per 48 ore. Cancella entro la data
-                  indicata per ricevere un rimborso parziale.
-                </li>
-                <li>Consulta i termini dell'host pre maggiori dettagli.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer
-      class="mt-5 py-2"
-      style="background-color: #f7f7f7; border-top: 1px solid lightgray"
-    >
-      <div id="colonne-footer" class="container-fluid">
-        <div class="row text-start">
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Assistenza</strong></li>
-              <li><a href="#" class="footer-links">Centro Assistenza</a></li>
-              <li><a href="#" class="footer-links">AirCover</a></li>
-              <li><a href="#" class="footer-links">Antidiscriminazione</a></li>
-              <li>
-                <a href="#" class="footer-links">Supporto alla disabilita'</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Opzioni di cancellazione</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Segnala problema nel quartiere</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Ospitare</strong></li>
-              <li>
-                <a href="#" class="footer-links">Centro Apri un Airbnb</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">AirCover per gli host</a>
-              </li>
-              <li><a href="#" class="footer-links">Risorse per gli host</a></li>
-              <li>
-                <a href="#" class="footer-links">Forum della community</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links">Ospitare responsabilmente</a>
-              </li>
-              <li>
-                <a href="#" class="footer-links"
-                  >Partecipa a una lezione gratuita sull'ospitalita'</a
-                >
-              </li>
-              <li><a href="#" class="footer-links">Trova un co-host</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <ul>
-              <li><strong>Airbnb</strong></li>
-              <li><a href="#" class="footer-links">2025 Summer Release</a></li>
-              <li><a href="#" class="footer-links">Newsroom</a></li>
-              <li><a href="#" class="footer-links">Nuove funzionalita'</a></li>
-              <li>
-                <a href="#" class="footer-links">Opportunita' di lavoro</a>
-              </li>
-              <li><a href="#" class="footer-links">Investitori</a></li>
-              <li><a href="#" class="footer-links">Gift card</a></li>
-              <li>
-                <a href="#" class="footer-links">Soggiorni con Airbnb.org</a>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div id="social-icons">
+        <button title="Scegli la lingua" class="pe-3">
+          <span><ion-icon name="globe-outline" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 14px"></ion-icon> </span>Italiano (IT)
+        </button>
+        <button title="Scegli una valuta" class="pe-3">
+          <span><ion-icon name="logo-euro" class="footer-icons ps-2"
+              style="padding-top: 12px; font-size: 12px"></ion-icon></span>EUR
+        </button>
+        <div class="d-flex align-items-center justify-content-between" style="gap: 15px">
+          <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
+          <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
         </div>
       </div>
-      <div
-        id="social-icons-links"
-        class="container-fluid d-flex justify-content-between align-items-center mt-5 px-5 flex-wrap"
-      >
-        <div id="social-links" style="padding-top: 15px">
-          <p>
-            © 2025 Airbnb, Inc. &bull;<a href="#" class="footer-links">
-              Privacy</a
-            >
-            &bull;<a href="#" class="footer-links"> Termini</a> &bull;<a
-              href="#"
-              class="footer-links"
-            >
-              Mappa del sito</a
-            >
-            &bull;<a href="#" class="footer-links"> Dettagli dell'azienda</a>
-          </p>
-        </div>
-        <div id="social-icons">
-          <button title="Scegli la lingua" class="pe-3">
-            <span
-              ><ion-icon
-                name="globe-outline"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 14px"
-              ></ion-icon> </span
-            >Italiano (IT)
-          </button>
-          <button title="Scegli una valuta" class="pe-3">
-            <span
-              ><ion-icon
-                name="logo-euro"
-                class="footer-icons ps-2"
-                style="padding-top: 12px; font-size: 12px"
-              ></ion-icon></span
-            >EUR
-          </button>
-          <div
-            class="d-flex align-items-center justify-content-between"
-            style="gap: 15px"
-          >
-            <ion-icon name="logo-facebook" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-twitter" class="footer-icons"></ion-icon>
-            <ion-icon name="logo-instagram" class="footer-icons"></ion-icon>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 
-    <script src="dettaglio.js"></script>
-  </body>
+  <script src="dettaglio.js"></script>
+</body>
+
 </html>

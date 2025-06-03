@@ -1,10 +1,16 @@
+/*PER OTTENERE I VALORI INSERITI NEI FORM DELL'ALTRA SCHEDA*///
+ // Recupera parametri dalla query string
+ const params = new URLSearchParams(window.location.search);
+ const checkIn = params.get("checkin");
+ const checkOut = params.get("checkout");
+
 //INPUT CHECK-IN
 flatpickr(".datepicker", {
     altInput: true,
     altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
     dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
     minDate: "today", // Opzionale: disabilita le date passate
-    defaultDate: "today", // Imposta oggi come valore predefinito
+    defaultDate: checkIn || "today", // Imposta oggi come valore predefinito
     //maxDate per data di checkout massima
     locale: "it",  // per avere il calendario in lingua italiana
 
@@ -19,8 +25,8 @@ flatpickr(".datepickerOut", {
     altInput: true,
     altFormat: "j M",      // quello che l'utente vede (es: 1 giu)
     dateFormat: "Y-m-d",   // valore interno compatibile con new Date() (altrimenti la funzione javascript per calcolare i giorni non funziona)
-    minDate: tomorrow, // Opzionale: disabilita le date passate
-    defaultDate: tomorrow, // Imposta il giorno successivo come valore predefinito
+    minDate: checkOut || tomorrow, // Opzionale: disabilita le date passate
+    defaultDate: checkOut || tomorrow, // Imposta il giorno successivo come valore predefinito
     //maxDate per data di checkout massima
     locale: "it"  // per avere il calendario in lingua italiana
 });
